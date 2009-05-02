@@ -1,0 +1,1344 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:35:16', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:35:16')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:35:17', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 1, NULL, '2009-05-02 16:35:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 1) [0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:37:44', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:37:44')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:37:44', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 2, NULL, '2009-05-02 16:37:44')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 2) [0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:38:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:38:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:38:46', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 3, NULL, '2009-05-02 16:38:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 3) [0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:42:39', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:42:39')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:42:39', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 4, NULL, '2009-05-02 16:42:39')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 4) [0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:42:47', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:42:47')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:42:48', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 5, NULL, '2009-05-02 16:42:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 5) [0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:42:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:42:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:42:48', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 6, NULL, '2009-05-02 16:42:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.5ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 6) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:43:44', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:43:44')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:43:44', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 7, NULL, '2009-05-02 16:43:44')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 7) [0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:44:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:44:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 8) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:44:46', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 8, NULL, '2009-05-02 16:44:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 8) [0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:44:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:44:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 9) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:44:46', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 9, NULL, '2009-05-02 16:44:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 9) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:45:27', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:45:27')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 10) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:45:27', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 10, NULL, '2009-05-02 16:45:27')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 10) [0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:45:27', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:45:27')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:45:27', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 11, NULL, '2009-05-02 16:45:27')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 11) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:45:27', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:45:27')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 12) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:45:27', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 12, NULL, '2009-05-02 16:45:27')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 12) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:45:41', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:45:41')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 13) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:45:41', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 13, NULL, '2009-05-02 16:45:41')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 13) [0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:45:41', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:45:41')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:45:41', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 14, NULL, '2009-05-02 16:45:41')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 14) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:45:41', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:45:41')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:45:41', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 15, NULL, '2009-05-02 16:45:41')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 15) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:49:28', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:49:28')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 16) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:49:43', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:49:43')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 17) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:50:47', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:50:47')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 18) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:51:26', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:51:26')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 19) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:51:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:51:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 20) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:52:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:52:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 21) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (7.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:53:59', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:53:59')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 22) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:53:59', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 22, NULL, '2009-05-02 16:53:59')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 16) [0m
+  [4;36;1mSQL (7.3ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:54:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 23) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:54:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 23, NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 17) [0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:54:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 24) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.4ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:54:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 24, NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 18) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:54:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 25) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:54:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 25, NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 19) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:54:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 26) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:54:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 26, NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 20) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:54:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 27) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:54:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 27, NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 21) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:54:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 28) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:54:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 28, NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 22) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:54:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 29) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:54:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 29, NULL, '2009-05-02 16:54:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 23) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 30) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 30, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 24) [0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 31) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 31, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 25) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 32) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 32, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 26) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 33) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 33, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 27) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 34) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 34, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 28) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 35) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 35, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 29) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 36) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 36, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 30) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 37) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 37, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 31) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 38) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 38, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 32) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 39) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 39, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 33) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 40) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 40, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.7ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 34) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 41) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 41, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 35) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 16:58:34', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 42) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:58:34', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 42, NULL, '2009-05-02 16:58:34')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 36) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 43) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 43, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 37) [0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 44) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 44, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 38) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 45) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 45, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 39) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 46) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 46, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 40) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 47) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 47, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 41) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 48) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 48, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 42) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 49) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 49, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 43) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 50) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 50, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 44) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 51) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.5ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 51, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 45) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 52) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 52, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 46) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 53) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 53, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 47) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 54) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:42', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 54, NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 48) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:00:42', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:00:42')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 55) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:00:43', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 55, NULL, '2009-05-02 17:00:43')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 49) [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 56) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 56, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 50) [0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 57) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 57, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 51) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 58) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 58, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 52) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 59) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 59, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 53) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 60) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 60, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 54) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 61) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 61, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 55) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 62) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 62, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 56) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 63) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 63, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 57) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 64) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 64, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 58) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 65) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 65, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 59) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 66) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 66, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 60) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 67) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 67, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 61) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 68) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:10:46', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 68, NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 62) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:10:46', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:10:46')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 69) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:16', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:16')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 70) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:16', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 70, NULL, '2009-05-02 17:11:16')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 63) [0m
+  [4;36;1mSQL (179.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:17', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 71) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:17', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 71, NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 64) [0m
+  [4;36;1mSQL (332.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:17', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 72) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:17', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 72, NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 65) [0m
+  [4;36;1mSQL (88.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:17', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 73) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:17', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 73, NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 66) [0m
+  [4;36;1mSQL (82.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:17', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 74) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:17', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 74, NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 67) [0m
+  [4;36;1mSQL (24.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:17', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 75) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.6ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:17', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 75, NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 68) [0m
+  [4;36;1mSQL (86.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:17', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 76) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:17', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 76, NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 69) [0m
+  [4;36;1mSQL (94.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:17', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 77) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:17', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 77, NULL, '2009-05-02 17:11:17')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 70) [0m
+  [4;36;1mSQL (94.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 78) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:18', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 78, NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 71) [0m
+  [4;36;1mSQL (286.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 79) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:18', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 79, NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 72) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 80) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:18', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 80, NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 73) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 81) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:18', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 81, NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 74) [0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 82) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:18', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 82, NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 75) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 83) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.7ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:18', NULL, 'LS26 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 83, NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 76) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:18', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 84) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:18', NULL, 'LS6 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 84, NULL, '2009-05-02 17:11:18')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 77) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 85) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 85, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 78) [0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 86) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 86, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 79) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 87) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 87, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 80) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 88) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 88, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 81) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 89) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.6ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 89, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 82) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 90) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 90, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 83) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 91) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 91, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 84) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 92) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 92, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 85) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 93) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 93, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 86) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 94) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 94, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 87) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 95) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 95, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.5ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 88) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 96) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 96, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 89) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 97) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 97, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 90) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 98) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS26 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 98, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 91) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:11:48', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 99) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:11:48', NULL, 'LS6 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 99, NULL, '2009-05-02 17:11:48')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 92) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:09', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:09')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 100) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 100, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 93) [0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 101) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 101, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 94) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 102) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 102, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 95) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 103) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 103, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 96) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 104) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.4ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 104, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 97) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 105) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 105, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 98) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 106) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 106, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 99) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 107) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 107, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 100) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 108) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 108, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 101) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 109) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 109, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 102) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 110) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 110, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 103) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 111) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 111, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 104) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 112) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 112, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 105) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 113) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS26 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 113, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 106) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:12:10', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 114) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:12:10', NULL, 'LS6 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 114, NULL, '2009-05-02 17:12:10')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 107) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 115) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 115, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 108) [0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 116) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 116, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 109) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 117) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 117, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 110) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 118) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 118, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 111) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 119) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 119, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 112) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 120) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 120, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.5ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 113) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 121) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 121, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 114) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 122) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 122, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 115) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 123) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 123, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 116) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 124) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 124, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 117) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 125) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.4ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 125, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.4ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 118) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 126) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 126, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 119) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 127) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 127, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 120) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 128) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS26 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 128, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 121) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:13:25', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 129) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mPub Create (0.3ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:13:25', NULL, 'LS6 8TT', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 129, NULL, '2009-05-02 17:13:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 122) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
