@@ -39,4 +39,10 @@ describe Pub do
       @pub.geocode.longitude.should == BigDecimal.new("-1.551842")
     end
   end
+  
+  describe "name_and_town" do
+    it "should be '[name] in [town]'" do
+      @pub.name_and_town.should eql("Grove in Leeds")
+    end
+  end
 end
