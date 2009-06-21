@@ -10,6 +10,14 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
+    when /the new display_pubs page/
+      new_display_pubs_path
+
+    when /the new pub page/
+      new_pub_path
+    when /list all pubs page/
+      pubs_path  
+   
     
     # Add more mappings here.
     # Here is a more fancy example:

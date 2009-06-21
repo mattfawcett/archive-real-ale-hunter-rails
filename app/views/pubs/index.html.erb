@@ -1,0 +1,13 @@
+<h3>Pubs</h3>
+<table>
+	<tr>
+		<th>Pub Name</th>
+	</tr>
+	
+	<% @pubs.each do |pub| %>
+		<tr>
+			<td><%= h pub.name %></td>
+		</tr>
+	<% end %>
+	
+</table>
