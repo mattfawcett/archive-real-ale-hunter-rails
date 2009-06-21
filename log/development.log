@@ -58,3 +58,141 @@ Migrating to CreateUsers (20090502115001)
   [4;36;1mPub Create (0.3ms)[0m   [0;1mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 16:40:44', NULL, 'LS115PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 1, NULL, '2009-05-02 16:40:44')[0m
   [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
   [4;36;1mPub Load (0.4ms)[0m   [0;1mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePubs (20090502113858)
+Migrating to CreateUsers (20090502115001)
+Migrating to AddGeocodableTables (20090502171815)
+  [4;35;1mSQL (14.3ms)[0m   [0mCREATE TABLE `geocodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `latitude` decimal(15,12), `longitude` decimal(15,12), `query` varchar(255), `street` varchar(255), `locality` varchar(255), `region` varchar(255), `postal_code` varchar(255), `country` varchar(255), `precision` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (21.9ms)[0m   [0;1mCREATE INDEX `geocodes_longitude_index` ON `geocodes` (`longitude`)[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE INDEX `geocodes_latitude_index` ON `geocodes` (`latitude`)[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mCREATE UNIQUE INDEX `geocodes_query_index` ON `geocodes` (`query`)[0m
+  [4;35;1mSQL (14.9ms)[0m   [0mCREATE INDEX `geocodes_locality_index` ON `geocodes` (`locality`)[0m
+  [4;36;1mSQL (12.4ms)[0m   [0;1mCREATE INDEX `geocodes_region_index` ON `geocodes` (`region`)[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mCREATE INDEX `geocodes_postal_code_index` ON `geocodes` (`postal_code`)[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mCREATE INDEX `geocodes_country_index` ON `geocodes` (`country`)[0m
+  [4;35;1mSQL (10.9ms)[0m   [0mCREATE INDEX `geocodes_precision_index` ON `geocodes` (`precision`)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE `geocodings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `geocodable_id` int(11), `geocode_id` int(11), `geocodable_type` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mCREATE INDEX `geocodings_geocodable_type_index` ON `geocodings` (`geocodable_type`)[0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mCREATE INDEX `geocodings_geocode_id_index` ON `geocodings` (`geocode_id`)[0m
+  [4;35;1mSQL (9.8ms)[0m   [0mCREATE INDEX `geocodings_geocodable_id_index` ON `geocodings` (`geocodable_id`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090502171815')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `geocodes`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `geocodes`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geocodes`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `geocodings`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `geocodings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geocodings`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `pubs`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `pubs`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPub Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `pubs`[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-05-02 17:24:28', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-05-02 17:24:28')[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPub Create (0.3ms)[0m   [0;1mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-05-02 17:24:28', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 2, NULL, '2009-05-02 17:24:28')[0m
+  [4;35;1mGeocode Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `geocodes`[0m
+  [4;36;1mGeocode Load (0.3ms)[0m   [0;1mSELECT * FROM `geocodes` WHERE (`geocodes`.`query` = 'Back row\nLeeds, UK LS11 5PL') LIMIT 1[0m
+  [4;35;1mGeocoding Load (0.4ms)[0m   [0mSELECT * FROM `geocodings` WHERE (`geocodings`.geocodable_id = 2 AND `geocodings`.geocodable_type = 'Pub') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPub Load (0.3ms)[0m   [0mSELECT * FROM `pubs` WHERE (`pubs`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPub Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `pubs`[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`updated_at`, `username`, `level`, `memory_lat`, `memory_lon`, `pints`, `email`, `memory_zoom`, `created_at`) VALUES('2009-06-21 17:10:32', 'matt', 3, NULL, NULL, 100, 'mail@matthewfawcett.co.uk', NULL, '2009-06-21 17:10:32')[0m
+  [4;35;1mPub Create (0.4ms)[0m   [0mINSERT INTO `pubs` (`lon`, `name`, `gbg`, `cask_marque`, `updated_at`, `number_of_pumps`, `post_code`, `description`, `address_1`, `address_2`, `town`, `telephone`, `user_id`, `lat`, `created_at`) VALUES(NULL, 'Grove', 1, 0, '2009-06-21 17:10:32', NULL, 'LS11 5PL', 'The Grove is a real gem', 'Back row', 'Holbeck', 'Leeds', '01132 439254', 3, NULL, '2009-06-21 17:10:32')[0m
+  [4;36;1mGeocode Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `geocodes`[0m
+  [4;35;1mGeocode Load (0.3ms)[0m   [0mSELECT * FROM `geocodes` WHERE (`geocodes`.`query` = 'Back row\nLeeds, UK LS11 5PL') LIMIT 1[0m
+  [4;36;1mGeocoding Load (0.4ms)[0m   [0;1mSELECT * FROM `geocodings` WHERE (`geocodings`.geocodable_id = 3 AND `geocodings`.geocodable_type = 'Pub') LIMIT 1[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPub Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `pubs`[0m
+  [4;36;1mPub Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `pubs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePubs (20090502113858)
+Migrating to CreateUsers (20090502115001)
+Migrating to AddGeocodableTables (20090502171815)
+Migrating to RemoveUnneccesaryLatAndLonOnPub (20090621172330)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'real_ale_hunter_rails_development.pub' doesn't exist: ALTER TABLE `pub` DROP `latitude`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePubs (20090502113858)
+Migrating to CreateUsers (20090502115001)
+Migrating to AddGeocodableTables (20090502171815)
+Migrating to RemoveUnneccesaryLatAndLonOnPub (20090621172330)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Can't DROP 'latitude'; check that column/key exists: ALTER TABLE `pubs` DROP `latitude`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePubs (20090502113858)
+Migrating to CreateUsers (20090502115001)
+Migrating to AddGeocodableTables (20090502171815)
+Migrating to RemoveUnneccesaryLatAndLonOnPub (20090621172330)
+  [4;35;1mSQL (59.6ms)[0m   [0mALTER TABLE `pubs` DROP `lat`[0m
+  [4;36;1mSQL (15.2ms)[0m   [0;1mALTER TABLE `pubs` DROP `lon`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090621172330')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `geocodes`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `geocodes`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW KEYS FROM `geocodes`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `geocodings`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `geocodings`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `geocodings`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `pubs`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `pubs`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `pubs`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (17.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `real_ale_hunter_rails_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `real_ale_hunter_rails_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (10.3ms)[0m   [0;1mCREATE TABLE `geocodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `latitude` decimal(15,12), `longitude` decimal(15,12), `query` varchar(255), `street` varchar(255), `locality` varchar(255), `region` varchar(255), `postal_code` varchar(255), `country` varchar(255), `precision` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mCREATE INDEX `geocodes_country_index` ON `geocodes` (`country`)[0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1mCREATE INDEX `geocodes_latitude_index` ON `geocodes` (`latitude`)[0m
+  [4;35;1mSQL (6.9ms)[0m   [0mCREATE INDEX `geocodes_locality_index` ON `geocodes` (`locality`)[0m
+  [4;36;1mSQL (6.7ms)[0m   [0;1mCREATE INDEX `geocodes_longitude_index` ON `geocodes` (`longitude`)[0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCREATE INDEX `geocodes_postal_code_index` ON `geocodes` (`postal_code`)[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE INDEX `geocodes_precision_index` ON `geocodes` (`precision`)[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mCREATE UNIQUE INDEX `geocodes_query_index` ON `geocodes` (`query`)[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE INDEX `geocodes_region_index` ON `geocodes` (`region`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE `geocodings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `geocodable_id` int(11), `geocode_id` int(11), `geocodable_type` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE INDEX `geocodings_geocodable_id_index` ON `geocodings` (`geocodable_id`)[0m
+  [4;36;1mSQL (23.7ms)[0m   [0;1mCREATE INDEX `geocodings_geocodable_type_index` ON `geocodings` (`geocodable_type`)[0m
+  [4;35;1mSQL (11.6ms)[0m   [0mCREATE INDEX `geocodings_geocode_id_index` ON `geocodings` (`geocode_id`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE `pubs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `address_1` varchar(255), `address_2` varchar(255), `town` varchar(255), `post_code` varchar(255), `telephone` varchar(255), `number_of_pumps` int(11), `user_id` int(11), `gbg` tinyint(1), `cask_marque` tinyint(1) DEFAULT 0, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `email` varchar(255), `level` varchar(255), `pints` varchar(255), `memory_lat` decimal(20,20), `memory_lon` decimal(20,20), `memory_zoom` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090621172330')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090502115001')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090502113858')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090502171815')[0m

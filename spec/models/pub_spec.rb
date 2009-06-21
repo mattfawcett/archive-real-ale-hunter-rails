@@ -31,4 +31,12 @@ describe Pub do
       @pub.post_code.should eql("LS6 8TT")
     end
   end
+  
+  describe "Geocoding" do
+    it "should have the latitude and longitude when I save a pub" do
+      @pub = Pub.make
+      @pub.geocode.latitude.should == BigDecimal.new("53.79178")
+      @pub.geocode.longitude.should == BigDecimal.new("-1.551842")
+    end
+  end
 end

@@ -9,9 +9,17 @@ class Pub < ActiveRecord::Base
   
   before_validation :clean_post_code
   
+  acts_as_geocodable :address => {:street => :address_1, :locality => :town, :region => :state, :postal_code => :post_code}
+  
+  
   def clean_post_code
     unless self.post_code.nil? || self.post_code =~ /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
       self.post_code = self.post_code.slice(0, self.post_code.length - 3) + " " + self.post_code.slice(self.post_code.length-3, 3)
     end
+  end
+  
+  
+  def state
+    "UK"
   end
 end
