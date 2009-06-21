@@ -6,7 +6,7 @@ development:
   host: localhost
   socket: /opt/lampp/var/mysql/mysql.sock
 
-test:
+test: &TEST
   adapter: mysql
   database: real_ale_hunter_rails_test
   username: root
@@ -20,3 +20,6 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+cucumber:
+  <<: *TEST
