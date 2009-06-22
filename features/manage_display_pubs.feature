@@ -10,8 +10,18 @@ Feature: Manage display_pubs
 
 	Scenario: Viewing one pubs details
 		Given a pub is called "Rose and Crown"
-		When I go to list all pubs page
+		And I am on the list all pubs page
 		When I follow "Rose and Crown"
 		Then I should be on rose_and_crown_show_page
 		And I should see "Rose and Crown"
+		
+	Scenario: "Adding a new pub"
+		Given I have no pubs
+		And I am on the list all pubs page
+		When I follow "Add a new pub"
+		And I fill in "name" with "Mr Foleys"
+		And I fill in "description" with "A fine ale house"
+		
+
+		
 		
