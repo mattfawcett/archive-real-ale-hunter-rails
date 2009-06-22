@@ -26,6 +26,6 @@ class Pub < ActiveRecord::Base
   end
   
   def name_and_town
-    "#{name} in #{town}"
+    "#{name} - #{town}"
   end
 end

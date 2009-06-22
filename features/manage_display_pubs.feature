@@ -5,5 +5,13 @@ Feature: Manage display_pubs
   
   Scenario: Displaying a list of pubs
     Given a pub is called "Rose and Crown"
-	When I go to list all pubs page
+		When I go to list all pubs page
     Then I should see "Rose and Crown"
+
+	Scenario: Viewing one pubs details
+		Given a pub is called "Rose and Crown"
+		When I go to list all pubs page
+		When I follow "Rose and Crown"
+		Then I should be on rose_and_crown_show_page
+		And I should see "Rose and Crown"
+		

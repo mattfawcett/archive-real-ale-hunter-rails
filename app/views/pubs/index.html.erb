@@ -6,7 +6,7 @@
 	
 	<% @pubs.each do |pub| %>
 		<tr>
-			<td><%= h pub.name %></td>
+			<td><%= link_to(pub.name, pub_path(pub)) %></td>
 		</tr>
 	<% end %>
 	

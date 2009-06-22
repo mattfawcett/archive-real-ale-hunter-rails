@@ -17,6 +17,9 @@ module NavigationHelpers
       new_pub_path
     when /list all pubs page/
       pubs_path  
+    when /rose_and_crown_show_page/
+      "/pubs/rose-and-crown-leeds"
+    
    
     
     # Add more mappings here.
