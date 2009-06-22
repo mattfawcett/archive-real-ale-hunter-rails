@@ -4,16 +4,16 @@ development:
   username: root
   password:
   host: localhost
-  socket: /opt/lampp/var/mysql/mysql.sock
-
+  #socket: /opt/lampp/var/mysql/mysql.sock
+  socket: "/Applications/xampp/xamppfiles/var/mysql/mysql.sock"
 test: &TEST
   adapter: mysql
   database: real_ale_hunter_rails_test
   username: root
   password:
   host: localhost
-  socket: /opt/lampp/var/mysql/mysql.sock
-
+  #socket: /opt/lampp/var/mysql/mysql.sock
+  socket: "/Applications/xampp/xamppfiles/var/mysql/mysql.sock"
 
 production:
   adapter: sqlite3

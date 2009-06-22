@@ -1,3 +1,7 @@
+require 'machinist/active_record'
+require 'sham'
+
+
 User.blueprint do
   username "matt"
   email "mail@matthewfawcett.co.uk"

@@ -10,7 +10,7 @@ class Pub < ActiveRecord::Base
   before_validation :clean_post_code
   
   acts_as_geocodable :address => {:street => :address_1, :locality => :town, :region => :state, :postal_code => :post_code}
-  #has_friendly_id :name_and_town, :use_slug => true
+  has_friendly_id :name_and_town, :use_slug => true
 
   
   
