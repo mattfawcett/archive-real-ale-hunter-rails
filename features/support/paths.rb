@@ -19,6 +19,8 @@ module NavigationHelpers
       pubs_path  
     when /rose_and_crown_show_page/
       "/pubs/rose-and-crown-leeds"
+    when "mr_foleys_show_page"
+      "/pubs/mr-foleys-leeds"
     
    
     

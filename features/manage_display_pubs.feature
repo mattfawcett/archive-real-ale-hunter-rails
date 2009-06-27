@@ -19,8 +19,17 @@ Feature: Manage display_pubs
 		Given I have no pubs
 		And I am on the list all pubs page
 		When I follow "Add a new pub"
-		And I fill in "name" with "Mr Foleys"
-		And I fill in "description" with "A fine ale house"
+		And I fill in "pub_name" with "Mr Foleys"
+		And I fill in "pub_description" with "A fine ale house"
+		And I fill in "pub_address_1" with "Headrow"
+		And I fill in "pub_town" with "Leeds"
+		And I fill in "pub_post_code" with "LS1 5RG"
+		And I fill in "pub_telephone" with "0113500735"
+		And I check "pub_gbg"		
+		And I select "3" from "pub_number_of_pumps"
+		And I press "Save"
+		Then I should be on mr_foleys_show_page
+		And I should see "Thanks, Mr Foleys has been added"
 		
 
 		

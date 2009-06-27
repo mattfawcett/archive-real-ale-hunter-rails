@@ -1,9 +1,6 @@
-class PubsController < ApplicationController
-  def index
-    @pubs = Pub.all
+class PubsController < ResourceController::Base
+  create.after do
+    flash[:notice] = "Thanks, Mr Foleys has been added"
   end
-  
-  def show
-    @pub = Pub.find(params[:id])
-  end
+
 end
