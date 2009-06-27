@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090622072551) do
+ActiveRecord::Schema.define(:version => 20090627153142) do
+
+  create_table "beers", :force => true do |t|
+    t.string   "name"
+    t.string   "parent_type"
+    t.integer  "parent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "geocodes", :force => true do |t|
     t.decimal "latitude",    :precision => 15, :scale => 12

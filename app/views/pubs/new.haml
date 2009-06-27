@@ -1,0 +1,54 @@
+%h2 Add Pub
+-form_for @pub do |pub_form| 
+  .column-left
+    %h3 Pub details
+    %p
+      = pub_form.label :name
+      %br/
+      = pub_form.text_field :name
+    %p 
+      = pub_form.label :description
+      %br/
+      = pub_form.text_area :description
+    %p  
+      = pub_form.label :address_1
+      %br/
+      = pub_form.text_field :address_1
+    %p  
+      = pub_form.label :address_2
+      %br/
+      = pub_form.text_field :address_2
+    %p  
+      = pub_form.label :town
+      %br/
+      = pub_form.text_field :town
+    %p 
+      = pub_form.label :post_code
+      %br/
+      = pub_form.text_field :post_code
+    %p  
+      = pub_form.label :telephone
+      %br/
+      = pub_form.text_field :telephone
+    %p  
+      = pub_form.label :number_of_pumps
+      %br/
+      = pub_form.select :number_of_pumps, 1..16
+    %p
+      = pub_form.label :gbg, "Good Beer Guide listed?"
+      %br/
+      = pub_form.check_box :gbg
+   
+    
+  .column-right 
+    %h3 permanent Beers
+    - pub_form.fields_for :beers do |beer_form|	
+      %p
+        = beer_form.label :name 
+        = beer_form.text_field :name 
+	
+      %p
+        = pub_form.submit "Save" 
+        
+  %hr.clear
+   

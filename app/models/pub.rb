@@ -1,5 +1,7 @@
 class Pub < ActiveRecord::Base
   belongs_to :user
+  has_many :beers, :as => :parent
+  
   validates_presence_of(:name)
   validates_presence_of(:address_1)
   validates_presence_of(:town)
@@ -11,6 +13,8 @@ class Pub < ActiveRecord::Base
   
   acts_as_geocodable :address => {:street => :address_1, :locality => :town, :region => :state, :postal_code => :post_code}
   has_friendly_id :name_and_town, :use_slug => true
+  
+  accepts_nested_attributes_for :beers, :allow_destroy => true
 
   
   

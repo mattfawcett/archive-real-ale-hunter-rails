@@ -6,6 +6,7 @@ describe Pub do
   end
   
   it { should belong_to(:user) }
+  it { should have_many(:beers) }
   
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:description) }

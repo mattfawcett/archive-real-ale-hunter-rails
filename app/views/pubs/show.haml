@@ -27,7 +27,9 @@
 .column-right
   %h3 Permanent Real Ales
   %p#permanent-beers
+  -for beer in @pub.beers
+    = h beer.name
+    %br/
   
 %hr.clear
-  
 %p#description= h @pub.description
