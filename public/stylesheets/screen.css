@@ -312,6 +312,28 @@ input.button {
 	list-style-image: url(../images/bullet.gif);
 }
 
+#main-full-width {
+	float: left;
+	width: 820px;
+	padding: 0; margin: 0 0 0 40px;
+	display: inline;	
+}
+#main-full-width h2 {
+	font: bold 2.9em 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-serif;
+	color: #51432F; 
+	padding: 10px 0 5px 5px; 	
+	margin-left: 5px;		
+	letter-spacing: -2px;
+	border-bottom: 1px solid #E4F2C8; 	
+}
+#main-full-width h2 a {
+	color: #51432f;
+	text-decoration: none;		
+}
+#main-full-width ul li {
+	list-style-image: url(../images/bullet.gif);
+}
+
 #sidebar {
 	float: right;
 	width: 285px;
@@ -509,4 +531,24 @@ ol.commentlist {
 	content: "."; 
 }
 
+.column-left {
+	float: left;
+	width: 400px;
+	display: inline;	
+}
 
+.column-right {
+	float: right;
+	width: 400px;
+	padding: 0; 
+	display: inline;	
+}
+hr.clear{
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	border-width:0;
+	margin:0;
+	padding:0;
+}

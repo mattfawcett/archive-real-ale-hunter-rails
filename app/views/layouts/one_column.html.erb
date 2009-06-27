@@ -1,0 +1,19 @@
+	<%= render :partial => 'layouts/header' %>			
+			
+	<!-- content starts -->
+	<div id="content">
+	
+		<div id="main-full-width">
+			<%= flash_messages %>
+			
+			<%= yield %>
+
+		<!-- main ends -->	
+		</div>
+				
+		
+		
+	<!-- content ends-->	
+	</div>
+		
+	<%= render :partial => 'layouts/footer' %>

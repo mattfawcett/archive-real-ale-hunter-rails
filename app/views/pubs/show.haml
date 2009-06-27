@@ -1,0 +1,33 @@
+%h2= h @pub.name
+
+.column-left
+  %h3 Address
+  %p#pub-address
+    = h @pub.name 
+    %br/
+  
+    = h @pub.address_1 
+    %br/
+   
+    -unless @pub.address_2.blank?
+      = h @pub.address_2 unless @pub.address_2.nil?
+      %br/ 
+
+    = h @pub.town 
+    %br/
+  
+    = h @pub.post_code 
+    %br/
+  
+    -unless @pub.telephone.blank?
+      = h @pub.telephone 
+      %br/
+
+  
+.column-right
+  %h3 Permanent Real Ales
+  %p#permanent-beers
+  
+%hr.clear
+  
+%p#description= h @pub.description
