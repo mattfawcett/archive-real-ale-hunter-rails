@@ -1,2 +1,4 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+function change_id_of_dynamically_added_field(html, new_id)
+{
+	html.replace(/attributes_0/g, "attributes_" + new_id)
+}

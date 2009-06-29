@@ -4,7 +4,7 @@ module PubsHelper
       beer = render(:partial => 'beer', :locals => { :beer_form => form, :beer => Beer.new })
       page << %{
 var new_beer_id = new Date().getTime();
-$('#beers_area').append("#{ escape_javascript beer }".replace(/attributes_0/, "attributes_" + new_beer_id) );
+$('#beers_area').append(change_id_of_dynamically_added_field("#{ escape_javascript beer }", new_beer_id) );
 }
     end
   end
