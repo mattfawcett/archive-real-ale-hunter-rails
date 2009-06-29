@@ -3,8 +3,8 @@ module PubsHelper
     link_to_function name do |page|
       beer = render(:partial => 'beer', :locals => { :beer_form => form, :beer => Beer.new })
       page << %{
-var new_beer_id = "new_" + new Date().getTime();
-$('#beers_area').append("#{ escape_javascript beer }".replace(/new_\\d+/g, new_beer_id) );
+var new_beer_id = new Date().getTime();
+$('#beers_area').append("#{ escape_javascript beer }".replace(/attributes_0/, "attributes_" + new_beer_id) );
 }
     end
   end

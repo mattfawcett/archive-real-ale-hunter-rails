@@ -1,5 +1,6 @@
 %h2 Add Pub
--form_for @pub do |pub_form| 
+-form_for @pub do |pub_form|
+  = pub_form.error_messages 
   .column-left
     %h3 Pub details
     %p
