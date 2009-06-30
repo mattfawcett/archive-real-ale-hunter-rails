@@ -6,7 +6,7 @@ class PubsController < ResourceController::Base
   end
 
   
-  create.flash "Thanks, Mr Foleys has been added"
+  create.flash "Thanks, The pub has been added"
   
 
   private

@@ -14,7 +14,7 @@ class Pub < ActiveRecord::Base
   acts_as_geocodable :address => {:street => :address_1, :locality => :town, :region => :state, :postal_code => :post_code}
   has_friendly_id :name_and_town, :use_slug => true
   
-  accepts_nested_attributes_for :beers, :allow_destroy => true
+  accepts_nested_attributes_for :beers, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
   
   

@@ -29,14 +29,15 @@ Feature: Manage display_pubs
 		And I select "3" from "pub_number_of_pumps"
 		And I press "Save"
 		Then I should be on mr_foleys_show_page
-		And I should see "Thanks, Mr Foleys has been added"
+		And I should see "Mr Foleys"
+		And I should see "A fine ale house"
 		And I should see "A fine ale house"
 		And I should see "Headrow"
 		And I should see "Leeds"
 		And I should see "LS1 5RG"
 		And I should see "0113500735"
-		And I should see "this pub is listed in the Good Beer Guide"		
-		And I should see "this pub has 3 hand pumps"	
+		And I should see "Mr Foleys is listed in the Good Beer Guide"		
+		And I should see "Mr Foleys pub has 3 hand pumps"	
 		
 
 		

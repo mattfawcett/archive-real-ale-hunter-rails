@@ -22,6 +22,9 @@
     -unless @pub.telephone.blank?
       = h @pub.telephone 
       %br/
+      
+  -if @pub.gbg
+    %p= "#{@pub.name} is listed in the Good Beer Guide" 
 
   
 .column-right
