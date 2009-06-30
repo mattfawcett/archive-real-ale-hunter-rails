@@ -2,3 +2,6 @@
   %p
     = beer_form.label :name 
     = beer_form.text_field :name 
+  - unless beer_form.object.new_record?
+    = beer_form.check_box '_delete'
+    = beer_form.label '_delete', 'Remove'
