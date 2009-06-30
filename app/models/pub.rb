@@ -2,12 +2,12 @@ class Pub < ActiveRecord::Base
   belongs_to :user
   has_many :beers, :as => :parent
   
-  validates_presence_of(:name)
-  validates_presence_of(:address_1)
-  validates_presence_of(:town)
-  validates_presence_of(:description)
-  validates_presence_of(:post_code)
-  validates_format_of(:post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/)
+  validates_presence_of :name
+  validates_presence_of :address_1
+  validates_presence_of :town
+  validates_presence_of :description
+  validates_presence_of :post_code
+  validates_format_of :post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
   
   before_validation :clean_post_code
   

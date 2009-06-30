@@ -1,3 +1,4 @@
-%p
-  = beer_form.label :name 
-  = beer_form.text_field :name 
+- pub_form.fields_for :beers, beer do |beer_form| 
+  %p
+    = beer_form.label :name 
+    = beer_form.text_field :name 
