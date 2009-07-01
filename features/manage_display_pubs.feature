@@ -31,7 +31,6 @@ Feature: Manage display_pubs
 		Then I should be on mr_foleys_show_page
 		And I should see "Mr Foleys"
 		And I should see "A fine ale house"
-		And I should see "A fine ale house"
 		And I should see "Headrow"
 		And I should see "Leeds"
 		And I should see "LS1 5RG"
@@ -39,6 +38,24 @@ Feature: Manage display_pubs
 		And I should see "Mr Foleys is listed in the Good Beer Guide"		
 		And I should see "Mr Foleys has 3 hand pumps"	
 		
+	Scenario: "Editing a pub"
+	  Given a pub is called "Rose and Crown"
+	  And I am on the rose_and_crown_show_page
+	  When I follow "Update the details for Rose and Crown"
+	  And I fill in "pub_description" with "Updated description of R&C"
+	  And I fill in "pub_address_1" with "Updated Addr1"
+		And I fill in "pub_post_code" with "LS1 1AB"
+		And I fill in "pub_telephone" with "01135985222"
+		And I uncheck "pub_gbg"		
+		And I select "5" from "pub_number_of_pumps"
+		And I press "Save"
+		Then I should be on rose_and_crown_show_page		
+		And I should see "Updated description of R&C"
+		And I should see "Updated Addr1"
+		And I should see "LS1 1AB"
+		And I should see "01135985222"
+		And I should not see "Rose and Crown is listed in the Good Beer Guide"		
+		And I should see "Rose and Crown has 5 hand pumps"
 
 		
 		

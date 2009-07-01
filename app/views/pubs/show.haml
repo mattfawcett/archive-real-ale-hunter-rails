@@ -41,3 +41,5 @@
   
 %hr.clear
 %p#description= h @pub.description
+
+%p= link_to "Update the details for #{@pub.name}", edit_pub_path(@pub)
