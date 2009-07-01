@@ -37,7 +37,7 @@ Feature: Manage display_pubs
 		And I should see "LS1 5RG"
 		And I should see "0113500735"
 		And I should see "Mr Foleys is listed in the Good Beer Guide"		
-		And I should see "Mr Foleys pub has 3 hand pumps"	
+		And I should see "Mr Foleys has 3 hand pumps"	
 		
 
 		

@@ -25,6 +25,9 @@
       
   -if @pub.gbg
     %p= "#{@pub.name} is listed in the Good Beer Guide" 
+    
+  -unless @pub.number_of_pumps.nil?
+    %p= "#{@pub.name} has #{@pub.number_of_pumps} hand pumps"
 
   
 .column-right
