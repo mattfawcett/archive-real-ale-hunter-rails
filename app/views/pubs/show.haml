@@ -26,16 +26,18 @@
   -if @pub.gbg
     %p= "#{@pub.name} is listed in the Good Beer Guide" 
     
-  -unless @pub.number_of_pumps.nil?
-    %p= "#{@pub.name} has #{@pub.number_of_pumps} hand pumps"
+  
 
   
 .column-right
   %h3 Permanent Real Ales
   %p#permanent-beers
-  -for beer in @pub.beers
-    = h beer.name
-    %br/
+    -for beer in @pub.beers
+      = h beer.name
+      %br/
+  
+  -unless @pub.number_of_pumps.nil?
+    %p= "#{@pub.name} has #{@pub.number_of_pumps} hand pumps"
   
 %hr.clear
 %p#description= h @pub.description

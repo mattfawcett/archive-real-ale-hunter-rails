@@ -2,10 +2,11 @@
   = pub_form.error_messages 
   .column-left
     %h3 Pub details
-    %p
-      = pub_form.label :name
-      %br/
-      = pub_form.text_field :name    
+    -if pub_form.object.new_record?
+      %p
+        = pub_form.label :name
+        %br/
+        = pub_form.text_field :name    
     %p  
       = pub_form.label :address_1
       %br/
