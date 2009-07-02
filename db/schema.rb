@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090627153142) do
+ActiveRecord::Schema.define(:version => 20090702075832) do
 
   create_table "beers", :force => true do |t|
     t.string   "name"
@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(:version => 20090627153142) do
   add_index "geocodings", ["geocodable_id"], :name => "geocodings_geocodable_id_index"
   add_index "geocodings", ["geocodable_type"], :name => "geocodings_geocodable_type_index"
   add_index "geocodings", ["geocode_id"], :name => "geocodings_geocode_id_index"
+
+  create_table "images", :force => true do |t|
+    t.string   "name"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.integer  "pub_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "pubs", :force => true do |t|
     t.string   "name"
