@@ -6,8 +6,10 @@ require 'shoulda'
 require 'spec'
 require 'spec/rails'
 require 'machinist'
+require 'spec/image_spec_helper'
 
 require File.expand_path(File.dirname(__FILE__) + "/blueprints")
+require File.expand_path(File.dirname(__FILE__) + '/matchers')
 
 
 Spec::Runner.configure do |config|
@@ -18,6 +20,7 @@ Spec::Runner.configure do |config|
   config.use_instantiated_fixtures  = false
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
 
+  config.include(Matchers)
   config.before(:each) { Sham.reset }
 
 end

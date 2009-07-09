@@ -1,0 +1,5 @@
+%h3 latest photos
+-if @pub.has_images?
+  %pub_images
+    -@pub.images.each do |image|
+      = lightbox_image_tag(image)

@@ -7,6 +7,7 @@ describe Pub do
   
   it { should belong_to(:user) }
   it { should have_many(:beers) }
+  it { should have_many(:images) }
   
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:description) }
@@ -85,6 +86,18 @@ describe Pub do
   describe "slug" do
     it "should be a URI escaped version of name_and_town" do
       @pub.slug.name.should eql("grove-leeds")
+    end
+  end
+  
+  describe "has_images?" do
+    it "should have images if there is more than 0 images" do
+      @pub.stub!(:images).and_return([mock_model(Image)])
+      @pub.should have_images
+    end
+    
+    it "should not have images if there is more than 0 images" do
+      @pub.stub!(:images).and_return([])
+      @pub.should_not have_images
     end
   end
 end

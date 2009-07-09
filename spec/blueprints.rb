@@ -21,3 +21,7 @@ Pub.blueprint do
   gbg true
   cask_marque false
 end
+
+Image.blueprint do
+  
+end

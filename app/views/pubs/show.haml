@@ -42,6 +42,14 @@
     %p= "#{@pub.name} has #{@pub.number_of_pumps} hand pumps"
   
 %hr.clear
-%p#description= h @pub.description
+%p#description
+  = h @pub.description
+  %br/
+  = link_to "Update the details for #{@pub.name}", edit_pub_path(@pub)
 
-%p= link_to "Update the details for #{@pub.name}", edit_pub_path(@pub)
+.column-left
+  =render :partial => 'latest_pub_images'
+
+.column-right
+  =render :partial => 'latest_pub_visits'
+
