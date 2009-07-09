@@ -1,5 +1,7 @@
 %h3 latest photos
 -if @pub.has_images?
   %pub_images
+    = link_to "View All Photos", pub_images_path(@pub)
+    = link_to "Upload Photo", new_pub_image_path(@pub)
     -@pub.images.each do |image|
       = lightbox_image_tag(image)

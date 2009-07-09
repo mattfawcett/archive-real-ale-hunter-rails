@@ -21,8 +21,11 @@ module NavigationHelpers
       "/pubs/rose-and-crown-leeds"
     when "mr_foleys_show_page"
       "/pubs/mr-foleys-leeds"
-
-    
+    when /the Rose and Crown image listing page/
+      "/pubs/rose-and-crown-leeds/images"
+    when /the Rose and Crown new image page/
+      "/pubs/rose-and-crown-leeds/images/new"
+      
     # Add more mappings here.
     # Here is a more fancy example:
     #

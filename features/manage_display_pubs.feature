@@ -58,6 +58,7 @@ Feature: Manage display_pubs
 		And I should see "01135985222"
 		And I should not see "Rose and Crown is listed in the Good Beer Guide"		
 		And I should see "Rose and Crown has 5 hand pumps"
+ 
 
 		
 		

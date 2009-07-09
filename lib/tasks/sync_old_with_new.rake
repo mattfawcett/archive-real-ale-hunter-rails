@@ -5,6 +5,11 @@ task :sync_old_with_new => :environment do
   Pub.destroy_all
   Image.destroy_all
   
+  OldSite::User.all.each do |old_user|
+    User.create!(:username => old_user.user_name, :email => old_user.email_address,
+                 :level => old_user.user_level, :pints => old_user.pints)
+  end
+  
   OldSite::Location.all.each do |old_pub|
     if old_pub.gbg == 1
       gbg = true
