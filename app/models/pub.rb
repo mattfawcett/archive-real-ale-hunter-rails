@@ -10,13 +10,19 @@ class Pub < ActiveRecord::Base
   validates_format_of :post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
   
   before_validation :clean_post_code
+  acts_as_mappable
   
-  acts_as_geocodable :address => {:street => :address_1, :locality => :town, :region => :state, :postal_code => :post_code}
+  
   has_friendly_id :name_and_town, :use_slug => true
   
   accepts_nested_attributes_for :beers, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
-  
+  def validate
+    geo = Geokit::Geocoders::MultiGeocoder.geocode(address)
+    errors.add(:address, "Could not Geocode address") if !geo.success
+    self.lat, self.lng = geo.lat,geo.lng if geo.success
+  end
+
   
   def clean_post_code
     unless self.post_code.nil? || self.post_code =~ /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
@@ -25,11 +31,13 @@ class Pub < ActiveRecord::Base
   end
   
   
-  def state
-    "UK"
+  def address
+    [address_1, address_2, town, post_code].compact.join(", ")
   end
   
   def name_and_town
     "#{name} - #{town}"
   end
+  
+ 
 end

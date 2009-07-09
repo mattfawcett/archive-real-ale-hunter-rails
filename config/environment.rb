@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "giraffesoft-resource_controller", :lib => "resource_controller", :source => "http://gems.github.com"
   config.gem "haml"
   config.gem "thoughtbot-paperclip", :lib => 'paperclip', :source => "http://gems.github.com"
+  config.gem "geokit"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -45,5 +46,4 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-Geocode.geocoder = Graticule.service(:yahoo).new 'your_api_key'
 

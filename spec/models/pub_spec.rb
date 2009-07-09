@@ -35,15 +35,26 @@ describe Pub do
   
   describe "Geocoding" do
     it "should have the latitude and longitude when I save a pub" do
-      @pub = Pub.make
-      @pub.geocode.latitude.should == BigDecimal.new("53.79178")
-      @pub.geocode.longitude.should == BigDecimal.new("-1.551842")
+      @pub = Pub.make                        
+      @pub.lat.should == BigDecimal.new("53.7907075")
+      @pub.lng.should == BigDecimal.new("-1.5488214")
     end
   end
   
   describe "name_and_town" do
     it "should be '[name] - [town]'" do
       @pub.name_and_town.should eql("Grove - Leeds")
+    end
+  end
+  
+  describe "address" do
+    it "should be the full address on 1 line" do
+      @pub.address.should eql("Back row, Holbeck, Leeds, LS11 5PL")
+    end
+    
+    it "should handle nil fields" do
+      @pub.address_1 = nil
+      @pub.address.should eql("Holbeck, Leeds, LS11 5PL")
     end
   end
   
