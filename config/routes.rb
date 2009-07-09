@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :pubs
+  map.resources :pubs, :has_many => :images
 
 
   map.connect ':controller/:action/:id'

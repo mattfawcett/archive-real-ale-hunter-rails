@@ -117,3 +117,8 @@ end
 Then /^I should be on (.+)$/ do |page_name|
   URI.parse(current_url).path.should == path_to(page_name)
 end
+
+Then /^I should see tag "(.+)"$/ do |selector|  
+  (Hpricot(response.body)/selector).should_not be_empty  
+end  
+

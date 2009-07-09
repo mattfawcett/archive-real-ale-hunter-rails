@@ -5,10 +5,9 @@ class PubsController < ResourceController::Base
     object.beers.build
   end
 
-  
   create.flash "Thanks, The pub has been added"
   
-
+  
   private
   def which_layout?
     params[:action] == 'index' ? 'two_column' : 'one_column'
