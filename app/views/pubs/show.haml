@@ -25,6 +25,8 @@
       
   -if @pub.gbg
     %p= "#{@pub.name} is listed in the Good Beer Guide" 
+  -unless @pub.website.blank?
+    %p= link_to "View the wesbite for #{@pub.name}", @pub.website
     
   
 
