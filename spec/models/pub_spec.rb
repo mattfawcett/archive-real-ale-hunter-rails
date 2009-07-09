@@ -33,6 +33,30 @@ describe Pub do
     end
   end
   
+  describe "website validation" do
+    it "should add http:// to the site if not their already" do
+      @pub.website = "www.google.com"
+      @pub.save
+      @pub.website.should eql("http://www.google.com")
+    end
+    
+    it "should not add http:// if the site already has http:// or https://" do
+      @pub.website = "http://www.google.com"
+      @pub.save
+      @pub.website.should eql("http://www.google.com")
+      
+      @pub.website = "https://www.google.com"
+      @pub.save
+      @pub.website.should eql("https://www.google.com")
+    end
+    
+    it "should not add http:// if the site is blank" do
+      @pub.website = ""
+      @pub.save
+      @pub.website.should be_blank
+    end
+  end
+  
   describe "Geocoding" do
     it "should have the latitude and longitude when I save a pub" do
       @pub = Pub.make                        

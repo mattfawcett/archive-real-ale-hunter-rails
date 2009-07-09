@@ -21,6 +21,7 @@ Feature: Manage display_pubs
 		When I follow "Add a new pub"
 		And I fill in "pub_name" with "Mr Foleys"
 		And I fill in "pub_description" with "A fine ale house"
+    And I fill in "pub_website" with "www.google.com"
 		And I fill in "pub_address_1" with "Headrow"
 		And I fill in "pub_town" with "Leeds"
 		And I fill in "pub_post_code" with "LS1 5RG"
@@ -37,6 +38,7 @@ Feature: Manage display_pubs
 		And I should see "0113500735"
 		And I should see "Mr Foleys is listed in the Good Beer Guide"		
 		And I should see "Mr Foleys has 3 hand pumps"	
+    And I should see "View the wesbite for Mr Foleys"
 		
 	Scenario: "Editing a pub"
 	  Given a pub is called "Rose and Crown"

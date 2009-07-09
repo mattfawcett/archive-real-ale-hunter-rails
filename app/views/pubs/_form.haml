@@ -43,6 +43,10 @@
       = pub_form.label :description
       %br/
       = pub_form.text_area :description
+    %p 
+      = pub_form.label :website
+      %br/
+      = pub_form.text_field :website
     %h3 permanent Beers
     #beers_area
       = render :partial => 'beer', :locals => {:pub_form => pub_form}

@@ -9,7 +9,7 @@ class Pub < ActiveRecord::Base
   validates_presence_of :post_code
   validates_format_of :post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
   
-  before_validation :clean_post_code
+  before_validation :clean_post_code, :clean_website
   acts_as_mappable
   
   
@@ -17,7 +17,7 @@ class Pub < ActiveRecord::Base
   
   accepts_nested_attributes_for :beers, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
-  def validate
+  def validate_on_create
     geo = Geokit::Geocoders::MultiGeocoder.geocode(address)
     errors.add(:address, "Could not Geocode address") if !geo.success
     self.lat, self.lng = geo.lat,geo.lng if geo.success
@@ -27,6 +27,12 @@ class Pub < ActiveRecord::Base
   def clean_post_code
     unless self.post_code.nil? || self.post_code =~ /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
       self.post_code = self.post_code.slice(0, self.post_code.length - 3) + " " + self.post_code.slice(self.post_code.length-3, 3)
+    end
+  end
+  
+  def clean_website
+    unless website.blank? || website =~ /http(s)?:\/\//
+      self.website = "http://#{website}"
     end
   end
   

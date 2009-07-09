@@ -21,8 +21,7 @@ module NavigationHelpers
       "/pubs/rose-and-crown-leeds"
     when "mr_foleys_show_page"
       "/pubs/mr-foleys-leeds"
-    
-   
+
     
     # Add more mappings here.
     # Here is a more fancy example:
