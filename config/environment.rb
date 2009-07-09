@@ -46,3 +46,4 @@ Rails::Initializer.run do |config|
 end
 
 Geocode.geocoder = Graticule.service(:yahoo).new 'your_api_key'
+

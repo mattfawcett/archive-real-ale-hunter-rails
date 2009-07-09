@@ -18,3 +18,11 @@ production:
 
 cucumber:
   <<: *TEST
+  
+old_site:
+  adapter: mysql
+  database: realalehunter
+  username: root
+  password:
+  host: localhost
+  socket: /opt/lampp/var/mysql/mysql.sock
