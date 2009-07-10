@@ -1,5 +1,5 @@
 class ImagesController < ResourceController::Base
-  actions :all, :execpt => [:destroy, :edit, :update]
+  actions :all, :except => [:destroy, :edit, :update]
   belongs_to :pub
   
   layout "two_column"

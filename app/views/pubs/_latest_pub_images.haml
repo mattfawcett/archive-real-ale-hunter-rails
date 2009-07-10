@@ -7,3 +7,6 @@
       = link_to "Upload Photo", new_pub_image_path(@pub)
     -@pub.images.latest.each do |image|
       = lightbox_image_tag(image)
+-else
+  %p
+    = link_to "There are currently no photos for #{h @pub.name}, click here to add one", new_pub_image_path(@pub)

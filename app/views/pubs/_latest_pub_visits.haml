@@ -7,3 +7,6 @@
   -@pub.visits.latest.each do |visit|
     %h4= "Added by #{h visit.user.username} - #{distance_of_time_in_words(visit.created_at.to_f, Time.now.to_i)} ago"
     = h visit.comments
+-else
+  %p
+    = link_to "There are currently no visits for #{h @pub.name}, click here to add one", new_pub_visit_path(@pub)

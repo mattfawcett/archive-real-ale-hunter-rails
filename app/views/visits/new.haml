@@ -1,0 +1,16 @@
+%h2= "Add a new visit for #{@pub.name}"
+-form_for([@pub, @visit]) do |visit_form|
+  .column-left
+    %h3 Visit details
+    %p
+      = visit_form.label :comments
+      %br/
+      = visit_form.text_area :comments
+  .column-right
+    %h3 Beers available on visit
+    #beers_area
+      = render :partial => 'shared/beer', :locals => {:pub_form => visit_form}
+    %p
+      = add_beer_link "Add another", visit_form
+    %p
+      = visit_form.submit "Add Visit" 

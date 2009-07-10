@@ -49,7 +49,7 @@
       = pub_form.text_field :website
     %h3 permanent Beers
     #beers_area
-      = render :partial => 'beer', :locals => {:pub_form => pub_form}
+      = render :partial => 'shared/beer', :locals => {:pub_form => pub_form}
     %p
     = add_beer_link "Add another", pub_form                   
 	      
