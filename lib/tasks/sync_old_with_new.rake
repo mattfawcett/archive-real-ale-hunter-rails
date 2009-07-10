@@ -4,6 +4,8 @@ desc "Sync"
 task :sync_old_with_new => :environment do
   Pub.destroy_all
   Image.destroy_all
+  Beer.destroy_all
+  Visit.destroy_all
   
   OldSite::User.all.each do |old_user|
     User.create!(:username => old_user.user_name, :email => old_user.email_address,
@@ -25,7 +27,8 @@ task :sync_old_with_new => :environment do
                       :number_of_pumps => old_pub.number_of_pumps, 
                       :gbg => gbg, :cask_marque => old_pub.cask_marque == 1 ? true : false,
                       :lat => old_pub.lat, :lng => old_pub.lon,
-                      :website => old_pub.website_from_description
+                      :website => old_pub.website_from_description,
+                      :created_at => old_pub.date_added, :updated_at => old_pub.date_added
                       )
     new_pub.save(false) 
     OldSite::Image.find_by_sql(" SELECT * FROM images WHERE pub_id = '#{old_pub.id}' ").each do |old_image|
@@ -33,8 +36,29 @@ task :sync_old_with_new => :environment do
       new_image.attachment_file_name = ''
       new_image = new_pub.images.new( :user_id => old_image.member_id,
                                       :name => old_image.description,
+                                      :created_at => Time.at(old_image.upload_time),
+                                      :updated_at => Time.at(old_image.upload_time),
                                       :attachment => File.new("/home/matt/workspace/rah/application/upload/image#{old_image.id}.jpg"))     
       new_image.save!
+    end
+    
+    OldSite::PubBeer.find_by_sql("SELECT * FROM pub_beers WHERE pub_id = '#{old_pub.id}' ").each do |pub_beer|      
+      old_beer = OldSite::Beer.find(pub_beer.beer_id)
+      old_brewery = OldSite::Brewery.find(old_beer.brewery_id)
+      beer_name = old_beer.beer_name + " - " + old_brewery.brewery_name 
+      
+      Beer.create!(:name => beer_name, :parent_type => "Pub", :parent_id => new_pub.id)
+    end
+    
+    OldSite::Visit.find_by_sql("SELECT * FROM visits WHERE pub_id = '#{old_pub.id}' ").each do |old_visit|
+      new_visit = new_pub.visits.create!(:comments => old_visit.comments.gsub(/<br(\s)?\/>/, "\n").gsub(/\\'/, "'"), :user_id => old_visit.member_id, :created_at => old_visit.date, :updated_at => old_visit.date)
+      OldSite::VisitBeer.find_by_sql("SELECT * FROM visit_beers WHERE visit_id = '#{old_visit.id}' ").each do |visit_beer|      
+        old_beer = OldSite::Beer.find(visit_beer.beer_id)
+        old_brewery = OldSite::Brewery.find(old_beer.brewery_id)
+        beer_name = old_beer.beer_name + " - " + old_brewery.brewery_name 
+        
+        Beer.create!(:name => beer_name, :parent_type => "Visit", :parent_id => new_visit.id)
+      end
     end
   end
   
@@ -45,9 +69,13 @@ end
 
 module OldSite
   establish_connection :old_site
+  
+    
 end
 
 class Location < ActiveRecord::Base
+  has_many :visits, :foreign_key => "pub_id"
+  
   def clean_description
     ret = description
     ret = ret.gsub(/<br(\s)?\/>/, "\n") # replace br tags
@@ -60,3 +88,17 @@ class Location < ActiveRecord::Base
   end
 end
 
+class Brewery < ActiveRecord::Base
+  has_many :beers
+end
+
+
+class PubBeer < ActiveRecord::Base
+  belongs_to :pub
+  belongs_to :beer
+end
+
+class VisitBeer < ActiveRecord::Base
+  belongs_to :pub
+  belongs_to :beer
+end

@@ -8,6 +8,7 @@ describe Pub do
   it { should belong_to(:user) }
   it { should have_many(:beers) }
   it { should have_many(:images) }
+  it { should have_many(:visits) }
   
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:description) }
@@ -98,6 +99,18 @@ describe Pub do
     it "should not have images if there is more than 0 images" do
       @pub.stub!(:images).and_return([])
       @pub.should_not have_images
+    end
+  end
+  
+  describe "has_visits?" do
+    it "should have visits if there is more than 0 visits" do
+      @pub.stub!(:visits).and_return([mock_model(Visit)])
+      @pub.should have_visits
+    end
+    
+    it "should not have visits if there is more than 0 visits" do
+      @pub.stub!(:visits).and_return([])
+      @pub.should_not have_visits
     end
   end
 end

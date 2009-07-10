@@ -2,6 +2,7 @@ class Pub < ActiveRecord::Base
   belongs_to :user
   has_many :beers, :as => :parent
   has_many :images
+  has_many :visits
   
   validates_presence_of :name
   validates_presence_of :address_1
@@ -48,6 +49,10 @@ class Pub < ActiveRecord::Base
   
   def has_images?
     images.length > 0
+  end
+  
+  def has_visits?
+    visits.length > 0
   end
  
 end
