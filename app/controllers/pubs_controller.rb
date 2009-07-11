@@ -1,5 +1,7 @@
 class PubsController < ResourceController::Base
   layout :which_layout?
+  caches_page :index, :if => Proc.new { |c| c.request.format.json? }
+  
   
   index.wants.json do
     render :json => collection.to_json
@@ -10,7 +12,7 @@ class PubsController < ResourceController::Base
   end
   
   show.wants.json do
-    render :json => object.to_json
+    render :json => object.to_json(:methods => :slug)
   end 
 
   create.flash "Thanks, The pub has been added"

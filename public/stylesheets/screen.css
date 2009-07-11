@@ -552,3 +552,13 @@ hr.clear{
 	margin:0;
 	padding:0;
 }
+#map {
+	width: 870px;
+	height: 600px;
+}
+#map img {
+  background: transparent;
+  border: 0;
+  padding: 0px;
+}
+
