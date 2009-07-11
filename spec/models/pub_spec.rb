@@ -15,13 +15,24 @@ describe Pub do
   it { should validate_presence_of(:address_1) }
   it { should validate_presence_of(:town) }
   it { should validate_presence_of(:post_code) }
+  
+  
+  
    
   it "should create a new instance given valid attributes" do    
     @pub.should be_valid
   end
   
   it "should have a named scope to retrieve all pubs, but only the bare minimum of columns" do
-    Pub.should_have_named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
+    Pub.should have_named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
+  end
+  
+  it "should have named scope for getting all details of pubs in a limited area" do
+    @pub_1 = Pub.make(:lat => 42, :lng => -1.25)
+    @pub_2 = Pub.make(:lat => 42, :lng => 7.25)
+    @pub_3 = Pub.make(:lat => 40, :lng => -1.25)
+    @pub_4 = Pub.make(:lat => 45.6, :lng => -1)
+    Pub.within_boundreys(41.3, 45.6, -1.5, -1).should == [@pub_1, @pub_4]
   end
   
   describe "post_code" do

@@ -15,12 +15,14 @@ class Pub < ActiveRecord::Base
   acts_as_mappable
   
   named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
+  named_scope :within_boundreys,  lambda {|min_lan, max_lat, min_lng, max_lng| {:conditions => ["lat >= ? AND lat <= ? AND lng >= ? AND lng <= ?", min_lan, max_lat, min_lng, max_lng]}}
   
   has_friendly_id :name_and_town, :use_slug => true
   
   accepts_nested_attributes_for :beers, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
   def validate_on_create
+    return unless lat.nil? && lng.nil?
     geo = Geokit::Geocoders::MultiGeocoder.geocode(address)
     errors.add(:address, "Could not Geocode address") if !geo.success
     self.lat, self.lng = geo.lat,geo.lng if geo.success
