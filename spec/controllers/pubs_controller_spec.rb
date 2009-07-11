@@ -34,6 +34,12 @@ describe PubsController do
         get :index, :format => 'json'
         response.should be_success
       end
+      
+      it "should not do a normal expensive find" do
+        Pub.stub!(:all_optimised_for_cluster_for_map).and_return([])
+        Pub.should_not_receive(:find).with(:all)
+        get :index, :format => 'json'
+      end
     end
   end
 
