@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 var icon = new GIcon(G_DEFAULT_ICON);  
 var markers = [];
-var non_clustered_markers = [];
 var markerCluster;
 var clustering_on = true;
 var map;
@@ -31,7 +30,7 @@ function initialize() {
     
     GEvent.addListener(map, "zoomend", function(overlay, point)
  	  {
-      remove_non_clustered_markers();
+      map.clearOverlays(); 
     });
     
     GEvent.addListener(map, "moveend", function(overlay, point)
@@ -41,6 +40,7 @@ function initialize() {
 			{
 				//we are zoomed in, dynamically update numbered markers			
 				markerCluster.clearMarkers();
+				delete(clearMarkers);
         clustering_on = false; //set flag si if we zoom out again, clustering gets restarted
         update_non_clustered_markers();
 			}
@@ -48,8 +48,10 @@ function initialize() {
 			{
 				//we are zoomed out, just use the clustering
 				if(!clustering_on){
+					$('#map-pub-listing').html(''); //remove anything in the bottom table
 					clustering_on = true; //set flag again so we don't keep clustering
   				markerCluster = new MarkerClusterer(map, markers, {gridSize: 50, maxZoom: 14});
+					//markerCluster.turn_clustering_back_on();
 				}
 			}
 		});				    
@@ -123,11 +125,4 @@ function numbered_icon(number)
 	icon.iconAnchor=new GPoint(16,32);
 	icon.infoWindowAnchor=new GPoint(16, 0);	
  	return icon;	
-}
-
-function remove_non_clustered_markers()
-{  
-  for (i = 0; i < non_clustered_markers.length; i++) {
-    map.removeOverlay(non_clustered_markers[i]);
-  }
 }

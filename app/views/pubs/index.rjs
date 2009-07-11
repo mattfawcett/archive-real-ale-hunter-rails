@@ -2,7 +2,6 @@
   page << "var point = new GLatLng(#{pub.lat}, #{pub.lng});"
   page << "var marker = createMarker(point, #{pub.id}, #{index+1});"
   page << "map.addOverlay(marker);"  
-  page << "non_clustered_markers.push(marker);"
 end
 
 page.replace_html 'map-pub-listing', :partial => 'map/map_pub_listing'

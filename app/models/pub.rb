@@ -14,7 +14,7 @@ class Pub < ActiveRecord::Base
   before_validation :clean_post_code, :clean_website
   acts_as_mappable
   
-  named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
+  named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng", :limit => 1000
   named_scope :within_boundreys,  lambda {|min_lan, max_lat, min_lng, max_lng| {:conditions => ["lat >= ? AND lat <= ? AND lng >= ? AND lng <= ?", min_lan, max_lat, min_lng, max_lng]}}
   
   has_friendly_id :name_and_town, :use_slug => true
