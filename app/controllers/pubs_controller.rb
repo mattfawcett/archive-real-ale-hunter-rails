@@ -8,6 +8,10 @@ class PubsController < ResourceController::Base
   new_action.before do
     object.beers.build
   end
+  
+  show.wants.json do
+    render :json => object.to_json
+  end 
 
   create.flash "Thanks, The pub has been added"
   
