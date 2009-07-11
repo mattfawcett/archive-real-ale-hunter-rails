@@ -80,6 +80,31 @@ describe PubsController do
         response.headers['Content-Type'].should =~ /text\/html/
       end
     end
+    
+    describe "when requesting json" do
+      it "should find the pub" do
+        Pub.should_receive(:find).with("12").and_return(@pub)
+        get :show, :id => "12", :format => 'json'
+      end
+      
+      it "should expose the pub as @pub" do
+        Pub.stub(:find).with("12").and_return(@pub)
+        get :show, :id => "12", :format => 'json'
+        assigns(:pub).should eql(@pub)
+      end
+      
+      it "should give success" do
+        Pub.stub(:find).with("12").and_return(@pub)
+        get :show, :id => "12", :format => 'json'
+        response.should be_success
+      end
+      
+      it "should give json back" do
+        Pub.stub(:find).with("12").and_return(@pub)
+        get :show, :id => "12", :format => 'json'
+        response.headers['Content-Type'].should =~ /json/
+      end
+    end
   end
 
 end
