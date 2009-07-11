@@ -43,21 +43,28 @@ task :sync_old_with_new => :environment do
     end
     
     OldSite::PubBeer.find_by_sql("SELECT * FROM pub_beers WHERE pub_id = '#{old_pub.id}' ").each do |pub_beer|      
-      old_beer = OldSite::Beer.find(pub_beer.beer_id)
-      old_brewery = OldSite::Brewery.find(old_beer.brewery_id)
-      beer_name = old_beer.beer_name + " - " + old_brewery.brewery_name 
-      
-      Beer.create!(:name => beer_name, :parent_type => "Pub", :parent_id => new_pub.id)
+      old_beer = OldSite::Beer.find_by_id(pub_beer.beer_id)
+      if old_beer
+        old_brewery = OldSite::Brewery.find_by_id(old_beer.brewery_id)
+        if old_brewery
+          beer_name = old_beer.beer_name + " - " + old_brewery.brewery_name       
+          Beer.create!(:name => beer_name, :parent_type => "Pub", :parent_id => new_pub.id)
+        end
+      end
     end
     
     OldSite::Visit.find_by_sql("SELECT * FROM visits WHERE pub_id = '#{old_pub.id}' ").each do |old_visit|
       new_visit = new_pub.visits.create!(:comments => old_visit.comments.gsub(/<br(\s)?\/>/, "\n").gsub(/\\'/, "'"), :user_id => old_visit.member_id, :created_at => old_visit.date, :updated_at => old_visit.date)
       OldSite::VisitBeer.find_by_sql("SELECT * FROM visit_beers WHERE visit_id = '#{old_visit.id}' ").each do |visit_beer|      
-        old_beer = OldSite::Beer.find(visit_beer.beer_id)
-        old_brewery = OldSite::Brewery.find(old_beer.brewery_id)
-        beer_name = old_beer.beer_name + " - " + old_brewery.brewery_name 
+        old_beer = OldSite::Beer.find_by_id(visit_beer.beer_id)
+        if old_beer
+          old_brewery = OldSite::Brewery.find_by_id(old_beer.brewery_id)
+          if old_brewery
+            beer_name = old_beer.beer_name + " - " + old_brewery.brewery_name 
         
-        Beer.create!(:name => beer_name, :parent_type => "Visit", :parent_id => new_visit.id)
+            Beer.create!(:name => beer_name, :parent_type => "Visit", :parent_id => new_visit.id)
+          end
+        end
       end
     end
   end
