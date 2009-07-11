@@ -16,7 +16,6 @@ class Pub < ActiveRecord::Base
   
   named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
   
-  
   has_friendly_id :name_and_town, :use_slug => true
   
   accepts_nested_attributes_for :beers, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
