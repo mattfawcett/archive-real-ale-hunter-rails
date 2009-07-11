@@ -25,7 +25,13 @@ class PubsController < ResourceController::Base
   
   def collection      
     if params[:format] == 'json'
-      end_of_association_chain.all_optimised_for_cluster_for_map
+      if params[:min_lat].nil?
+        #get all pubs with minimal details
+        end_of_association_chain.all_optimised_for_cluster_for_map
+      else
+        #get details for a limited amount of pubs. but full details
+        end_of_association_chain.within_boundreys(params[:min_lat], params[:max_lat], params[:min_lng], params[:max_lng])
+      end
     else
       end_of_association_chain.find(:all)
     end

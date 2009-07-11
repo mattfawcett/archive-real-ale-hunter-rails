@@ -90,6 +90,10 @@ function initialize() {
 		var bounds = map.getBounds();
 		var southWest = bounds.getSouthWest();
 		var northEast = bounds.getNorthEast();
+		alert (northEast.lng()); //-1.5300607681274414
+	  alert (southWest.lng()); //-1.567397117614746
+		alert (northEast.lat()); //53.80711346956182
+	  alert (southWest.lat()); //53.79190566459485
 		
 	}
 		
