@@ -14,7 +14,7 @@ class Pub < ActiveRecord::Base
   before_validation :clean_post_code, :clean_website
   acts_as_mappable
   
-  named_scope :for_map, :select => "id, lat, lng, name, address_1, address_2, town, post_code, telephone"
+  named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
   
   
   has_friendly_id :name_and_town, :use_slug => true

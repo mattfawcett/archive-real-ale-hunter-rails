@@ -20,6 +20,10 @@ describe Pub do
     @pub.should be_valid
   end
   
+  it "should have a named scope to retrieve all pubs, but only the bare minimum of columns" do
+    Pub.should_have_named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
+  end
+  
   describe "post_code" do
     it { should allow_value("LS18 5DA").for(:post_code) }
     it { should allow_value("LS185DA").for(:post_code) } 

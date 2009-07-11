@@ -9,8 +9,7 @@ function initialize() {
     var map = new GMap2(document.getElementById('map'));
     map.setCenter(new GLatLng(54, -1), 6);
     map.addControl(new GLargeMapControl());
-    var icon = new GIcon(G_DEFAULT_ICON);
-    //icon.image = "http://labs.google.com/ridefinder/images/mm_20_red.png";    
+    var icon = new GIcon(G_DEFAULT_ICON);  
     var markers = [];   
     
     
@@ -19,7 +18,7 @@ function initialize() {
 			for (x in json) 
 			{
 			  var latlng = new GLatLng(json[x].pub.lat, json[x].pub.lng);        
-				marker = createMarker(latlng, html = json[x].pub.name);
+				marker = createMarker(latlng, json[x].pub.id);
     
 				markers.push(marker);     
       }
@@ -29,12 +28,19 @@ function initialize() {
     
   }
   
-  function createMarker(point, html)
+  //create a marker object for the cluster
+  function createMarker(point, pub_id)
 	{
 		var marker = new GMarker(point, icon);
 		// Show this markers index in the info window when it is clicked
-		GEvent.addListener(marker, "click", function() {marker.openInfoWindowHtml(html);});
+		GEvent.addListener(marker, "click", function() {marker.openInfoWindowHtml(marker_info_window_html_for_pub(pub_id));});
 		return marker;
 	};
+	
+	//for a particular pub_id, generate the HTMl for its overlay
+	function marker_info_window_html_for_pub(pub_id)
+	{
+		alert(pub_id);
+	}
 		
 }

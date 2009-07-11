@@ -2,7 +2,7 @@ class PubsController < ResourceController::Base
   layout :which_layout?
   
   index.wants.json do
-    render :json => Pub.for_map.to_json
+    render :json => Pub.all_optimised_for_cluster_for_map.to_json
   end 
   
   new_action.before do
