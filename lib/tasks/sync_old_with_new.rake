@@ -6,6 +6,7 @@ task :sync_old_with_new => :environment do
   Image.destroy_all
   Beer.destroy_all
   Visit.destroy_all
+  User.destroy_all
   
   OldSite::User.all.each do |old_user|
     User.create!(:username => old_user.user_name, :email => old_user.email_address,
