@@ -53,3 +53,4 @@
 .column-right
   =render :partial => 'latest_pub_visits'
 
+- set_meta(:keywords => "Real ale pubs, #{h @pub.name}", :description => @pub.description) 
