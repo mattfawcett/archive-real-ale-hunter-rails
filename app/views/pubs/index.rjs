@@ -4,4 +4,4 @@
   page << "map.addOverlay(marker);"  
 end
 
-page.replace_html 'map-pub-listing', :partial => 'map/map_pub_listing'
+page.replace_html 'map-pub-listing', :partial => 'maps/map_pub_listing'

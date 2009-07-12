@@ -2,12 +2,13 @@ class PubsController < ResourceController::Base
   layout :which_layout?
   caches_page :index
   
-  
   index.wants.json do
     render :json => collection.to_json
   end 
+  index.wants.html do
+    render :template => "pubs/index.haml"
+  end
   index.wants.js do
-    
   end
   
   new_action.before do
@@ -36,6 +37,7 @@ class PubsController < ResourceController::Base
     else
       end_of_association_chain.find(:all)
     end
+ #end_of_association_chain.find(:all, :limit => 10)
   end
   
 end
