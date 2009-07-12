@@ -45,7 +45,7 @@ class Pub < ActiveRecord::Base
   
   
   def address
-    [address_1, address_2, town, post_code].compact.join(", ")
+    [address_1, address_2, town, post_code].compact.delete_if{|x| x.blank? }.join(", ")
   end
   
   def name_and_town
