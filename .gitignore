@@ -2,3 +2,4 @@
 .project
 log/*
 public/system/attachments/*
+public/system/cache/*
