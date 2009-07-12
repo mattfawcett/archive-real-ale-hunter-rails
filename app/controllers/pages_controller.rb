@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @tab = "What's New"
     @pubs = Pub.latest 10
     @visits = Visit.latest 10
-    @images = Image.latest 10
+    @images = Image.latest 9
 end
   
   private

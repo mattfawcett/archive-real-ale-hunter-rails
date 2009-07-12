@@ -561,4 +561,15 @@ hr.clear{
   border: 0;
   padding: 0px;
 }
+.whats-new-photo {
+  display: absolute;
+  width: 185px;
+  height :200px;
+  left: 500px;
+  
+}
+.whats-new-photo p {
+  font-size: 73%;
+  display: inline;
+}
 

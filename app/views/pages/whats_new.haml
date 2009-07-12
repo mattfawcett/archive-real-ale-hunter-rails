@@ -13,3 +13,9 @@
     = link_to(visit.pub.name, pub_path(visit.pub.slug.name)) + " - " + h(visit.pub.town)
     = " - Added by #{visit.user.username} - #{distance_of_time_in_words(visit.created_at.to_f, Time.now.to_i)} ago"
     %br/
+
+%h3 Latest Photos
+-@images.each do |image|  
+  %div.whats-new-photo
+    %p= h(image.pub.name) + " - " + h(image.pub.town)
+    = lightbox_image_tag(image)    

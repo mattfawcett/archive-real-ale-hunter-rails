@@ -22,9 +22,9 @@ describe PagesController do
       assigns(:visits).should eql(visits)
     end
     
-    it "should expose the 10 latest images as @images" do
+    it "should expose the 9 latest images as @images" do
       images = []
-      Image.should_receive(:latest).with(10).and_return(images)
+      Image.should_receive(:latest).with(9).and_return(images)
       get :whats_new
       assigns(:images).should eql(images)
     end
