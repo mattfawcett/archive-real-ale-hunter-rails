@@ -1,0 +1,15 @@
+%h2 What's new
+
+%h3 Latest Pubs
+%p
+  -@pubs.each do |pub|
+    = link_to(pub.name, pub_path(pub.slug.name)) + " - " + h(pub.town)
+    = " - Added by #{pub.user.username} - #{distance_of_time_in_words(pub.created_at.to_f, Time.now.to_i)} ago"
+    %br/
+
+%h3 Latest Visits
+%p
+  -@visits.each do |visit|
+    = link_to(visit.pub.name, pub_path(visit.pub.slug.name)) + " - " + h(visit.pub.town)
+    = " - Added by #{visit.user.username} - #{distance_of_time_in_words(visit.created_at.to_f, Time.now.to_i)} ago"
+    %br/

@@ -6,6 +6,6 @@ class Image < ActiveRecord::Base
   belongs_to :pub
   
   default_scope :order => "created_at DESC"
-  named_scope(:latest, :limit => 4)
+  named_scope :latest, lambda{|n| {:limit => n}}
 
 end

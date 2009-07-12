@@ -22,6 +22,9 @@ Pub.blueprint do
   cask_marque false
 end
 
-Image.blueprint do
-  
+
+Visit.blueprint do
+  comments "very nice indeed"
+  user
+  pub
 end

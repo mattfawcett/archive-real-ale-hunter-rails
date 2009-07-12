@@ -5,9 +5,13 @@ describe Image do
   it { should belong_to(:user) }
   it { should belong_to(:pub) }
   
-  it "should have a named scope called latest wihich returns last 4 images" do
-    Image.should have_named_scope(:latest, :limit => 4)
+  describe "named scope latest" do
+    it "should get the n number of latest pubs" do
+      @image_1 = create_image
+      @image_2 = create_image(:created_at => Time.now.advance(:minutes => 1))
+      Image.latest(1).should == [@image_2]
+      Image.latest(2).should == [@image_2, @image_1]
+    end
   end
-  
   
 end

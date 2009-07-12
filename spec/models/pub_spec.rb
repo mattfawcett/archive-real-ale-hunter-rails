@@ -25,6 +25,14 @@ describe Pub do
       Pub.in_town("Wakefield").should eql([@pub_3])
     end
   end
+  
+  describe "named scope latest" do
+    it "should get the n number of latest pubs" do
+      @pub_2 = Pub.make(:created_at => Time.now.advance(:minutes => 1))
+      Pub.latest(1).should == [@pub_2]
+      Pub.latest(2).should == [@pub_2, @pub]
+    end
+  end
    
   it "should create a new instance given valid attributes" do    
     @pub.should be_valid

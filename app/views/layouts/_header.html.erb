@@ -48,6 +48,9 @@
 			<% content_tag :li, :id => (@tab == 'Towns' ? 'current' : nil) do %>
         <%= link_to "Towns", towns_path %>
 		  <% end %>
+			<% content_tag :li, :id => (@tab == "What's New" ? 'current' : nil) do %>
+        <%= link_to "What's New", :controller => "pages", :action => "whats_new" %>
+		  <% end %>
 		
 		</ul>
 	<!-- navigation ends-->	

@@ -16,8 +16,7 @@ class Pub < ActiveRecord::Base
   
   named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
   named_scope :within_boundreys,  lambda {|min_lan, max_lat, min_lng, max_lng| {:conditions => ["lat >= ? AND lat <= ? AND lng >= ? AND lng <= ?", min_lan, max_lat, min_lng, max_lng]}}
-  named_scope :in_town, lambda {|town| {:conditions => {:town => town}}}
-  
+  named_scope :in_town, lambda {|town| {:conditions => {:town => town}}}    
   default_scope :order => "name ASC"
   
   has_friendly_id :name_and_town, :use_slug => true
@@ -63,6 +62,11 @@ class Pub < ActiveRecord::Base
   
   def self.towns
     Pub.find(:all, :select => "DISTINCT(town) as town", :order => "town ASC").collect {|p| p.town}
+  end
+  
+  def self.latest(n = 5)
+    #bug in rails is why this isn't in a named_scope https://rails.lighthouseapp.com/projects/8994/tickets/2346-named_scope-doesnt-override-default_scopes-order-key
+    find(:all, :order => "created_at DESC", :limit => n)
   end
  
 end

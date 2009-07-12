@@ -5,7 +5,7 @@
       = link_to "View All Photos", pub_images_path(@pub)
       |
       = link_to "Upload Photo", new_pub_image_path(@pub)
-    -@pub.images.latest.each do |image|
+    -@pub.images.latest(4).each do |image|
       = lightbox_image_tag(image)
 -else
   %p
