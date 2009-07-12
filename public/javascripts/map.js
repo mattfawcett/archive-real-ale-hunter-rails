@@ -24,7 +24,7 @@ function initialize() {
 				marker = createMarker(latlng, json[x].pub.id);
 				markers.push(marker);     
       }
-      markerCluster = new MarkerClusterer(map, markers, {gridSize: 50, maxZoom: 14});
+      markerCluster = new MarkerClusterer(map, markers, {gridSize: 60, maxZoom: 14});
     });
     
     GEvent.addListener(map, "zoomend", function(overlay, point)
