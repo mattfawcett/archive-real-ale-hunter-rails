@@ -27,7 +27,7 @@
 	<!--header -->
 	<div id="header">			
 				
-		<h1 id="logo-text">Real Ale Hunter<a href="index.html" title="Real Ale Hunter"></a></h1>		
+		<h1 id="logo-text"><a href="/" title="Real Ale Hunter">Real Ale Hunter</a></h1>		
 		<p id="slogan">A map and directory of real ale serving pubs</p>	
 		
 		<div id="top-menu">
@@ -40,12 +40,16 @@
 	<!-- navigation starts-->	
 	<div  id="nav">
 		<ul>
-			<li id="current"><a href="index.html">Home</a></li>
-			<li><a href="style.html">Style Demo</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="index.html">Services</a></li>
-			<li><a href="index.html">Support</a></li>
-			<li><a href="index.html">About</a></li>		
+			<% content_tag :li, :id => (@tab == 'Home' ? 'current' : nil) do %>
+	      <%= link_to "Home", root_path %>
+			<% end %>
+			<% content_tag :li, :id => (@tab == 'Map' ? 'current' : nil) do %>
+        <%= link_to "Map", map_path %>
+		  <% end %>
+			<% content_tag :li, :id => (@tab == 'Pubs' ? 'current' : nil) do %>
+        <%= link_to "Pubs", pubs_path %>
+		  <% end %>
+		
 		</ul>
 	<!-- navigation ends-->	
 	</div>		

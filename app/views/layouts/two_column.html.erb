@@ -12,6 +12,15 @@
 		</div>
 				
 		<div id="sidebar">
+			
+			<h3>Home</h3>
+			<ul class="sidemenu">				
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "What is real ale", :controller => "pages", :action => "what_is_real_ale" %></li>
+				<li><%= link_to "Real ale styles", :controller => "pages", :action => "styles_of_real_ale" %></li>
+				<li><%= link_to "Brewing real ale", :controller => "pages", :action => "brewing_real_ale" %></li>
+				<li><%= link_to "Camra - the campaign for real ale", :controller => "pages", :action => "camra_campaign_for_real_ale" %></li>
+			</ul>	
 		
 			<h3>About</h3>			
 			
@@ -33,15 +42,7 @@
 			</p>
 			</form>		
 			
-			<h3>Sidebar Menu</h3>
-			<ul class="sidemenu">				
-				<li><a href="index.html">Home</a></li>
-				<li><a href="index.html#TemplateInfo">TemplateInfo</a></li>
-				<li><a href="style.html">Style Demo</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="http://www.styleshout.com/">More Free Templates</a></li>	
-				<li><a href="http://www.4templates.com/?aff=ealigam">Premium Templates</a></li>					
-			</ul>	
+			
 				
 			<h3>Links</h3>
 			<ul class="sidemenu">

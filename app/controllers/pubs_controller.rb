@@ -1,6 +1,6 @@
 class PubsController < ResourceController::Base
   layout :which_layout?
-  caches_page :index, :if => Proc.new { |c| c.request.format.json? }
+  caches_page :index
   
   
   index.wants.json do
