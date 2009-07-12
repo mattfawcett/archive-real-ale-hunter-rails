@@ -13,6 +13,6 @@
       %td= h pub.address
       %td= pub.number_of_pumps.nil? ? "unknown" : pub.number_of_pumps
       %td= pub.gbg.nil? ? "unknown" : (pub.gbg ? "yes" : "No")
-      %td h pub.user.username
+      %td h pub.user.user_name
     %tr
       %td{:colspan => 5}= h pub.description

@@ -146,6 +146,16 @@ function MarkerClusterer(map, opt_markers, opt_opts) {
     GEvent.removeListener(mcfn_);
   };
   
+  this.turn_off = function() {
+    GEvent.removeListener(mcfn_);
+  }
+  
+  this.turn_back_on = function(){
+    mcfn_ = GEvent.addListener(map_, "moveend", function () {
+      me_.resetViewport();
+    });
+    me_.resetViewport();
+  }
   
   /**
   * Check a marker, whether it is in current map viewport.

@@ -28,7 +28,8 @@ task :sync_old_with_new => :environment do
                       :gbg => gbg, :cask_marque => old_pub.cask_marque == 1 ? true : false,
                       :lat => old_pub.lat, :lng => old_pub.lon,
                       :website => old_pub.website_from_description,
-                      :created_at => old_pub.date_added, :updated_at => old_pub.date_added
+                      :created_at => old_pub.date_added, :updated_at => old_pub.date_added,
+                      :user_id => old_pub.added_by
                       )
     new_pub.save(false) 
     OldSite::Image.find_by_sql(" SELECT * FROM images WHERE pub_id = '#{old_pub.id}' ").each do |old_image|

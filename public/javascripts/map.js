@@ -24,8 +24,9 @@ function initialize() {
 				marker = createMarker(latlng, json[x].pub.id);
 				markers.push(marker);     
       }
-      
+      console.log("about to make a new MarkerClusterer for the first time");
       markerCluster = new MarkerClusterer(map, markers, {gridSize: 50, maxZoom: 14});
+      console.trace(markerCluster);
     });
     
     GEvent.addListener(map, "zoomend", function(overlay, point)
@@ -39,9 +40,9 @@ function initialize() {
 			if(curzoom >= 14)
 			{
 				//we are zoomed in, dynamically update numbered markers			
-				markerCluster.clearMarkers();
-				delete(clearMarkers);
-        clustering_on = false; //set flag si if we zoom out again, clustering gets restarted
+				markerCluster.turn_off();
+				map.clearOverlays();
+        clustering_on = false; //set flag so if we zoom out again, clustering gets restarted        
         update_non_clustered_markers();
 			}
 			else
@@ -50,8 +51,9 @@ function initialize() {
 				if(!clustering_on){
 					$('#map-pub-listing').html(''); //remove anything in the bottom table
 					clustering_on = true; //set flag again so we don't keep clustering
-  				markerCluster = new MarkerClusterer(map, markers, {gridSize: 50, maxZoom: 14});
-					//markerCluster.turn_clustering_back_on();
+ 				  console.log("about to turn the clusterer back on");
+          markerCluster.turn_back_on();
+          console.trace(markerCluster);
 				}
 			}
 		});				    
