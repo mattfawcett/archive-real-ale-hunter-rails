@@ -17,7 +17,14 @@ describe Pub do
   it { should validate_presence_of(:post_code) }
   
   
-  
+  describe "named scope in_town" do
+    it "should find pubs in the passed in town" do
+      @pub_2 = Pub.make(:lat => 13, :lng => 123)
+      @pub_3 = Pub.make(:town => "Wakefield", :lat => 13, :lng => 123)
+      Pub.in_town("Leeds").should eql([@pub, @pub_2])
+      Pub.in_town("Wakefield").should eql([@pub_3])
+    end
+  end
    
   it "should create a new instance given valid attributes" do    
     @pub.should be_valid
@@ -126,6 +133,15 @@ describe Pub do
     it "should not have visits if there is more than 0 visits" do
       @pub.stub!(:visits).and_return([])
       @pub.should_not have_visits
+    end
+  end
+  
+  describe "towns" do
+    it "should just return an array of unique town names sorted alphabetically" do
+      @pub_2 = Pub.make
+      @pub_3 = Pub.make(:town => "Wakefield", :lat => 13, :lng => 123)
+      @pub_4 = Pub.make(:town => "London", :lat => 13, :lng => 123)
+      Pub.towns.should eql(["Leeds", "London", "Wakefield"])
     end
   end
 end

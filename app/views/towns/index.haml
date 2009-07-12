@@ -1,0 +1,5 @@
+%h2 Towns
+%p 
+  -@towns.each do |town|
+    = link_to town, town_pubs_path(town)
+    %br/

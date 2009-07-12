@@ -33,9 +33,13 @@ class PubsController < ResourceController::Base
       #get details for a limited amount of pubs. but full details
       end_of_association_chain.within_boundreys(params[:min_lat], params[:max_lat], params[:min_lng], params[:max_lng])
     else
-      end_of_association_chain.find(:all)
+      if(params[:town_id])
+        #limit to a town
+        end_of_association_chain.in_town(params[:town_id])
+      else  
+        end_of_association_chain.find(:all)
+      end
     end
- #end_of_association_chain.find(:all, :limit => 10)
   end
   
 end

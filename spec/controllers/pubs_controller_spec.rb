@@ -7,10 +7,17 @@ describe PubsController do
   end
 
   describe "responding to GET index" do
-    describe "when requesting html" do
+    describe "when requesting html" do      
+      
       it "should expose all the pubs as @pubs" do
         Pub.should_receive(:find).with(:all).and_return([@pub])
         get :index
+        assigns(:pubs).should == [@pub]
+      end
+      
+      it "should limit the number of pubs to a town if there is a town_id in params" do
+        Pub.should_receive(:in_town).with("Leeds").and_return([@pub])
+        get :index, :town_id => "Leeds"
         assigns(:pubs).should == [@pub]
       end
       
