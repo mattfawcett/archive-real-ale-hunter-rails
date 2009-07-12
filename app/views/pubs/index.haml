@@ -1,7 +1,0 @@
-%h3 Pubs
-%p= link_to "Add a new pub", new_pub_path 
-%p
-  - @pubs.each do |pub|
-    =link_to(pub.name, pub_path(pub)) 
-    = h(pub.address)
-    %br/

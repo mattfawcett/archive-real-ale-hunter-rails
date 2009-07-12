@@ -5,9 +5,6 @@ class PubsController < ResourceController::Base
   index.wants.json do
     render :json => collection.to_json
   end 
-  index.wants.html do
-    render :template => "pubs/index.haml"
-  end
   index.wants.js do
   end
   
