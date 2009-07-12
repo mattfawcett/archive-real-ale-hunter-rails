@@ -1,4 +1,8 @@
-<h3>Pubs</h3>
+<% if params[:town_id] %>
+  <h3>Pubs in <%= h params[:town_id] %></h3>
+<% else %>
+  <h3>Pubs</h3>
+<% end %>
 <p><%= link_to "Add a new pub", new_pub_path  %></p>
 <p>
   <% @pubs.each do |pub| %>
