@@ -15,7 +15,10 @@
     %br/
 
 %h3 Latest Photos
--@images.each do |image|  
-  %div.whats-new-photo
-    %p= h(image.pub.name) + " - " + h(image.pub.town)
-    = lightbox_image_tag(image)    
+%div.whats-new-photos
+  -@images.each_with_index do |image, index|  
+    %div{:id => "whats-new-photo-#{index}"}
+      %p= h(image.pub.name) + " - " + h(image.pub.town)
+      = lightbox_image_tag(image)    
+      %p= h("Added by #{image.pub.user.username} - #{image.pub.user.pints} pints")
+  
