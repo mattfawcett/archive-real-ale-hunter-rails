@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090710175106) do
+ActiveRecord::Schema.define(:version => 20090814201920) do
 
   create_table "beers", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,18 @@ ActiveRecord::Schema.define(:version => 20090710175106) do
     t.decimal  "lat",             :precision => 20, :scale => 20
     t.decimal  "lng",             :precision => 20, :scale => 20
     t.string   "website"
+  end
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "pub_id"
+    t.integer  "user_id"
+    t.integer  "beer_quality"
+    t.integer  "beer_selection"
+    t.integer  "atmosphere"
+    t.integer  "price"
+    t.integer  "overall_option"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "slugs", :force => true do |t|

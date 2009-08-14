@@ -9,6 +9,7 @@ describe Pub do
   it { should have_many(:beers) }
   it { should have_many(:images) }
   it { should have_many(:visits) }
+  it { should have_many(:ratings) }
   
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:description) }

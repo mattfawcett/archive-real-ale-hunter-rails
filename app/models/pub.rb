@@ -3,7 +3,8 @@ class Pub < ActiveRecord::Base
   has_many :beers, :as => :parent
   has_many :images
   has_many :visits
-  
+  has_many :ratings 
+
   validates_presence_of :name
   validates_presence_of :address_1
   validates_presence_of :town

@@ -10,7 +10,7 @@ User.blueprint do
 end
 
 Pub.blueprint do
-  name  "Grove"
+  name "Grove"
   description "The Grove is a real gem"
   address_1 "Back row"
   address_2 "Holbeck"
@@ -25,6 +25,16 @@ end
 
 Visit.blueprint do
   comments "very nice indeed"
+  user
+  pub
+end
+
+Rating.blueprint do   
+  beer_quality 2
+  beer_selection 5
+  atmosphere 3
+  price 1
+  overall_option 3
   user
   pub
 end
