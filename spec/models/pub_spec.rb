@@ -153,4 +153,13 @@ describe Pub do
       Pub.towns.should eql(["Leeds", "London", "Wakefield"])
     end
   end
+  
+  describe "average_ratings" do
+    it "should return the a rounded whole number for the average" do
+      [1,3,5,0,4,1,1,2,3].each do |atmosphere|
+        @pub.ratings.make(:atmosphere => atmosphere)
+      end
+      @pub.average_ratings[:atmosphere].should eql(22)
+    end
+  end
 end

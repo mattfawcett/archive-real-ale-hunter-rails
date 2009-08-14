@@ -69,5 +69,19 @@ class Pub < ActiveRecord::Base
     #bug in rails is why this isn't in a named_scope https://rails.lighthouseapp.com/projects/8994/tickets/2346-named_scope-doesnt-override-default_scopes-order-key
     find(:all, :order => "created_at DESC", :limit => n)
   end
+  
+  def average_ratings
+    results = {:beer_quality => 0, :beer_selection => 0, :atmosphere => 0, :price => 0, :overall_option => 0}
+    ratings.each do |one_rating|
+      results.each do |thing_to_rate, rating|
+        results[thing_to_rate] += one_rating.send(thing_to_rate.to_s) * 10
+      end
+    end
+    results.each do |thing_to_rate, rating|
+      puts "#{thing_to_rate} = total #{rating}. There are #{ratings.length}"
+      results[thing_to_rate] = rating / ratings.length
+    end
+    return results
+  end
  
 end
