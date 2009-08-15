@@ -10,6 +10,9 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
+    when /the new rating page/
+      new_rating_path
+
     when /the new display_pubs page/
       new_display_pubs_path
 
