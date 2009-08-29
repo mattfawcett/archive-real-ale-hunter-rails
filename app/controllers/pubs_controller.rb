@@ -3,6 +3,7 @@ class PubsController < ResourceController::Base
   caches_page :index, :unless => Proc.new { |c| c.request.format.js? }
   
   
+  
   index.wants.json do
     render :json => collection.to_json
   end 
