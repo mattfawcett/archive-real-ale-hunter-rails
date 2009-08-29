@@ -1,7 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe RatingsController do
-  pending
 
   describe "responding to GET new" do
     describe "if I have not already added a review for this pub" do
@@ -36,4 +35,5 @@ describe RatingsController do
     
     it "should redirect me to the pubs show page"
   end
+  
 end
