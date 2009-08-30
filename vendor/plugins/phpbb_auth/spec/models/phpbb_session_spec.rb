@@ -14,7 +14,7 @@ describe PhpbbSession do
   
   it "should return a user for a particular session if they are logged in" do
     @user = PhpbbUser.create!(valid_PhpbbUser_attributes)
-    PhpbbSession.create!(valid_PhpbbSession_attributes(:session_user_id => @user.id))    
+    PhpbbSession.create!(valid_PhpbbSession_attributes(:session_user_id => @user.user_id))    
     @session = PhpbbSession.find_by_session_id('2d4b5dd208b7baa6d548aea9d655b392')
     @session.phpbb_user.username.should eql("matt")
   end

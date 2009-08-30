@@ -4,7 +4,6 @@ require 'rubygems'
 require 'active_record'
 
 
-
 ActiveRecord::Base.configurations['test'] = {
   :adapter => 'sqlite3',
   :dbfile => 'db/test.db',
@@ -40,10 +39,10 @@ end
 
 def valid_PhpbbSession_attributes(overwrite_attributes = {})
   {
-    :session_last_visit => "1236865629",
+    :session_last_visit => 1.minute.ago,
     :session_browser => "Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.9.0.5) Gecko/2008121621 Ubuntu/8.04 (hardy) Firefox/3.0.5",
-    :session_start => "1236865629",
-    :session_time => "1236865629",
+    :session_start => 1.minute.ago,
+    :session_time => 1.minute.ago,
     :session_id => "2d4b5dd208b7baa6d548aea9d655b392",
     :session_viewonline => "1",
     :session_ip => "127.0.0.1",
@@ -132,3 +131,8 @@ def valid_PhpbbUser_attributes(overwrite_attributes = {})
     :user_form_salt => "af92d6547f0009e2"
   }
 end
+
+#declare a user class as ifit was one in the application
+class User < ActiveRecord::Base
+end
+
