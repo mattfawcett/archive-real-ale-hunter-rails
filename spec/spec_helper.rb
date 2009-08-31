@@ -24,3 +24,11 @@ Spec::Runner.configure do |config|
   config.before(:each) { Sham.reset }
 
 end
+
+def login_as(user)
+  cookies["phpbb3_7uah4_sid"] = 'abcd'
+  mock_user = mock_model(PhpbbUser, {:user_email => 'phpbbsessionemail', :username_clean => 'dave'})
+  mock_session = mock_model(PhpbbSession, :logged_in? => true, :phpbb_user => mock_user)
+  PhpbbSession.stub!(:find_by_session_id).and_return(mock_session)
+  User.stub!(:find).with(:first, :conditions => {'email' => 'phpbbsessionemail'}).and_return(user)
+end

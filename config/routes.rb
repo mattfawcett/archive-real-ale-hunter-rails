@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :pubs, :has_many => [:images, :visits]
+  map.resources :pubs, :shallow => true, :has_many => [:images, :visits, :ratings]
   map.resource :map
   map.resources :towns, :has_many => :pubs
 

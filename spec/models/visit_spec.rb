@@ -14,4 +14,6 @@ describe Visit do
       Visit.latest(2).should == [@visit_2, @visit_1]
     end
   end
+  
+  
 end
