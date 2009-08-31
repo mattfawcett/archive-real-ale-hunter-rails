@@ -35,6 +35,15 @@ phpbb_database_development:
   host: localhost
   socket: /opt/lampp/var/mysql/mysql.sock  
   
+  
+phpbb_database_test:  
+  adapter: mysql
+  database: realalehunter_forum
+  username: root
+  password:
+  host: localhost
+  socket: /opt/lampp/var/mysql/mysql.sock 
+  
 phpbb_database_production:  
   adapter: mysql
   database: realalehunter_forum
