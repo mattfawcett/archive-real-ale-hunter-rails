@@ -27,11 +27,11 @@ describe Rating do
     end
   end
   
-  it "must not allow a value outside 0 - 5" do
+  it "must not allow a value outside 0 - 10" do
     %w(beer_quality beer_selection atmosphere price overall_option).each do |field|
       rating = Rating.make_unsaved(field => -1) 
       rating.should_not be_valid
-      rating = Rating.make_unsaved(field => 6) 
+      rating = Rating.make_unsaved(field => 11 
       rating.should_not be_valid
     end
   end

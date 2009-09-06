@@ -145,6 +145,18 @@ describe Pub do
     end
   end
   
+  describe "has_ratings?" do
+    it "should have ratings if there is more than 0 ratings" do
+      @pub.stub!(:ratings).and_return([mock_model(Rating)])
+      @pub.should have_ratings
+    end
+    
+    it "should not have ratings if there is more than 0 ratings" do
+      @pub.stub!(:ratings).and_return([])
+      @pub.should_not have_ratings
+    end
+  end
+  
   describe "towns" do
     it "should just return an array of unique town names sorted alphabetically" do
       @pub_2 = Pub.make
@@ -159,7 +171,7 @@ describe Pub do
       [1,3,5,0,4,1,1,2,3].each do |atmosphere|
         @pub.ratings.make(:atmosphere => atmosphere)
       end
-      @pub.average_ratings[:atmosphere].should eql(22)
+      @pub.average_ratings[:atmosphere].should eql(2)
     end
   end
 end

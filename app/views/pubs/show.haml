@@ -1,5 +1,4 @@
 %h2= h @pub.name
-= h @current_user.inspect
 .column-left
   %h3 Address
   %p#pub-address
@@ -40,7 +39,24 @@
   
   -unless @pub.number_of_pumps.nil?
     %p= "#{@pub.name} has #{@pub.number_of_pumps} hand pumps"
-  
+
+  %h3= "Ratings (#{@pub.ratings.length})"
+  %p#ratings
+    - if @pub.has_ratings?
+      = "Beer quality - #{@pub.average_ratings[:beer_quality]}/10"
+      %br/
+      = "Beer selection - #{@pub.average_ratings[:beer_selection]}/10"
+      %br/ 
+      = "Atmosphere - #{@pub.average_ratings[:atmosphere]}/10"
+      %br/
+      = "Price - #{@pub.average_ratings[:price]}/10"
+      %br/
+      = "Overall Opinion - #{@pub.average_ratings[:overall_option]}/10" 
+      %br/   
+      = link_to "Add/Edit your rating", new_pub_rating_path(@pub)
+    -else
+      = link_to "This pub hasn't been rated yet. be the first to rate it", new_pub_rating_path(@pub)
+
 %hr.clear
 %p#description
   = h @pub.description

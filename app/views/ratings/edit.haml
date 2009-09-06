@@ -1,0 +1,4 @@
+%h2= "Edit your rating for #{h @pub.name}"
+
+- form_for [@rating] do |f|
+  = render :partial => "form", :locals => {:f => f}

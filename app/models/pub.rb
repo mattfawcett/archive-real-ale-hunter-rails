@@ -61,6 +61,10 @@ class Pub < ActiveRecord::Base
     visits.length > 0
   end
   
+  def has_ratings?
+    ratings.length > 0
+  end
+  
   def self.towns
     Pub.find(:all, :select => "DISTINCT(town) as town", :order => "town ASC").collect {|p| p.town}
   end
@@ -74,7 +78,7 @@ class Pub < ActiveRecord::Base
     results = {:beer_quality => 0, :beer_selection => 0, :atmosphere => 0, :price => 0, :overall_option => 0}
     ratings.each do |one_rating|
       results.each do |thing_to_rate, rating|
-        results[thing_to_rate] += one_rating.send(thing_to_rate.to_s) * 10
+        results[thing_to_rate] += one_rating.send(thing_to_rate.to_s)
       end
     end
     results.each do |thing_to_rate, rating|

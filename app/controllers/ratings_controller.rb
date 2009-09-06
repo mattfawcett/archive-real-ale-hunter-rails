@@ -1,4 +1,5 @@
 class RatingsController < ApplicationController
+  layout "two_column"
   
   def new
     @pub = Pub.find(params[:pub_id])
@@ -11,11 +12,13 @@ class RatingsController < ApplicationController
   
   def edit
     @rating = @current_user.ratings.find(params[:id])
+    @pub = @rating.pub
   end
   
   def create
+    @pub = Pub.find(params[:pub_id])
     @rating = Rating.new(params[:rating])
-    @rating.pub_id = params[:pub_id]
+    @rating.pub = @pub
     @rating.user_id = @current_user.id
     if @rating.save
       flash[:notice] = "Thanks, your rating has been added"
@@ -28,6 +31,7 @@ class RatingsController < ApplicationController
 
   def update
     @rating = @current_user.ratings.find(params[:id])
+    @pub = @rating.pub
     if @rating.update_attributes(params[:rating])
       flash[:notice] = "Thanks, your rating has been updated"
       redirect_to pub_path(@rating.pub)
