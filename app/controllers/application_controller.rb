@@ -13,4 +13,11 @@ class ApplicationController < ActionController::Base
   def set_current_user
     @current_user ||= current_user
   end
+  
+  def require_login
+    unless @current_user
+      flash[:notice] = "you need to be logged in to do this"
+      redirect_to :back
+    end
+  end
 end

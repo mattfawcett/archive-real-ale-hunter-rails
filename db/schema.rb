@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090814201920) do
+ActiveRecord::Schema.define(:version => 20091007195131) do
 
   create_table "beers", :force => true do |t|
     t.string   "name"
@@ -78,9 +78,9 @@ ActiveRecord::Schema.define(:version => 20090814201920) do
     t.string   "username"
     t.string   "email"
     t.string   "level"
-    t.string   "pints"
-    t.decimal  "memory_lat",  :precision => 20, :scale => 20
-    t.decimal  "memory_lon",  :precision => 20, :scale => 20
+    t.integer  "pints",       :limit => 255, :default => 0, :null => false
+    t.decimal  "memory_lat"
+    t.decimal  "memory_lon"
     t.integer  "memory_zoom"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -11,4 +11,11 @@ describe ApplicationHelper do
     end
   end
   
+  describe "display_username" do
+    it "should show the username and show their number of pints whne you hover over it" do
+      expected = '<span title="matt - 10 pints" class="dotted-line-username">matt</span>'
+      mock_user = mock_model(User, :username => 'matt', :pints => 10)
+      helper.display_username(mock_user).should eql(expected)
+    end
+  end
 end

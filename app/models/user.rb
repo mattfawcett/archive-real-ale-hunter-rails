@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   def rating_for(pub)
     ratings.find_by_pub_id(pub.id)
   end
+  
+  def add_pints(number=0)
+    self.update_attribute(:pints, self.pints += number)
+  end
 end

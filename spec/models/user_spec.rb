@@ -46,4 +46,12 @@ describe User do
       @user.rating_for(@pub_2).should be_nil
     end
   end
+  
+  describe "add pints" do
+    it "should add the number of pints passed in and save the user" do
+      user = User.make
+      user.add_pints(10)
+      user.pints.should eql(110)
+    end
+  end
 end

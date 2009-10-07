@@ -8,3 +8,10 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+namespace :spec do
+  task :autotest do
+    require './spec/rspec_autotest'
+    RspecAutotest.run
+  end
+end

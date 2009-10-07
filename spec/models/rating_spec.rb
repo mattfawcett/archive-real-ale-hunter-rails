@@ -31,8 +31,17 @@ describe Rating do
     %w(beer_quality beer_selection atmosphere price overall_option).each do |field|
       rating = Rating.make_unsaved(field => -1) 
       rating.should_not be_valid
-      rating = Rating.make_unsaved(field => 11 
+      rating = Rating.make_unsaved(field => 11) 
       rating.should_not be_valid
+    end
+  end
+  
+  describe "awarding pints" do
+    it "should add 3 pints to the user on creation" do
+      rating = Rating.make_unsaved
+      user = ratingpub.user
+      user.should_receive(:add_pints).with(3)
+      rating.save
     end
   end
  

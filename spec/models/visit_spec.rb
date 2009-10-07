@@ -15,5 +15,13 @@ describe Visit do
     end
   end
   
+  describe "awarding pints" do
+    it "should add 3 pints to the user on creation" do
+      visit = Visit.make_unsaved
+      user = visit.user
+      user.should_receive(:visit).with(5)
+      visit.save
+    end
+  end
   
 end

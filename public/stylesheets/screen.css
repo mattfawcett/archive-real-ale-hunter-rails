@@ -634,3 +634,6 @@ hr.clear{
   top: 1350px;
 }
 
+.dotted-line-username{
+  text-decoration: underline;
+}

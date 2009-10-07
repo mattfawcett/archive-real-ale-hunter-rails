@@ -174,4 +174,13 @@ describe Pub do
       @pub.average_ratings[:atmosphere].should eql(2)
     end
   end
+  
+  describe "awarding pints" do
+    it "should add 5 pints to the user on creation" do
+      pub = Pub.make_unsaved
+      user = pub.user
+      user.should_receive(:add_pints).with(5)
+      pub.save
+    end
+  end
 end

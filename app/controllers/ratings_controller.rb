@@ -1,5 +1,6 @@
 class RatingsController < ApplicationController
   layout "two_column"
+  before_filter :require_login
   
   def new
     @pub = Pub.find(params[:pub_id])

@@ -13,6 +13,7 @@ class Pub < ActiveRecord::Base
   validates_format_of :post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
   
   before_validation :clean_post_code, :clean_website
+  after_create :award_pints
   acts_as_mappable
   
   named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
@@ -87,5 +88,8 @@ class Pub < ActiveRecord::Base
     end
     return results
   end
- 
+  
+  def award_pints
+    user.add_pints(5)
+  end
 end
