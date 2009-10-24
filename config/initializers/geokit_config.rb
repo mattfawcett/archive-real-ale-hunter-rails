@@ -4,10 +4,6 @@ if defined? Geokit
 	Geokit::default_units = :miles
 	Geokit::default_formula = :sphere
 
-	# This is the timeout value in seconds to be used for calls to the geocoder web
-	# services.  For no timeout at all, comment out the setting.  The timeout unit
-	# is in seconds. 
-	Geokit::Geocoders::timeout = 3
 
 	# These settings are used if web service calls must be routed through a proxy.
 	# These setting can be nil if not needed, otherwise, addr and port must be 
@@ -52,7 +48,7 @@ if defined? Geokit
 	# Be aware that there are Terms of Use restrictions on how you can use the 
 	# various geocoders.  Make sure you read up on relevant Terms of Use for each
 	# geocoder you are going to use.
-	Geokit::Geocoders::provider_order = [:google,:us]
+	Geokit::Geocoders::provider_order = [:yahoo,:google,:us]
 
 	# The IP provider order. Valid symbols are :ip,:geo_plugin.
 	# As before, make sure you read up on relevant Terms of Use for each

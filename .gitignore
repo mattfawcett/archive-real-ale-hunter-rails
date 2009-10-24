@@ -3,3 +3,5 @@
 log/*
 public/system/attachments/*
 public/system/cache/*
+tmp/*
+db/test.sqlite3-journal

@@ -42,7 +42,6 @@ phpbb_database_test: &PHPBB_TEST
   username: root
   password:
   host: localhost
-  socket: /opt/lampp/var/mysql/mysql.sock 
   
 phpbb_database_cucumber: 
   <<: *PHPBB_TEST

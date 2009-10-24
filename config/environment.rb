@@ -19,11 +19,11 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  
   config.gem "friendly_id"
   config.gem "sqlite3-ruby", :lib => "sqlite3"
-  config.gem "giraffesoft-resource_controller", :lib => "resource_controller", :source => "http://gems.github.com"
   config.gem "haml"
-  config.gem "thoughtbot-paperclip", :lib => 'paperclip', :source => "http://gems.github.com"
+  config.gem "paperclip"
   config.gem "geokit"
   config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
 

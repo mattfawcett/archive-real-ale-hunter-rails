@@ -19,7 +19,7 @@ describe Visit do
     it "should add 3 pints to the user on creation" do
       visit = Visit.make_unsaved
       user = visit.user
-      user.should_receive(:visit).with(5)
+      user.should_receive(:add_pints).with(3)
       visit.save
     end
   end

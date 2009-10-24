@@ -4,7 +4,7 @@ describe MapsController do
 
   describe "responding to GET show" do
     it "should give success" do
-      get :index
+      get :show
       response.should be_success
     end    
   end

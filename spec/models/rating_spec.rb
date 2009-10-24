@@ -38,8 +38,9 @@ describe Rating do
   
   describe "awarding pints" do
     it "should add 3 pints to the user on creation" do
-      rating = Rating.make_unsaved
-      user = ratingpub.user
+      pub = Pub.make
+      rating = pub.ratings.make_unsaved
+      user = rating.user
       user.should_receive(:add_pints).with(3)
       rating.save
     end

@@ -83,7 +83,6 @@ class Pub < ActiveRecord::Base
       end
     end
     results.each do |thing_to_rate, rating|
-      puts "#{thing_to_rate} = total #{rating}. There are #{ratings.length}"
       results[thing_to_rate] = rating / ratings.length
     end
     return results

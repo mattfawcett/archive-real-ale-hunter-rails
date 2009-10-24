@@ -6,7 +6,7 @@ require 'shoulda'
 require 'spec'
 require 'spec/rails'
 require 'machinist'
-require 'spec/image_spec_helper'
+require File.expand_path(File.dirname(__FILE__) + "/image_spec_helper")
 
 require File.expand_path(File.dirname(__FILE__) + "/blueprints")
 require File.expand_path(File.dirname(__FILE__) + '/matchers')
