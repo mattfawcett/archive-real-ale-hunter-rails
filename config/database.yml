@@ -25,7 +25,6 @@ old_site:
   username: root
   password:
   host: localhost
-  socket: /opt/lampp/var/mysql/mysql.sock
   
 phpbb_database_development:  
   adapter: mysql
@@ -33,7 +32,6 @@ phpbb_database_development:
   username: root
   password:
   host: localhost
-  socket: /opt/lampp/var/mysql/mysql.sock  
   
   
 phpbb_database_test: &PHPBB_TEST
@@ -52,4 +50,3 @@ phpbb_database_production:
   username: root
   password:
   host: localhost
-  socket: /opt/lampp/var/mysql/mysql.sock

@@ -12,11 +12,8 @@ Given /^I am logged in$/ do
   session.fill_in("password", :with => "cdzvc4a") 
   session.click_button("Login")
   session.response.body.should contain("You have been successfully logged in")
-  #puts "COOKIES ARE #{session.cookies.inspect}"
-  puts "RESPONSE HEADERS ARE #{session.response.header.inspect}"
-  puts "REQUEST HEADERS ARE #{session.request.inspect}"
-  puts "COOKIES ARE #{adapter.mechanize.cookies.inspect}"
-  session.methods.each {|m| puts "NEXT METHOD #{m}<br>"}
+  session_id = session.response.body[/index.php\?sid=([a-z0-9]*)/, 1]
+  cookies["#{PHPBB_AUTH_COOKIE_NAME}_sid"] = session_id
 end
 
 Then /^I should say what I see$/ do 

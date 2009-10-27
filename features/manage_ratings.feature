@@ -14,7 +14,7 @@ Feature: Manage ratings
     Then I should see "Add a rating for Rose and Crown"
     When I select "3" from "rating_atmosphere"
     And I press "Save"
-    Then I should be on the Rose and Crown image listing page
+    Then I should be on the rose_and_crown_show_page
     And I should see "Atmosphere 3/10" 
 
   Scenario: Changing my rating of a pub
@@ -26,6 +26,6 @@ Feature: Manage ratings
     Then I should see "Edit your rating for the rose and crown"
     When I select "4" from "rating_atmosphere"
     And I press "Save"
-    Then I should be on the Rose and Crown image listing page
+    Then I should be on the rose_and_crown_show_page
     And I should see "Atmosphere 4/10" 
  
