@@ -5,15 +5,18 @@ require "webrat/mechanize"
 Given /^I am logged in$/ do
   @matt = User.make(:username => "matt", :email => "mail@matthewfawcett.co.uk")
   @current_user = @matt
-  # session = Webrat::MechanizeSession.new
-  # session.visit("http://localhost/rah/application/forum/ucp.php?mode=login")
-  # session.fill_in("username", :with => "matt") 
-  # session.fill_in("password", :with => "cdzvc4a") 
-  # session.click_button("Login")
-  # session.response.body.should contain("You have been successfully logged in")
-  # ApplicationController.should_receive(:current_user)
-  # puts "THE INSTANCE METHODS ARE #{session.methods.inspect}"
-  ApplicationController.stub!(:current_user).and_return(@current_user)
+  adapter = MechanizeWorld.new
+  session = Webrat::Session.new(adapter)
+  session.visit("http://localhost/real-ale-hunter/application/forum/ucp.php")  
+  session.fill_in("username", :with => "matt") 
+  session.fill_in("password", :with => "cdzvc4a") 
+  session.click_button("Login")
+  session.response.body.should contain("You have been successfully logged in")
+  #puts "COOKIES ARE #{session.cookies.inspect}"
+  puts "RESPONSE HEADERS ARE #{session.response.header.inspect}"
+  puts "REQUEST HEADERS ARE #{session.request.inspect}"
+  puts "COOKIES ARE #{adapter.mechanize.cookies.inspect}"
+  session.methods.each {|m| puts "NEXT METHOD #{m}<br>"}
 end
 
 Then /^I should say what I see$/ do 
