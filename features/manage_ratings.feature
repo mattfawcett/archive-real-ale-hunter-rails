@@ -22,10 +22,10 @@ Feature: Manage ratings
     And I have already rated the "Rose and Crown"
 	When I go to the rose_and_crown_show_page
     Then I should not see "There are no ratings yet for the the Rose and Crown"
-    When I follow "Rate the Rose and Crown"
-    Then I should see "Edit your rating for the rose and crown"
+    When I follow "Add/Edit your rating"
+    Then I should see "Edit your rating for Rose and Crown"
     When I select "4" from "rating_atmosphere"
     And I press "Save"
     Then I should be on the rose_and_crown_show_page
-    And I should see "Atmosphere 4/10" 
+    And I should see "Atmosphere - 4/10" 
  
