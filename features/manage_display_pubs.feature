@@ -5,18 +5,19 @@ Feature: Manage display_pubs
   
   Scenario: Displaying a list of pubs
     Given a pub is called "Rose and Crown"
-		When I go to list all pubs page
+	  When I go to list all pubs page
     Then I should see "Rose and Crown"
 
 	Scenario: Viewing one pubs details
-		Given a pub is called "Rose and Crown"
+    Given a pub is called "Rose and Crown"
 		And I am on the list all pubs page
 		When I follow "Rose and Crown"
 		Then I should be on rose_and_crown_show_page
-		And I should see "Rose and Crown"
+    And I should see "Rose and Crown"
 		
 	Scenario: "Adding a new pub"
-		Given I have no pubs
+	  Given I am logged in
+		And I have no pubs
 		And I am on the list all pubs page
 		When I follow "Add a new pub"
 		And I fill in "pub_name" with "Mr Foleys"
@@ -41,7 +42,8 @@ Feature: Manage display_pubs
     And I should see "View the wesbite for Mr Foleys"
 		
 	Scenario: "Editing a pub"
-	  Given a pub is called "Rose and Crown"
+	  Given I am logged in
+	  And a pub is called "Rose and Crown"
 	  And I am on the rose_and_crown_show_page
 	  When I follow "Update the details for Rose and Crown"
 	  And I fill in "pub_description" with "Updated description of R&C"

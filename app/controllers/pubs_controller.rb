@@ -1,4 +1,5 @@
 class PubsController < ResourceController::Base
+  before_filter :require_login, :only => [:new, :create, :edit, :update]
   layout :which_layout?
   caches_page :index, :unless => Proc.new { |c| c.request.format.js? }
   
@@ -19,6 +20,8 @@ class PubsController < ResourceController::Base
   end 
 
   create.flash "Thanks, The pub has been added"
+  create.before { @pub.user = @current_user }
+  
   
   
   private
