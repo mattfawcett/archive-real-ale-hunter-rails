@@ -4,7 +4,8 @@ Feature: Manage Pub Images
   wants to be able to be able to view and add photos for a pub
 
   Scenario: Uploading a new photo
-    Given a pub is called "Rose and Crown"
+    Given I am logged in
+    And a pub is called "Rose and Crown"
 		When I go to the Rose and Crown image listing page
     And I follow "Upload a new photo of Rose and Crown"
     Then I should be on the Rose and Crown new image page

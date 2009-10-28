@@ -7,6 +7,6 @@ class ImagesController < ResourceController::Base
   create.flash "Thanks, your photo has been uploaded"
   create.wants.html { redirect_to pub_images_path(parent_object) }
   create.before do
-    object.user = User.first
+    object.user = @current_user
   end
 end
