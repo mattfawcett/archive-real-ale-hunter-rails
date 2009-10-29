@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  include PhpbbAuth
+  #include PhpbbAuth
   before_filter :set_current_user
 
   # Scrub sensitive parameters from your log
@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
   
   def require_login
     unless @current_user
-      puts "ALL COOKIES ARE #{cookies.inspect} and current user is #{current_user}"
       flash[:notice] = "you need to be logged in to do this"
       redirect_to :back
     end

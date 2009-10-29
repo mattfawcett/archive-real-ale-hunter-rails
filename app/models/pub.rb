@@ -91,4 +91,15 @@ class Pub < ActiveRecord::Base
   def award_pints
     user.add_pints(5)
   end
+  
+  
+  define_index do
+    # fields
+    indexes name, :sortable => true
+    indexes description
+    indexes user.username, :as => :author, :sortable => true
+
+    # attributes
+    has user_id, created_at, updated_at
+  end
 end
