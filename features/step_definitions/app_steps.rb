@@ -7,7 +7,7 @@ Given /^I am logged in$/ do
   @current_user = @matt
   adapter = MechanizeWorld.new
   session = Webrat::Session.new(adapter)
-  session.visit("http://localhost/real-ale-hunter/application/forum/ucp.php")  
+  session.visit("http://forum.dev.realalehunter.co.uk/ucp.php")  
   session.fill_in("username", :with => "matt") 
   session.fill_in("password", :with => "cdzvc4a") 
   session.click_button("Login")
