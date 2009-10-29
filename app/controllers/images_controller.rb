@@ -1,4 +1,5 @@
 class ImagesController < ResourceController::Base
+  before_filter :require_login, :only => [:new, :create]
   actions :all, :except => [:destroy, :edit, :update]
   belongs_to :pub
   
