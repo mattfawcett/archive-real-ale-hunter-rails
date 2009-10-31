@@ -33,6 +33,7 @@ a:hover {
 	text-decoration: underline;
 }
 
+
 /* headers */
 h1, h2, h3 {
 	font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-serif;
@@ -288,7 +289,19 @@ input.button {
 	color: #4B3D2C;
 	background: transparent url(../images/right-tab.gif) no-repeat right top;	
 }
-
+#nav form {
+	margin: 5px 5px; 
+	padding: 0px 0px 0px 0px; 
+	background: transparent;
+	border: 0px; 	
+	position: absolute;
+	right: 50px;
+}
+#nav input, select, textarea {
+	margin-top: 10px;
+	padding: 5px;
+	color: #6A6969;; 	
+}
 /* Main Column */
 #main {
 	float: left;
@@ -636,4 +649,7 @@ hr.clear{
 
 .dotted-line-username{
   text-decoration: underline;
+}
+.match{
+  color: red;
 }

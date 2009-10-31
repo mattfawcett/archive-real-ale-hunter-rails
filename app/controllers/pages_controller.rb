@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-  layout "two_column"
   before_filter :set_tab
    
   def whats_new

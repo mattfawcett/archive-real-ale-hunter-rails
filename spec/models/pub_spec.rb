@@ -115,6 +115,11 @@ describe Pub do
       @pub.address_1 = nil
       @pub.address.should eql("Holbeck, Leeds, LS11 5PL")
     end
+    
+    it "should give back excperts if the excerpts flag is true" do
+      @pub.stub!(:excerpts).and_return(mock(:address_1 => 'test', :address_2 => 'test', :town => 'test', :post_code => 'test'))
+      @pub.address(excerpts=true).should eql("test, test, test, test")
+    end
   end
   
   describe "slug" do

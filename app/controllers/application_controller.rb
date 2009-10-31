@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   include PhpbbAuth
   before_filter :set_current_user
+  layout "two_column"
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password

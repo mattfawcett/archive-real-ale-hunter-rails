@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :pubs, :shallow => true, :has_many => [:images, :visits, :ratings]
   map.resource :map
+  map.resources :searches
   map.resources :towns, :has_many => :pubs
 
   map.root :controller => 'pages'
