@@ -8,9 +8,7 @@ class PubsController < ResourceController::Base
   index.wants.json do
     render :json => collection.to_json
   end 
-  index.wants.js do
-  end
-  
+  index.wants.js {}  
   new_action.before do
     object.beers.build
   end

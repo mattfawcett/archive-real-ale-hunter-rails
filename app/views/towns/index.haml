@@ -1,5 +1,10 @@
 %h2 Towns
+= render :partial => "shared/alphabet_anchor_links" 
+
 %p 
-  -@towns.each do |town|
+  - last_letter = '' 
+  - @towns.each do |town|
+    - unless last_letter == pub.name.upcase[0,1] 
+      = %a{:name => pub.name.upcase[0,1]}
     = link_to town, town_pubs_path(town)
     %br/
