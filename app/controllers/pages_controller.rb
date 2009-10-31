@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @pubs = Pub.latest 10
     @visits = Visit.latest 10
     @images = Image.latest 9
-end
+  end
   
   private
   def set_tab
