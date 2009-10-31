@@ -51,7 +51,12 @@
 			<% content_tag :li, :id => (@tab == "What's New" ? 'current' : nil) do %>
         <%= link_to "What's New", :controller => "pages", :action => "whats_new" %>
 		  <% end %>
-		
+		  <% content_tag :li, :id => (@tab == "Add Pub" ? 'current' : nil) do %>
+        <%= link_to "Add Pub", new_pub_path %>
+		  <% end %>
+		  <% content_tag :li, :id => (@tab == "Forum" ? 'current' : nil) do %>
+        <%= link_to "Forum", "http://forum.realalehunter.co.uk" %>
+		  <% end %>
 		</ul>
 		<!-- search starts -->
   	<% form_tag(searches_path, :method => :get) do %>
