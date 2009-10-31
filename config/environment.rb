@@ -25,7 +25,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "paperclip"
   config.gem "geokit"
-  #config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
+  config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
   config.gem 'thinking-sphinx', :lib => 'thinking_sphinx', :version => '1.2.12'
   
 
@@ -48,6 +48,10 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   config.action_controller.page_cache_directory = File.join(RAILS_ROOT, 'public', 'system', 'cache')
+  
+  
 end
+
+
 
 
