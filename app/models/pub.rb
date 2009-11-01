@@ -46,8 +46,8 @@ class Pub < ActiveRecord::Base
   end
   
   def address(excerpts=false)
-    fields = [address_1, address_2, town, post_code]
-    fields = fields.compact {|f| f.excerpts} if excerpts
+    field_names = %w(address_1 address_2 town post_code)
+    fields = field_names.collect {|f| excerpts ? self.excerpts.send(f) : self.send(f)} 
     fields.compact.delete_if{|x| x.blank? }.join(", ")
   end
   
