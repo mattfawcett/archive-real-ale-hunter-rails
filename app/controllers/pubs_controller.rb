@@ -5,17 +5,14 @@ class PubsController < ResourceController::Base
   
   
   
-  index.wants.json do
-    render :json => collection.to_json
-  end 
+  index.wants.json { render :json => collection.to_json }
   index.wants.js {}  
-  new_action.before do
-    object.beers.build
-  end
   
-  show.wants.json do
-    render :json => object.to_json(:methods => :slug)
-  end 
+  new_action.before { object.beers.build }
+  
+  show.wants.html { redirect_to @pub, :status => 301 if @pub.has_better_id? }
+  show.wants.json { render :json => object.to_json(:methods => :slug) }
+  
 
   create.flash "Thanks, The pub has been added"
   create.before { @pub.user = @current_user }

@@ -35,5 +35,18 @@ Feature: Site redirects
     When I request page "/towns/Abberley Village/index.html"
     Then I should be redirected to path "/towns/Abberley%20Village/pubs"  
     
+  Scenario: individual pubs show pages
+    When I request page "/pubs/view_pub/1/101.html"
+    Then I should be redirected to path "/pubs/grove-leeds" 
+    
+    When I request page "/pubs/view_pub/2/101.html"
+    Then I should be redirected to path "/pubs/grove-leeds"
 
-
+    When I request page "/pubs/view_images/101/1.html"
+    Then I should be redirected to path "/pubs/grove-leeds/images"
+    
+    When I request page "/pubs/view_images/101/2.html"
+    Then I should be redirected to path "/pubs/grove-leeds/images"
+    
+    
+    

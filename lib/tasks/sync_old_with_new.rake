@@ -8,6 +8,7 @@ task :sync_old_with_new => :environment do
   Beer.destroy_all
   Visit.destroy_all
   User.destroy_all
+  ActiveRecord::Base::connection().update("DELETE FROM slugs")
   
   new_user_ids = {}
   OldSite::User.all.each do |old_user|
@@ -36,13 +37,17 @@ task :sync_old_with_new => :environment do
                       :lat => old_pub.lat, :lng => old_pub.lon,
                       :website => old_pub.website_from_description,
                       :created_at => old_pub.date_added, :updated_at => old_pub.date_added,
-                      :user => User.find(new_user_ids[old_pub.added_by])
+                      :user => User.find(new_user_ids[old_pub.added_by] || User.first.id)
                       )
     
     new_pub.created_at = old_pub.date_added
     new_pub.save(false) 
-    new_pub.reload
-    puts "NEW LAT IS #{new_pub.lat.to_s}  AND OLD LON IS #{new_pub.lng.to_s}"
+    
+    #now manualy set the id to what it used ot be before
+    Pub.update_all("id = #{old_pub.id}", "id = #{new_pub.id}")
+    ActiveRecord::Base::connection().update("UPDATE slugs SET sluggable_id = #{old_pub.id} WHERE sluggable_id = #{new_pub.id}")
+    new_pub = Pub.find(old_pub.id)
+    
     OldSite::Image.find_by_sql(" SELECT * FROM images WHERE pub_id = '#{old_pub.id}' ").each do |old_image|
       new_image = new_pub.images.new
       new_image.attachment_file_name = ''
