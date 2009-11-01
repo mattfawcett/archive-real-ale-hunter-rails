@@ -7,3 +7,7 @@ end
 Then /^I should be redirected to path "([^\"]*)"$/ do |path|
   @full_stack_session.response.uri.to_s.should eql("http://app.dev.realalehunter.co.uk#{path}")
 end
+
+Then /^I should be redirected to url "([^\"]*)"$/ do |path|
+  @full_stack_session.response.uri.to_s.should eql(path)
+end

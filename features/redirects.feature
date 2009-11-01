@@ -52,5 +52,9 @@ Feature: Site redirects
     When I request page "/map/index.html"
     Then I should be redirected to path "/map"
     
+  Scenario: Forum pages
+    When I request page "/forum/index.html?blah=yes"
+    Then I should be redirected to url "http://forum.realalehunter.co.uk/index.html?blah=yes"
+    
     
     
