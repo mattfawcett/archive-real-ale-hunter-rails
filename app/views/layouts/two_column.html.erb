@@ -13,67 +13,18 @@
 				
 		<div id="sidebar">
 			
-			<h3>Home</h3>
-			<ul class="sidemenu">				
-				<li><%= link_to "Home", root_path %></li>
-				<li><%= link_to "What is real ale", :controller => "pages", :action => "what_is_real_ale" %></li>
-				<li><%= link_to "Real ale styles", :controller => "pages", :action => "styles_of_real_ale" %></li>
-				<li><%= link_to "Brewing real ale", :controller => "pages", :action => "brewing_real_ale" %></li>
-				<li><%= link_to "Camra - the campaign for real ale", :controller => "pages", :action => "camra_campaign_for_real_ale" %></li>
-				<li><%= link_to "Links", :controller => "pages", :action => "links" %></li>
-			</ul>	
+			<% if params[:controller] == 'pages' %>
+			  <%= render :partial => "side_menus/home"%>			  
+			<% else %>
+			  <%= render :partial => "side_menus/pubs"%>
+			<% end %>
 		
-			<h3>About</h3>			
+			<h3>Real Ale Tweets</h3>			
 			
-			<p>
-			<a href="index.html"><img src="images/gravatar.jpg" width="40" height="40" alt="image" class="float-left" /></a>
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
-			Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
-			posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
-			odio, ac blandit ante orci ut diam.
+			<p class="tweet">
 			</p>	
 			
-			<h3>Search</h3>	
-			
-			<form id="qsearch" action="index.html" method="get" >
-			<p>
-			<label for="qsearch">Search:</label>
-			<input class="tbox" type="text" name="qsearch" value="Search this site..." title="Start typing and hit ENTER" />
-			<input class="btn" alt="Search" type="image" name="searchsubmit" title="Search" src="images/search.gif" />
-			</p>
-			</form>		
-			
-			
-				
-			<h3>Links</h3>
-			<ul class="sidemenu">
-				<li><a href="http://www.alistapart.com">Alistapart</a></li>					
-				<li><a href="http://www.cssremix.com">CSS Remix</a></li>
-				<li><a href="http://www.cssmania.com/">CSS Mania</a></li>				
-			</ul>
-			
-			<h3>Sponsors</h3>
-			<ul class="sidemenu">
-				<li><a href="http://themeforest.net?ref=ealigam">ThemeForest <br /><span>Your Choice for Site Templates &amp; Wordpress Themes</span></a></li>
-				<li><a href="http://www.4templates.com/?aff=ealigam">4templates <br /><span>Low Cost Hi-Quality Templates</span></a></li>
-				<li><a href="http://store.templatemonster.com?aff=ealigam">TemplateMonster <br /><span>Delivering the Best Templates on the Net!</span></a></li>
-				<li><a href="http://tinyurl.com/3cgv2m">Text Link Ads <br /><span>Monetized your website</span></a></li>
-				<li><a href="http://www.fotolia.com/partner/114283">Fotolia <br /><span>Free stock images or from $1</span></a> </li>
-				<li><a href="http://www.dreamhost.com/r.cgi?287326">Dreamhost <br /><span>Premium webhosting</span></a></li>
-			</ul>
-			
-			<h3>Wise Words</h3>
-			<p>&quot;We can let circumstances rule us, or we can take 
-			charge and rule our lives from within.&quot;</p>
-					
-			<p class="align-right">- Earl Nightingale</p>
-					
-			<h3>Support Styleshout</h3>
-			<p>If you are interested in supporting my work and would like to contribute, you are
-			welcome to make a small donation through the 
-			<a href="http://www.styleshout.com/">donate link</a> on my website - it will 
-			be a great help and will surely be appreciated.</p>			
-						
+		
 		<!-- sidebar ends -->		
 		</div>		
 		
