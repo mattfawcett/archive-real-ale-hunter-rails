@@ -9,41 +9,50 @@ var markerCluster;
 var clustering_on = true;
 var map;
 function initialize() {
-
-  if(GBrowserIsCompatible()) {
+    if(GBrowserIsCompatible()) {
+  	    if($.query.get('lat') && $.query.get('lng'))
+		{
+			start_lat = $.query.get('lat');
+			start_lng = $.query.get('lng');
+			start_zoom = 16;
+			
+		}
+		else
+		{
+			start_lat = 54;
+			start_lng = -1;
+			start_zoom = 6;
+		}
+	    map = new GMap2(document.getElementById('map'));
+	    map.setCenter(new GLatLng(start_lat, start_lng), start_zoom);
+	    map.addControl(new GLargeMapControl());
     
-    map = new GMap2(document.getElementById('map'));
-    map.setCenter(new GLatLng(54, -1), 6);
-    map.addControl(new GLargeMapControl());
-    
-    $.getJSON('/pubs.json','', function(json)
-   	{
+	    $.getJSON('/pubs.json','', function(json)
+	   	{
 			for (x in json) 
 			{
-			  var latlng = new GLatLng(json[x].pub.lat, json[x].pub.lng);        
+				var latlng = new GLatLng(json[x].pub.lat, json[x].pub.lng);        
 				marker = createMarker(latlng, json[x].pub.id);
 				markers.push(marker);     
-      }
-      markerCluster = new MarkerClusterer(map, markers, {gridSize: 60, maxZoom: 14});
-    });
+	      	}
+	      	markerCluster = new MarkerClusterer(map, markers, {gridSize: 60, maxZoom: 14});
+	    });
     
-    GEvent.addListener(map, "zoomend", function(overlay, point)
- 	  {
-      map.clearOverlays(); 
-    });
+	    GEvent.addListener(map, "zoomend", function(overlay, point){
+	      	map.clearOverlays(); 
+	    });
     
-    GEvent.addListener(map, "moveend", function(overlay, point)
-	  {			
+	    GEvent.addListener(map, "moveend", function(overlay, point){			
 			var curzoom = map.getZoom();
 			if(curzoom >= 14)
 			{
 				//we are zoomed in, dynamically update numbered markers	
-		    if(clustering_on){
-				  markerCluster.turn_off();
-				  map.clearOverlays();
-          clustering_on = false; //set flag so if we zoom out again, clustering gets restarted        
-        }
-        update_non_clustered_markers();
+				if(clustering_on){
+					markerCluster.turn_off();
+					map.clearOverlays();
+	        		clustering_on = false; //set flag so if we zoom out again, clustering gets restarted        
+	        	}
+	        	update_non_clustered_markers();
 			}
 			else
 			{
@@ -51,11 +60,11 @@ function initialize() {
 				if(!clustering_on){
 					$('#map-pub-listing').html(''); //remove anything in the bottom table
 					clustering_on = true; //set flag again so we don't keep clustering
-          markerCluster.turn_back_on();
+	        		markerCluster.turn_back_on();
 				}
 			}
 		});				    
-  }
+  	}
 }
 
 

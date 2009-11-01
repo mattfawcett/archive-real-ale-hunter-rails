@@ -1,4 +1,5 @@
 %h2= "Photos of #{h @pub.name}"
 %p= link_to "Upload a new photo of #{@pub.name}", new_pub_image_path(@pub)
+%p= link_to "Back to #{@pub.name}", pub_path(@pub)
 - @pub.images.each do |image|
   = lightbox_image_tag(image)

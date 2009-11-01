@@ -21,6 +21,7 @@
     -unless @pub.telephone.blank?
       = h @pub.telephone 
       %br/
+    = link_to "View on Map", map_path(:lat => @pub.lat, :lng => @pub.lng)
       
   -if @pub.gbg
     %p= "#{@pub.name} is listed in the Good Beer Guide" 

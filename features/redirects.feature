@@ -48,5 +48,9 @@ Feature: Site redirects
     When I request page "/pubs/view_images/101/2.html"
     Then I should be redirected to path "/pubs/grove-leeds/images"
     
+  Scenario: Map Pages
+    When I request page "/map/index.html"
+    Then I should be redirected to path "/map"
+    
     
     
