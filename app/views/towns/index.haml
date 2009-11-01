@@ -4,7 +4,7 @@
 %p 
   - last_letter = '' 
   - @towns.each do |town|
-    - unless last_letter == pub.name.upcase[0,1] 
-      = %a{:name => pub.name.upcase[0,1]}
+    - unless last_letter == town.upcase[0,1] 
+      %a{:name => town.upcase[0,1]}
     = link_to town, town_pubs_path(town)
     %br/

@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  #include PhpbbAuth
+  include PhpbbAuth
   before_filter :set_current_user
   layout "two_column"
 

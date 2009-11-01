@@ -25,9 +25,10 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "paperclip"
   config.gem "geokit"
-  #config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
+  config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
   config.gem 'thinking-sphinx', :lib => 'thinking_sphinx', :version => '1.2.12'
   config.gem "will_paginate"
+  config.gem 'rack-rewrite', '~> 0.1.2'
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
@@ -50,8 +51,24 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
   config.action_controller.page_cache_directory = File.join(RAILS_ROOT, 'public', 'system', 'cache')
   
+  require 'rack-rewrite'
+  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+    r301 '/what-is-real-ale', '/what_is_real_ale'
+    r301 '/styles-of-real-ale', '/styles_of_real_ale'
+    r301 '/brewing-real-ale', '/brewing_real_ale'
+    r301 '/camra-campaign-for-real-ale', '/camra_campaign_for_real_ale'
+    r301 '/links.html', '/links'
+    r301 '/pubs/ALL.html', '/pubs'
+    r301 %r{/pubs/(\w).html}, '/pubs#$1'
+    r301 '/towns/ALL.html', '/towns'
+    r301 %r{/towns/(\w).html}, '/towns#$1'
+    r301 %r{/towns/(.*)/index.html}, '/towns/$1/pubs'
+  end
+  
+  
   
 end
+
 
 
 

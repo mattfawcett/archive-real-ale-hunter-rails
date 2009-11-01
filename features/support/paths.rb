@@ -10,6 +10,9 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
+    when /the new redirects page/
+      new_redirects_path
+
     when /the new rating page/
       new_rating_path
 
