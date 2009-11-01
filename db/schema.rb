@@ -42,11 +42,11 @@ ActiveRecord::Schema.define(:version => 20091007195131) do
     t.integer  "number_of_pumps"
     t.integer  "user_id"
     t.boolean  "gbg"
-    t.boolean  "cask_marque",     :default => false
+    t.boolean  "cask_marque",                                     :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "lat"
-    t.decimal  "lng"
+    t.decimal  "lat",             :precision => 15, :scale => 12
+    t.decimal  "lng",             :precision => 15, :scale => 12
     t.string   "website"
   end
 
@@ -78,9 +78,9 @@ ActiveRecord::Schema.define(:version => 20091007195131) do
     t.string   "username"
     t.string   "email"
     t.string   "level"
-    t.integer  "pints",       :limit => 255, :default => 0, :null => false
-    t.decimal  "memory_lat"
-    t.decimal  "memory_lon"
+    t.integer  "pints",                                       :default => 0, :null => false
+    t.decimal  "memory_lat",  :precision => 20, :scale => 20
+    t.decimal  "memory_lon",  :precision => 20, :scale => 20
     t.integer  "memory_zoom"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -26,6 +26,7 @@ task :sync_old_with_new => :environment do
       gbg = nil
     end
     Pub.record_timestamps = false    
+    puts "OLD LAT IS #{old_pub.lat.to_s}  AND OLD LON IS #{old_pub.lon.to_s}"
     new_pub = Pub.new(:name => old_pub.name, :description => old_pub.clean_description,
                       :address_1 => old_pub.address_1, :address_2 => old_pub.address_2,
                       :town => old_pub.town, :post_code => old_pub.post_code,
@@ -40,6 +41,8 @@ task :sync_old_with_new => :environment do
     
     new_pub.created_at = old_pub.date_added
     new_pub.save(false) 
+    new_pub.reload
+    puts "NEW LAT IS #{new_pub.lat.to_s}  AND OLD LON IS #{new_pub.lng.to_s}"
     OldSite::Image.find_by_sql(" SELECT * FROM images WHERE pub_id = '#{old_pub.id}' ").each do |old_image|
       new_image = new_pub.images.new
       new_image.attachment_file_name = ''

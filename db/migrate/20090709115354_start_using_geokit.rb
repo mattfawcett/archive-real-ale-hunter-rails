@@ -4,8 +4,8 @@ class StartUsingGeokit < ActiveRecord::Migration
   def self.up
     drop_table  :geocodes
     drop_table  :geocodings
-    add_column :pubs, :lat, :decimal, :precision => 20, :scale => 20
-    add_column :pubs, :lng, :decimal, :precision => 20, :scale => 20
+    add_column :pubs, :lat, :decimal, :precision => 15, :scale => 12
+    add_column :pubs, :lng, :decimal, :precision => 15, :scale => 12
   end
   
   def self.down
