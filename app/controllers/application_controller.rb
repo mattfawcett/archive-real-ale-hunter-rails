@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   def require_login
     unless @current_user
       flash[:notice] = "you need to be logged in to do this"
-      redirect_to :back
+      redirect_to "http://forum.realalehunter.co.uk/forum/ucp.php?mode=login"
     end
   end
 end
