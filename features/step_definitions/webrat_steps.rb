@@ -1,4 +1,5 @@
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
+require 'hpricot'
 
 # Commonly used webrat steps
 # http://github.com/brynary/webrat
