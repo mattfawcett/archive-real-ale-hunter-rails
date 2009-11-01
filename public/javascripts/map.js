@@ -1,7 +1,7 @@
 $(document).ready(function(){
   initialize();
 });
-
+		
 
 var icon = new GIcon(G_DEFAULT_ICON);  
 var markers = [];
@@ -13,18 +13,15 @@ function initialize() {
   	    if($.query.get('lat') && $.query.get('lng'))
 		{
 			start_lat = $.query.get('lat');
-			start_lng = $.query.get('lng');
-			start_zoom = 16;
-			
+			start_lng = $.query.get('lng');			
 		}
 		else
 		{
 			start_lat = 54;
 			start_lng = -1;
-			start_zoom = 6;
 		}
 	    map = new GMap2(document.getElementById('map'));
-	    map.setCenter(new GLatLng(start_lat, start_lng), start_zoom);
+	    map.setCenter(new GLatLng(54, -1), 6);
 	    map.addControl(new GLargeMapControl());
     
 	    $.getJSON('/pubs.json','', function(json)
@@ -36,6 +33,11 @@ function initialize() {
 				markers.push(marker);     
 	      	}
 	      	markerCluster = new MarkerClusterer(map, markers, {gridSize: 60, maxZoom: 14});
+			if($.query.get('lat') && $.query.get('lng'))
+			{
+				//coordinates in the query string, lets zoom in (cluster bug present when load map sratignht to this position)
+				map.setCenter(new GLatLng($.query.get('lat'), $.query.get('lng')), 16);
+			}			
 	    });
     
 	    GEvent.addListener(map, "zoomend", function(overlay, point){
@@ -114,9 +116,9 @@ function marker_info_window_html_for_pub(pub_id)
 // zoomed in area
 function update_non_clustered_markers()
 {
-  var bounds = map.getBounds();
+  	var bounds = map.getBounds();
 	var southWest = bounds.getSouthWest();
-  var northEast = bounds.getNorthEast();	
+  	var northEast = bounds.getNorthEast();	
 	$.ajax({
     type: 'GET',
     url: '/pubs.js',
