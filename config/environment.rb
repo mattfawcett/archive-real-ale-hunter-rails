@@ -26,7 +26,7 @@ Rails::Initializer.run do |config|
   config.gem "paperclip"
   config.gem "geokit"
   config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
-  config.gem 'thinking-sphinx', :lib => 'thinking_sphinx', :version => '1.2.12'
+  config.gem 'thinking-sphinx', :lib => 'thinking_sphinx', :version => '1.3.1'
   config.gem "will_paginate"
   config.gem 'rack-rewrite', '~> 0.1.2'
   
