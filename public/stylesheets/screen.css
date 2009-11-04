@@ -653,3 +653,8 @@ hr.clear{
 .match{
   color: red;
 }
+
+#whats-new-wrapper {
+  display: block;
+  height: 1300px;
+}

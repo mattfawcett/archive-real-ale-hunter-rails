@@ -105,8 +105,8 @@ describe PubsController do
       end
       
       it "should give html back" do
-        Pub.stub(:find).with("12").and_return(@pub)
-        get :show, :id => "12"
+        Pub.stub(:find).with(@pub.slug).and_return(@pub)
+        get :show, :id => @pub.slug
         response.headers['Content-Type'].should =~ /text\/html/
       end
     end
