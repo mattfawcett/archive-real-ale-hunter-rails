@@ -12,10 +12,11 @@ test: &TEST
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql
+  database: "realalehunter_production"
+  host: localhost
+  username: matt
+  password: c3038135cdzvc4
 
 cucumber:
   <<: *TEST
