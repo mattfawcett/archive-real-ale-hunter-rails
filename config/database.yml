@@ -13,7 +13,7 @@ test: &TEST
 
 production:
   adapter: mysql
-  database: "realalehunter_production"
+  database: "real_ale_hunter_production"
   host: localhost
   username: matt
   password: c3038135cdzvc4
