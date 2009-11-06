@@ -50,5 +50,5 @@ phpbb_database_production:
   adapter: mysql
   database: realalehunter_forum
   username: matt
-  password: c3038135cdzvc4cd
+  password: c3038135cdzvc4
   host: localhost
