@@ -68,8 +68,10 @@
 		</ul>
 		<!-- search starts -->
   	<% form_tag(searches_path, :method => :get) do %>
-  	  <%= text_field_tag :terms, params[:terms] %>
-  	  <%= submit_tag "Search" %>
+  	  <fieldset>
+  	    <%= text_field_tag :terms, params[:terms] %>
+  	    <%= submit_tag "Search" %>
+  	  </fieldset>
   	<% end %>
   	<!-- search ends -->
 	<!-- navigation ends-->	

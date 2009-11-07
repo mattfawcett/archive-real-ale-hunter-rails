@@ -658,3 +658,6 @@ hr.clear{
   display: block;
   height: 1300px;
 }
+fieldset {
+  border: 0px;
+}
