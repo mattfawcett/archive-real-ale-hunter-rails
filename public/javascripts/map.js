@@ -131,7 +131,7 @@ function update_non_clustered_markers()
 function numbered_icon(number)
 {
 	var icon = new GIcon();	
-	icon.image="http://www.realalehunter.co.uk/img/markers/marker" + number + ".png";
+	icon.image="http://www.realalehunter.co.uk/images/markers/marker" + number + ".png";
 	icon.iconSize=new GSize(20,34);
 	icon.iconAnchor=new GPoint(16,32);
 	icon.infoWindowAnchor=new GPoint(16, 0);	
