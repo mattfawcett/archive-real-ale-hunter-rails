@@ -20,7 +20,7 @@
   %div.whats-new-photos
     -@images.each_with_index do |image, index|  
       %div{:id => "whats-new-photo-#{index}"}
-        %p= h(image.pub.name) + " - " + h(image.pub.town)
+        %p= link_to(image.pub.name, pub_path(image.pub)) + " - " + h(image.pub.town)
         = lightbox_image_tag(image)    
         %p= "Added by #{display_username image.user} - #{image.user.pints} pints"
       
