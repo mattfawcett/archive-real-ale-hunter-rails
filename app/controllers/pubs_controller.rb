@@ -35,9 +35,9 @@ class PubsController < ResourceController::Base
     else
       if(params[:town_id])
         #limit to a town
-        end_of_association_chain.in_town(params[:town_id]).beginning_with_letter(params[:letter]).paginate(:page => params[:page])
+        end_of_association_chain.in_town(params[:town_id]).beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
       else  
-        end_of_association_chain.beginning_with_letter(params[:letter]).paginate(:page => params[:page])
+        end_of_association_chain.beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
       end
     end
   end
