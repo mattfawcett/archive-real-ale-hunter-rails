@@ -3,5 +3,6 @@ class MapsController < ApplicationController
   
   def show
     @tab = "Map"
+    @page_title = "Map"
   end
 end

@@ -4,6 +4,7 @@ class ImagesController < ResourceController::Base
   actions :all, :except => [:destroy, :edit, :update]
   belongs_to :pub
 
+  index.before {@page_title = "Photos of #{parent_object.name} - #{parent_object.town}"}
   
   create.flash "Thanks, your photo has been uploaded"
   create.wants.html { redirect_to pub_images_path(parent_object) }

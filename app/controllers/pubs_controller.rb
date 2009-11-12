@@ -4,12 +4,13 @@ class PubsController < ResourceController::Base
   caches_page :index, :unless => Proc.new { |c| c.request.format.js? }
   
   
-  
+  index.before {@page_title = "Pubs"}
   index.wants.json { render :json => collection.to_json }
   index.wants.js {}  
   
   new_action.before { object.beers.build }
   
+  show.before {@page_title = "#{@pub.name} - #{@pub.town}"}
   show.wants.html { redirect_to @pub, :status => 301 if @pub.has_better_id? }
   show.wants.json { render :json => object.to_json(:methods => :slug) }
   
