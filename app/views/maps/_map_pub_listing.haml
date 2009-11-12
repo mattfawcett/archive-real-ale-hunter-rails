@@ -8,7 +8,7 @@
     %th Added by
   -@pubs.each_with_index do |pub, index|
     %tr
-      %td{:rowspan => 2}= image_tag "http://www.realalehunter.co.uk/img/markers/marker#{index+1}.png"
+      %td{:rowspan => 2}= image_tag "http://www.realalehunter.co.uk/images/markers/marker#{index+1}.png"
       %td= link_to pub.name, pub_path(pub.slug.name), :target => "_blank"
       %td= h pub.address
       %td= pub.number_of_pumps.nil? ? "unknown" : pub.number_of_pumps
