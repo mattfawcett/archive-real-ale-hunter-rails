@@ -29,11 +29,11 @@
 		<div id="top-menu">
 			<p>
 			  <% if @current_user %>
-			    <%= link_to "account", "http://forum.realalehunter.co.uk/forum/ucp.php"%> |
-			    <%= link_to "logout", "http://forum.realalehunter.co.uk/forum/ucp.php?mode=logout"%>
+			    <%= link_to "account", "http://forum.realalehunter.co.uk/ucp.php"%> |
+			    <%= link_to "logout", "http://forum.realalehunter.co.uk/ucp.php?mode=logout"%>
 			  <% else %>
-			    <%= link_to "login", "http://forum.realalehunter.co.uk/forum/ucp.php?mode=login" %> |
-			    <%= link_to "register", "http://forum.realalehunter.co.uk/forum/ucp.php?mode=register" %>
+			    <%= link_to "login", "http://forum.realalehunter.co.uk/ucp.php?mode=login" %> |
+			    <%= link_to "register", "http://forum.realalehunter.co.uk/ucp.php?mode=register" %>
 			  <% end %>
 			</p>
 		</div>			
