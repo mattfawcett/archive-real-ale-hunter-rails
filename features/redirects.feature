@@ -19,6 +19,9 @@ Feature: Site redirects
     When I request page "/links.html"
     Then I should be redirected to path "/links"
     
+    When I request page "/new.html"
+    Then I should be redirected to path "/whats_new"
+    
   Scenario: Pub and town listing pages
     When I request page "/pubs/ALL.html" 
     Then I should be redirected to path "/pubs"
