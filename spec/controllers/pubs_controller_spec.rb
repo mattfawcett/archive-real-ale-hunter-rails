@@ -3,32 +3,47 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe PubsController do
   
   before(:each) do
-    @pub = Pub.make
+    @pub = Pub.make(:town => "Leeds", :name => "Dog and Gun")
   end
 
   describe "responding to GET index" do
     describe "when requesting html" do      
       
       it "should expose all the pubs as @pubs" do
-        Pub.should_receive(:find).with(:all).and_return([@pub])
+        Pub.should_receive(:find).with(:all, {:offset=> 0, :limit=> 200}).and_return([@pub])
         get :index
         assigns(:pubs).should == [@pub]
       end
       
       it "should limit the number of pubs to a town if there is a town_id in params" do
-        Pub.should_receive(:in_town).with("Leeds").and_return([@pub])
         get :index, :town_id => "Leeds"
         assigns(:pubs).should == [@pub]
+        get :index, :town_id => "Wakefield"
+        assigns(:pubs).should == []
+      end
+      
+      describe "handing only displayig pubs beginning with a certain letter" do
+        it "should be handle the passing in of a letter all pubs" do
+          get :index, :letter => 'D'
+          assigns(:pubs).should == [@pub]
+          get :index, :letter => 'E'
+          assigns(:pubs).should == []
+        end
+        
+        it "should be handle the passing in of a letter limited to a town" do
+          get :index, :town_id => "Leeds", :letter => 'D'
+          assigns(:pubs).should == [@pub]
+          get :index, :town_id => "Leeds", :letter => 'E'
+          assigns(:pubs).should == []
+        end
       end
       
       it "should give success" do
-        Pub.stub!(:find).with(:all).and_return([@pub])
         get :index
         response.should be_success
       end
       
       it "should give html back" do
-        Pub.stub!(:find).with(:all).and_return([@pub])
         get :index
         response.headers['Content-Type'].should =~ /text\/html/
       end
@@ -88,19 +103,20 @@ describe PubsController do
   describe "rsponding to GET show" do
     describe "when requesting html" do
       it "should find the pub" do
-        Pub.should_receive(:find).with("12").and_return(@pub)
-        get :show, :id => "12"
+        Pub.should_receive(:find).with(@pub.slug).and_return(@pub)
+        get :show, :id => @pub.slug
       end
       
       it "should expose the pub as @pub" do
-        Pub.stub(:find).with("12").and_return(@pub)
-        get :show, :id => "12"
+        Pub.stub(:find).with(@pub.slug).and_return(@pub)
+        get :show, :id => @pub.slug
         assigns(:pub).should eql(@pub)
       end
       
       it "should give success" do
-        Pub.stub(:find).with("12").and_return(@pub)
-        get :show, :id => "12"
+        Pub.stub(:find).with(@pub.slug).and_return(@pub)
+        @pub.stub(:has_better_id?).and_return(false)
+        get :show, :id => @pub.slug
         response.should be_success
       end
       
@@ -108,6 +124,13 @@ describe PubsController do
         Pub.stub(:find).with(@pub.slug).and_return(@pub)
         get :show, :id => @pub.slug
         response.headers['Content-Type'].should =~ /text\/html/
+      end
+      
+      it "should redirect to the pubs better id if there is one" do
+        Pub.stub(:find).with("12").and_return(@pub)
+        @pub.stub(:has_better_id?).and_return(true)
+        get :show, :id => "12"
+        response.should redirect_to(pub_path(@pub))
       end
     end
     
