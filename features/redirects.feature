@@ -53,8 +53,8 @@ Feature: Site redirects
     Then I should be redirected to path "/map"
     
   Scenario: Forum pages
-    When I request page "/forum/index.html?blah=yes"
-    Then I should be redirected to url "http://forum.realalehunter.co.uk/index.html?blah=yes"
+    When I request page "/forum/index.php?blah=yes"
+    Then I should be redirected to url "http://forum.realalehunter.co.uk/index.php?blah=yes"
     
     
     
