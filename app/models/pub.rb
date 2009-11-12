@@ -18,7 +18,9 @@ class Pub < ActiveRecord::Base
   
   named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
   named_scope :within_boundreys,  lambda {|min_lan, max_lat, min_lng, max_lng| {:conditions => ["lat >= ? AND lat <= ? AND lng >= ? AND lng <= ?", min_lan, max_lat, min_lng, max_lng]}}
-  named_scope :in_town, lambda {|town| {:conditions => {:town => town}}}    
+  named_scope :in_town, lambda {|town| {:conditions => {:town => town}}} 
+  named_scope :beginning_with_letter, lambda {|letter| {:conditions => letter.nil? ? "" : ["UPPER(name) LIKE ?", "#{letter}%"]}}
+     
   default_scope :order => "name ASC"
   
   has_friendly_id :name_and_town, :use_slug => true

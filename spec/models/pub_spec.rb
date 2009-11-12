@@ -34,6 +34,27 @@ describe Pub do
       Pub.latest(2).should == [@pub_2, @pub]
     end
   end
+  
+  describe "named scope beginning_with_letter" do
+    before(:each) do
+      @albian = Pub.make(:name => 'Albian')
+      @bradfield = Pub.make(:name => 'Bradfield')
+    end
+    
+    it "should only give pubs starting with that letter" do
+      Pub.beginning_with_letter("A").should == [@albian]
+    end
+    
+    it "should be case insensitive" do
+      Pub.beginning_with_letter("a").should == [@albian]
+    end
+    
+    it "should return all if letter is nil" do
+      Pub.beginning_with_letter(nil).should include(@albian)
+      Pub.beginning_with_letter(nil).should include(@bradfield)
+    end
+    
+  end
    
   it "should create a new instance given valid attributes" do    
     @pub.should be_valid
@@ -42,6 +63,7 @@ describe Pub do
   it "should have a named scope to retrieve all pubs, but only the bare minimum of columns" do
     Pub.should have_named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
   end
+  
   
   it "should have named scope for getting all details of pubs in a limited area" do
     @pub_1 = Pub.make(:lat => 42, :lng => -1.25)

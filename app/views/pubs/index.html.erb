@@ -6,19 +6,15 @@
 <p><%= link_to "Add a new pub", new_pub_path  %></p>
 
 
-<%= render :partial => "shared/alphabet_anchor_links" %>
+<%= render :partial => "shared/alphabet_anchor_links", :locals => {:hashes => false} %>
 
 <p>  
-  <% last_letter = '' %>
   <% @pubs.each do |pub| %>
-    <% unless last_letter == pub.name.upcase[0,1] %>
-      <a name="<%=pub.name.upcase[0,1]%>"></a>
-    <% end %>
     <%= link_to(pub.name, pub_path(pub)) %>
     <%= h(pub.address) %>
     <br/>
-    <% last_letter = pub.name.upcase[0,1] %>
    <% end %>
 </p>
+<%= will_paginate @pubs %>
 
 <% set_meta(:keywords => 'Real ale, pubs', :description => 'Pub listings') %>
