@@ -48,7 +48,7 @@ phpbb_database_cucumber:
   
 phpbb_database_production:  
   adapter: mysql
-  database: realalehunter_forum
+  database: realalehunter_forum_2
   username: matt
   password: c3038135cdzvc4
   host: localhost
