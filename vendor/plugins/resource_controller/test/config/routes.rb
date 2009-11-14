@@ -36,6 +36,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :image
   
   map.resources :options
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   
