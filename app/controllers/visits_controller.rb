@@ -1,5 +1,6 @@
 class VisitsController < ResourceController::Base
   actions :all, :except => [:destroy, :edit, :update]
+  before_filter :require_login, :only => [:new, :create]
   belongs_to :pub
   
   layout "one_column"

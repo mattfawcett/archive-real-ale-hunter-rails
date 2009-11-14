@@ -4,7 +4,8 @@ Feature: Manage Pub Visits
   wants to be able to be able to view and add visits for a pub
 
   Scenario: Adding a visit
-    Given a pub is called "Rose and Crown"
+    Given I am logged in
+    And a pub is called "Rose and Crown"
     When I go to the rose_and_crown_show_page
     And I follow "There are currently no visits for Rose and Crown, click here to add one"
     Then I should be on the Rose and Crown new visit page    
