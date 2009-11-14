@@ -59,11 +59,12 @@ Rails::Initializer.run do |config|
     r301 '/camra-campaign-for-real-ale', '/camra_campaign_for_real_ale'
     r301 '/links.html', '/links'
     r301 '/pubs/ALL.html', '/pubs'
-    r301 %r{/pubs/(\w).html}, '/pubs#$1'
+    r301 %r{/pubs/(\w).html}, '/pubs?letter=$1'
     r301 '/towns/ALL.html', '/towns'
     r301 %r{/towns/(\w).html}, '/towns#$1'
     r301 %r{/towns/(.*)/index.html}, '/towns/$1/pubs'
     rewrite %r{/pubs/view_pub/\d+/(\d+).html}, '/pubs/$1' #friendly_id will then redirect to the better name
+    rewrite %r{/pubs/view_pub_on_map/(\d+).html}, '/pubs/$1' #friendly_id will then redirect to the better name
     rewrite %r{/pubs/view_images/(\d+)/[0-9].html}, '/pubs/$1/images' #friendly_id will then redirect to the better name
     r301 "/map/index.html", '/map'
     r301 "/new.html", '/whats_new'

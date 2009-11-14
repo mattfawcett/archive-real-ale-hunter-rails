@@ -27,7 +27,7 @@ Feature: Site redirects
     Then I should be redirected to path "/pubs"
     
     When I request page "/pubs/X.html"
-    Then I should be redirected to path "/pubs#X"
+    Then I should be redirected to path "/pubs?letter=X"
     
     When I request page "/towns/ALL.html" 
     Then I should be redirected to path "/towns"
@@ -54,6 +54,9 @@ Feature: Site redirects
   Scenario: Map Pages
     When I request page "/map/index.html"
     Then I should be redirected to path "/map"
+    
+    When I request page "/pubs/view_pub_on_map/101.html"
+    Then I should be redirected to path "/pubs/grove-leeds"
     
   Scenario: Forum pages
     When I request page "/forum/index.php?blah=yes"
