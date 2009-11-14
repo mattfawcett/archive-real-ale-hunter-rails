@@ -12,6 +12,6 @@ class VisitsController < ResourceController::Base
   create.flash "Thanks, your visit has been added"
   create.wants.html { redirect_to pub_path(parent_object) }
   create.before do
-    object.user = User.first
+    object.user = @current_user
   end
 end

@@ -8,6 +8,10 @@ class PagesController < ApplicationController
     @images = Image.latest 9
   end
   
+  def sitemap
+    render :template => "pages/sitemap.rxml", :layout => false
+  end
+  
   private
   def set_tab_and_page_title
     @tab = "Home"

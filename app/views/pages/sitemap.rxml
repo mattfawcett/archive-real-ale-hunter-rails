@@ -1,0 +1,108 @@
+base_url = "http://www.realalehunter.co.uk"
+xml.instruct! :xml, :version => "1.0"
+xml.tag! 'urlset', "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
+ 
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '1.0'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/what_is_real_ale"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.8'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/styles_of_real_ale"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.8'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/brewing_real_ale"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.8'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/camra_campaign_for_real_ale"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.8'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/styles_of_real_ale"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.8'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/map"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.9'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/whats_new"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.9'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/links"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'monthly'
+    xml.tag! 'priority', '0.1'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/pubs"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'daily'
+    xml.tag! 'priority', '0.8'
+  end
+  
+  xml.tag! 'url' do
+    xml.tag! 'loc', base_url + "/towns"
+    xml.tag! 'lastmod', "2009-11-12"
+    xml.tag! 'changefreq', 'daily'
+    xml.tag! 'priority', '0.8'
+  end
+  
+  Pub.all.each do |pub|
+    xml.tag! 'url' do
+      xml.tag! 'loc', base_url + pub_path(pub)
+      xml.tag! 'lastmod', pub.updated_at.to_date.to_s(:db)
+      xml.tag! 'changefreq', 'monthly'
+      xml.tag! 'priority', '0.9'
+    end
+    
+    if pub.visits.length > 0
+      xml.tag! 'url' do
+        xml.tag! 'loc', base_url + pub_visits_path(pub)
+        xml.tag! 'lastmod', pub.visits.last.updated_at.to_date.to_s(:db)
+        xml.tag! 'changefreq', 'monthly'
+        xml.tag! 'priority', '0.6'
+      end
+    end
+    
+    if pub.images.length > 0
+      xml.tag! 'url' do
+        xml.tag! 'loc', base_url + pub_images_path(pub)
+        xml.tag! 'lastmod', pub.images.last.updated_at.to_date.to_s(:db)
+        xml.tag! 'changefreq', 'monthly'
+        xml.tag! 'priority', '0.6'
+      end
+    end
+  end
+end
