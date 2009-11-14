@@ -68,6 +68,7 @@ Rails::Initializer.run do |config|
     rewrite %r{/pubs/view_images/(\d+)/[0-9].html}, '/pubs/$1/images' #friendly_id will then redirect to the better name
     r301 "/map/index.html", '/map'
     r301 "/new.html", '/whats_new'
+    r301 "/newuser/index.php", '/whats_new'
     r301 %r{/forum(.*)}, 'http://forum.realalehunter.co.uk$1'
   end
   
