@@ -32,7 +32,7 @@ function initialize() {
 				marker = createMarker(latlng, json[x].pub.id);
 				markers.push(marker);     
 	      	}
-	      	markerCluster = new MarkerClusterer(map, markers, {gridSize: 60, maxZoom: 14});
+	      	markerCluster = new MarkerClusterer(map, markers, {gridSize: 80, maxZoom: 14});
 			if($.query.get('lat') && $.query.get('lng'))
 			{
 				//coordinates in the query string, lets zoom in (cluster bug present when load map sratignht to this position)
