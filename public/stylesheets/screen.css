@@ -205,7 +205,7 @@ input.button {
 	position: relative;
 	width: 952px;
 	height: 245px;
-	background: #8AB84B url(../images/header_new.jpg) no-repeat;	
+	background: #8AB84B url(../images/header.jpg) no-repeat;	
 	color: #fff;	
 	padding: 0;	
 	margin: 0;	
@@ -237,7 +237,7 @@ input.button {
  	position: absolute;
 	margin: 0;
 	padding: 30px 15px 8px 15px;
-	background: #74A838 url(../images/top-menu.gif) repeat-x;
+	background: #978060 url(../images/top-menu-2.gif) repeat-x;
 	font-family: 'Trebuchet MS', Arial, Sans-serif;
 	color: #FFF;
 	
