@@ -51,32 +51,41 @@ describe PubsController do
     
     describe "when requesting json" do 
       describe "when wanting all pubs" do
-        it "should call all_optimised_for_cluster_for_map on Pub" do
-          pubs_array = [@pub]
-          Pub.should_receive(:all_optimised_for_cluster_for_map).at_least(:once).and_return(pubs_array)
-          pubs_array.should_receive(:to_json)
-          get :index, :format => 'json'
-        end      
-        
-        it "should give success" do
-          Pub.stub!(:all_optimised_for_cluster_for_map).and_return([])
-          get :index, :format => 'json'
-          response.should be_success
+        describe "when request is from an iphone and includes lat and lon" do
+          it "should find the nearest pubs" do
+            pubs_array = [@pub]
+            Pub.should_receive(:find).with(:all, :within=>100, :origin =>["53","-1"], :limit => 5).at_least(:once).and_return(pubs_array)
+            get :index, :format => 'json', :lat => 53, :lon => -1            
+          end
         end
         
-        it "should not do a normal expensive find" do
-          Pub.stub!(:all_optimised_for_cluster_for_map).and_return([])
-          Pub.should_not_receive(:find).with(:all)
-          get :index, :format => 'json'
-        end
+        describe "when request is from cluster and all pubs are needed (no lat or lon)" do
+          it "should call all_optimised_for_cluster_for_map on Pub" do
+            pubs_array = [@pub]
+            Pub.should_receive(:all_optimised_for_cluster_for_map).at_least(:once).and_return(pubs_array)
+            pubs_array.should_receive(:to_json)
+            get :index, :format => 'json'
+          end      
         
-        it "should give json back" do
-          Pub.stub!(:all_optimised_for_cluster_for_map).and_return([])
-          get :index, :format => 'json'
-          response.headers['Content-Type'].should =~ /json/
+          it "should give success" do
+            Pub.stub!(:all_optimised_for_cluster_for_map).and_return([])
+            get :index, :format => 'json'
+            response.should be_success
+          end
+        
+          it "should not do a normal expensive find" do
+            Pub.stub!(:all_optimised_for_cluster_for_map).and_return([])
+            Pub.should_not_receive(:find).with(:all)
+            get :index, :format => 'json'
+          end
+        
+          it "should give json back" do
+            Pub.stub!(:all_optimised_for_cluster_for_map).and_return([])
+            get :index, :format => 'json'
+            response.headers['Content-Type'].should =~ /json/
+          end
         end
       end
-      
       describe "when requesting javascript" do
         it "should call all_optimised_for_cluster_for_map on Pub" do
           pubs_array = [@pub]
