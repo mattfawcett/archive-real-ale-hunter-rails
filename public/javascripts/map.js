@@ -65,7 +65,8 @@ function initialize() {
 	        		markerCluster.turn_back_on();
 				}
 			}
-		});				    
+		});	
+		$("#map-status").html("");
   	}
 }
 

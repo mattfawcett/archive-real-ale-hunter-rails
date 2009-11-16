@@ -25,3 +25,5 @@ config.action_controller.perform_caching             = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+GOOGLE_MAPS_API_KEY = "ABQIAAAAW5OrdClR6sTtPeIsdHKw9RQfcLyhfIqh4-VGmBjHk1PBviVtZhQa0NX48CYc6BQVurtqzGsgQPc62g"

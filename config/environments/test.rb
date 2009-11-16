@@ -25,3 +25,5 @@ config.action_mailer.delivery_method = :test
 # This is necessary if your schema can't be completely dumped by the schema dumper,
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
+
+GOOGLE_MAPS_API_KEY = "ABQIAAAAW5OrdClR6sTtPeIsdHKw9RRfDATDK87sRawdrbR8KRxRhju55BT8RQuaNV1SjZF771PVVjvWsFX3Kg"

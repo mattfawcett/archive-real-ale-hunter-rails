@@ -18,3 +18,5 @@ config.action_mailer.raise_delivery_errors = false
 
 
 Paperclip.options[:command_path] = "/usr/local/bin"
+
+GOOGLE_MAPS_API_KEY = "ABQIAAAAW5OrdClR6sTtPeIsdHKw9RRfDATDK87sRawdrbR8KRxRhju55BT8RQuaNV1SjZF771PVVjvWsFX3Kg"

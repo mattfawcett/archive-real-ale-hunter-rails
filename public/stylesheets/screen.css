@@ -296,6 +296,7 @@ input.button {
 	border: 0px; 	
 	position: absolute;
 	right: 50px;
+	clear: right;
 }
 #nav input, select, textarea {
 	margin-top: 10px;

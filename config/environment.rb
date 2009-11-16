@@ -71,6 +71,7 @@ Rails::Initializer.run do |config|
     r301 "/newuser/index.php", '/whats_new'
     r301 %r{/forum(.*)}, 'http://forum.realalehunter.co.uk$1'
   end
+    
   
   
   
