@@ -49,7 +49,7 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
-  config.action_controller.page_cache_directory = File.join(RAILS_ROOT, 'public', 'system', 'cache')
+  #config.action_controller.page_cache_directory = File.join(RAILS_ROOT, 'public', 'system', 'cache')
   
   require 'rack-rewrite'
   config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
