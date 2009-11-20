@@ -1,7 +1,7 @@
 class PubsController < ResourceController::Base
   before_filter :require_login, :only => [:new, :create, :edit, :update]
   layout :which_layout?
-  caches_page :index, :unless => Proc.new { |c| c.request.format.js? }
+  caches_page :index, :if => Proc.new { |c| c.request.format.json? }
   
   
   index.before {@page_title = "Pubs"}
