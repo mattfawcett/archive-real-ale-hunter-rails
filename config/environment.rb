@@ -72,7 +72,8 @@ Rails::Initializer.run do |config|
     r301 %r{/forum(.*)}, 'http://forum.realalehunter.co.uk$1'
   end
   
-  
+  config.load_paths += %W( #{RAILS_ROOT}/app/sweepers )
+  config.active_record.observers = :app_sweeper
   
 end
 

@@ -38,3 +38,7 @@ Rating.blueprint do
   user
   pub
 end
+
+Beer.blueprint do
+  name "Summer Lightning"
+end
