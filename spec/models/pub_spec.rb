@@ -61,7 +61,7 @@ describe Pub do
   end
   
   it "should have a named scope to retrieve all pubs, but only the bare minimum of columns" do
-    Pub.should have_named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
+    Pub.should have_named_scope :all_optimised_for_cluster_for_map, :select => "lat, lng"
   end
   
   
