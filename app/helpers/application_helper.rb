@@ -7,12 +7,8 @@ module ApplicationHelper
     messages
   end
   
-  def pub_photo_alt_text(image, include_full_size_link = false)
-    text = "#{image.name} - uploaded by #{image.user.username} #{distance_of_time_in_words(image.created_at.to_f, Time.now.to_i)} ago"
-    if include_full_size_link
-      text << " | #{link_to "Download Original", image.attachment.url(:original)}"
-    end
-    return text
+  def pub_photo_alt_text(image)
+    "#{image.name} - uploaded by #{image.user.username} #{distance_of_time_in_words(image.created_at.to_f, Time.now.to_i)} ago"
   end
 
   def add_beer_link(name, form)
