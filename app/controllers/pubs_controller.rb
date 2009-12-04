@@ -29,7 +29,7 @@ class PubsController < ResourceController::Base
     if params[:format] == 'json'
       if params[:lat] && params[:lon]
         #iphone request, get 5 closet pubs
-        end_of_association_chain.find(:all, :origin =>[params[:lat],params[:lon]], :within => 100, :limit => params[:limit] || 5)        
+        end_of_association_chain.find(:all, :origin =>[params[:lat],params[:lon]], :within => 100, :order => :distance, :limit => params[:limit] || 5)        
       else  
         #get all pubs with minimal details for clustering
         end_of_association_chain.all_optimised_for_cluster_for_map
