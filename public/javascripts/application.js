@@ -26,8 +26,4 @@ $(document).ready(function() {
 		$('#top-menu-logged-in').hide();
 		$('#top-menu-logged-out').show();
 	}
-	//append the session id onto the logout link
-	var old_logout_url = $('#logout-link').attr("href") ;
-	$('#logout-link').attr("href", old_logout_url + "&sid=" + $.cookie('phpbb3_7uah4_sid')) ;
-
 });
