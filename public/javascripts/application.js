@@ -12,3 +12,18 @@ jQuery(function($) {
 										 }
 	);
 });
+
+
+$(document).ready(function() {
+    //decide whether top nav should reflect logged in or logged out
+	if($.cookie('phpbb3_7uah4_u') != undefined && $.cookie('phpbb3_7uah4_u') > 1)
+	{
+		$('#top-menu-logged-in').show();
+		$('#top-menu-logged-out').hide();
+	}
+	else
+	{
+		$('#top-menu-logged-in').hide();
+		$('#top-menu-logged-out').show();
+	}
+});
