@@ -1,5 +1,5 @@
 class AppSweeper < ActionController::Caching::Sweeper
-  observe Pub, Visit, Image
+  observe Pub, Visit, Image, Rating
 
   def after_save(record)
     self.class::expire_pub_page(record.is_a?(Pub) ? record : record.pub)
