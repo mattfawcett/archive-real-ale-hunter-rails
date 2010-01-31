@@ -14,4 +14,12 @@ describe Image do
     end
   end
   
+  describe "awarding pints" do
+    it "should add 3 pints to the user on creation" do
+      image = new_image
+      user = image.user
+      user.should_receive(:add_pints).with(3)
+      image.save
+    end
+  end
 end

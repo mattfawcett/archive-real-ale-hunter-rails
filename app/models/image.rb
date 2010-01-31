@@ -7,5 +7,10 @@ class Image < ActiveRecord::Base
   
   default_scope :order => "created_at DESC"
   named_scope :latest, lambda{|n| {:limit => n}}
+  after_create :award_pints
+  
+  def award_pints
+    user.add_pints(3)
+  end
 
 end
