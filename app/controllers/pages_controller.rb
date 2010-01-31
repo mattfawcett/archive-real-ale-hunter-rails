@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   before_filter :set_tab_and_page_title
-  caches_page :index, :brewing_real_ale, :camra_campaign_for_real_ale, :links, 
-              :styles_of_real_ale, :what_is_real_ale, :whats_new
+  # caches_page :index, :brewing_real_ale, :camra_campaign_for_real_ale, :links, 
+  #             :styles_of_real_ale, :what_is_real_ale, :whats_new
    
   def whats_new
     @tab = "What's New"
