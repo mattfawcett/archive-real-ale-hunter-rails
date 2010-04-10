@@ -46,7 +46,14 @@ describe TweetSearcher do
     visit.comments.should == "In the vic'toria having a few pots"
   end
   
-  it "should not create a visit if there is no pub near the geo location"
+  it "should not create a visit if there is no pub near the geo location" do
+    mock_tweet = Hashie::Mash.new(:from_user  => 'john_smith', 
+                                  :geo => Hashie::Mash.new(:coordinates => [53.808533, -1.585550]),
+                                  :text => "In an unknown b #realalehunter")
+    Twitter::Search.stub!(:new).and_return([mock_tweet])
+    TweetSearcher.run!
+    Visit.count.should == 0
+  end
   
   it "should not add a visit if that pub has visited by that person today"
   

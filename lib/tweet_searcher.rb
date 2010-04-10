@@ -2,7 +2,7 @@ module TweetSearcher
   def self.run!
     Twitter::Search.new('#realalehunter').each do |tweet|
       next unless tweet.geo
-      pubs = Pub.find(:all, :origin => tweet.geo.coordinates, :within => 2, :order => :distance)
+      pubs = Pub.find(:all, :origin => tweet.geo.coordinates, :within => 1, :order => :distance)
       if pubs.length > 0
         matching_pub = nil
         pubs.each do |pub|
