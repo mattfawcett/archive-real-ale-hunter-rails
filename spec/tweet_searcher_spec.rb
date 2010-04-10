@@ -72,5 +72,18 @@ describe TweetSearcher do
     Visit.count.should == 1
   end
   
-  it "should allow unknown twitter users"
+  it "should allow unknown twitter users" do
+    mock_tweet = Hashie::Mash.new(:id => 12345,
+                                  :from_user  => 'mikeunknown', 
+                                  :geo => Hashie::Mash.new(:coordinates => [53.799206, -1.545382]),
+                                  :text => "In the boozer having a few pots #realalehunter")
+    Twitter::Search.stub!(:new).and_return([mock_tweet])
+    TweetSearcher.run!
+    visit = Visit.last
+    visit.user.should be_nil
+    visit.pub.should == @mr_foleys
+    visit.tweet_id.should == 12345
+    visit.tweet_username.should == 'mikeunknown'
+    visit.comments.should == "In the boozer having a few pots"
+  end
 end
