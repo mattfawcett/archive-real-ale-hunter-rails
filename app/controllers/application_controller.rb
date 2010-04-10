@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   def set_current_user
-    @current_user ||= current_user
+    @current_user ||= current_user    
   end
   
   def require_login

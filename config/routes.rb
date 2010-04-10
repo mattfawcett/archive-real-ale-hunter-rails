@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :map
   map.resources :searches
   map.resources :towns, :has_many => :pubs
-
+  map.resources :users
   map.root :controller => 'pages'
 
   
