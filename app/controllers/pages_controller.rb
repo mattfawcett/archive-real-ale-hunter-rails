@@ -14,6 +14,15 @@ class PagesController < ApplicationController
     render :template => "pages/sitemap.rxml", :layout => false
   end
   
+  def setup_twitter
+    if current_user
+      redirect_to edit_user_path(current_user)
+    else
+      flash[:notice] = "Please login first"
+      redirect_to "/"
+    end
+  end
+  
   private
   def set_tab_and_page_title
     @tab = "Home"
