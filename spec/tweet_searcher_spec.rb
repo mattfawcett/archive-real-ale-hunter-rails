@@ -11,7 +11,8 @@ describe TweetSearcher do
   end
   
   it "should create a visit for the nearest tweet if name not found in the tweet" do
-    mock_tweet = Hashie::Mash.new(:from_user  => 'john_smith', 
+    mock_tweet = Hashie::Mash.new(:id => 12345,
+                                  :from_user  => 'john_smith', 
                                   :geo => Hashie::Mash.new(:coordinates => [53.799206, -1.545382]),
                                   :text => "In the boozer having a few pots #realalehunter")
     Twitter::Search.stub!(:new).and_return([mock_tweet])
@@ -19,11 +20,14 @@ describe TweetSearcher do
     visit = Visit.last
     visit.user.should == @john
     visit.pub.should == @mr_foleys
+    visit.tweet_id.should == 12345
+    visit.tweet_username.should == 'john_smith'
     visit.comments.should == "In the boozer having a few pots"
   end
   
   it "should create a visit for the near pub that matches name if a match found" do
-    mock_tweet = Hashie::Mash.new(:from_user  => 'john_smith', 
+    mock_tweet = Hashie::Mash.new(:id => 12345,
+                                  :from_user  => 'john_smith', 
                                   :geo => Hashie::Mash.new(:coordinates => [53.799206, -1.545382]),
                                   :text => "In the victoria having a few pots #realalehunter")
     Twitter::Search.stub!(:new).and_return([mock_tweet])
@@ -35,19 +39,21 @@ describe TweetSearcher do
   end
   
   it "should create a visit for the near pub that matches name if a match found even if there are special charachers" do
-    mock_tweet = Hashie::Mash.new(:from_user  => 'john_smith', 
+    mock_tweet = Hashie::Mash.new(:id => 12345,
+                                  :from_user  => 'john_smith', 
                                   :geo => Hashie::Mash.new(:coordinates => [53.799206, -1.545382]),
                                   :text => "In the vic'toria having a few pots #realalehunter")
     Twitter::Search.stub!(:new).and_return([mock_tweet])
     TweetSearcher.run!
     visit = Visit.last
     visit.user.should == @john
-    visit.pub.should == @victoria
+    visit.pub.should == @victoria    
     visit.comments.should == "In the vic'toria having a few pots"
   end
   
   it "should not create a visit if there is no pub near the geo location" do
-    mock_tweet = Hashie::Mash.new(:from_user  => 'john_smith', 
+    mock_tweet = Hashie::Mash.new(:id => 12345,
+                                  :from_user  => 'john_smith', 
                                   :geo => Hashie::Mash.new(:coordinates => [53.808533, -1.585550]),
                                   :text => "In an unknown b #realalehunter")
     Twitter::Search.stub!(:new).and_return([mock_tweet])
@@ -55,7 +61,16 @@ describe TweetSearcher do
     Visit.count.should == 0
   end
   
-  it "should not add a visit if that pub has visited by that person today"
+  it "should not add a visit if that pub has visited by that person today" do
+    mock_tweet = Hashie::Mash.new(:id => 12345,
+                                  :from_user  => 'john_smith', 
+                                  :geo => Hashie::Mash.new(:coordinates => [53.799206, -1.545382]),
+                                  :text => "In the boozer having a few pots #realalehunter")
+    Twitter::Search.stub!(:new).and_return([mock_tweet])
+    TweetSearcher.run!
+    TweetSearcher.run!
+    Visit.count.should == 1
+  end
   
   it "should allow unknown twitter users"
 end
