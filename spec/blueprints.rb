@@ -7,6 +7,7 @@ User.blueprint do
   email "mail@matthewfawcett.co.uk"
   level 3
   pints 100
+  twitter_username "mattfawcett"
 end
 
 Pub.blueprint do
