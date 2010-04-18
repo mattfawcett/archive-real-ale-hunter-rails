@@ -6,7 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.root :controller => 'pages'
 
-  
+  map.logout "/logout", :controller => "pages", :action => "logout"  
+    
   map.connect ':action', :controller => 'pages'
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

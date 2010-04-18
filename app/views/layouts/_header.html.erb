@@ -29,7 +29,7 @@
 		<div id="top-menu">
 			<p id="top-menu-logged-in">
 			    <%= link_to "account", "http://forum.realalehunter.co.uk/ucp.php"%> |
-			    <%= link_to "logout", "http://forum.realalehunter.co.uk/ucp.php?mode=logout&sid=#{cookies[PHPBB_AUTH_COOKIE_NAME+'_sid']}"%>
+			    <%= link_to "logout", logout_path %>
 			</p>
 			<p id="top-menu-logged-out">
 			  <%= link_to "login", "http://forum.realalehunter.co.uk/ucp.php?mode=login" %> |

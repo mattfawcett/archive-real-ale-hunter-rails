@@ -23,6 +23,10 @@ class PagesController < ApplicationController
     end
   end
   
+  def logout
+    redirect_to "http://forum.realalehunter.co.uk/ucp.php?mode=logout&sid=#{cookies[PHPBB_AUTH_COOKIE_NAME+'_sid']}"
+  end
+  
   private
   def set_tab_and_page_title
     @tab = "Home"
