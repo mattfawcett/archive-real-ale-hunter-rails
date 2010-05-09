@@ -3,3 +3,5 @@
 %p= link_to "Back to #{@pub.name}", pub_path(@pub)
 - @pub.images.each do |image|
   = lightbox_image_tag(image)
+  
+- set_meta(:keywords => "Images of #{@pub.name} - #{@pub.town}", :description => "Member submitted photos of #{@pub.name} - #{@pub.town}")   
