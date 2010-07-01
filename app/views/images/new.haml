@@ -1,5 +1,6 @@
 %h2= "Upload a photo of #{@pub.name}"
 -form_for([@pub, @image], :html => {:multipart => true}) do |f|
+  = f.error_messages
   %p
     = f.label :name
     %br/
