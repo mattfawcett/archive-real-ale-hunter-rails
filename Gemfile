@@ -19,5 +19,8 @@ group "test" do
   gem "rspec", "1.2.6"
   gem "rspec-rails", "1.2.6"
   gem "machinist"
-  # gem "sqlite3-ruby", :require => "sqlite3"
+  gem "cucumber", "0.3.11"
+  gem "webrat", "0.4.4"
+  gem "hpricot"
+  gem "mechanize"
 end
