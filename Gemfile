@@ -13,6 +13,7 @@ gem "thinking-sphinx", "1.3.2", :require => "thinking_sphinx"
 gem "will_paginate"
 gem "rack-rewrite", "~> 0.1.2"
 gem "mysql"
+gem "twitter"
 
 group "test" do
   gem "shoulda"

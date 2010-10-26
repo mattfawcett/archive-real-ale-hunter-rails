@@ -9,6 +9,7 @@ class VisitsController < ResourceController::Base
     object.beers.build
   end
 
+  index.before {@page_title = "Visits added to #{@pub.name} - #{@pub.town}"}
   
   create.flash "Thanks, your visit has been added"
   create.wants.html { redirect_to pub_path(parent_object) }

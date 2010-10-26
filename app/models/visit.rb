@@ -11,6 +11,6 @@ class Visit < ActiveRecord::Base
   after_create :award_pints
   
   def award_pints
-    user.add_pints(3)
+    user.add_pints(3) if user
   end
 end
