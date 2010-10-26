@@ -20,15 +20,15 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   
-  config.gem "friendly_id"
-  config.gem "sqlite3-ruby", :lib => "sqlite3"
-  config.gem "haml"
-  config.gem "paperclip"
-  config.gem "geokit"
-  config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
-  config.gem 'thinking-sphinx', :lib => 'thinking_sphinx', :version => '1.3.2'
-  config.gem "will_paginate"
-  config.gem 'rack-rewrite', '~> 0.1.2'
+  # config.gem "friendly_id"
+  # config.gem "sqlite3-ruby", :lib => "sqlite3"
+  # config.gem "haml"
+  # config.gem "paperclip"
+  # config.gem "geokit"
+  # config.gem "mattfawcett-phpbb-auth", :lib => "phpbb_auth", :source => "http://gems.github.com"
+  # config.gem 'thinking-sphinx', :lib => 'thinking_sphinx', :version => '1.3.2'
+  # config.gem "will_paginate"
+  # config.gem 'rack-rewrite', '~> 0.1.2'
   
 
   # Only load the plugins named here, in the order given (default is alphabetical).
