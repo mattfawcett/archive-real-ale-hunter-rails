@@ -87,6 +87,7 @@ class Pub < ActiveRecord::Base
   end
   
   def average_ratings
+    return nil unless has_ratings?
     results = {:beer_quality => 0, :beer_selection => 0, :atmosphere => 0, :price => 0, :overall_option => 0}
     ratings.each do |one_rating|
       results.each do |thing_to_rate, rating|

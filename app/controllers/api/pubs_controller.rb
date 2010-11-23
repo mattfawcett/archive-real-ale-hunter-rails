@@ -12,8 +12,6 @@ class Api::PubsController < ApplicationController
   
   def show
     @pub = Pub.find(params[:id])
-    methods = [:number_of_ratings, :number_of_images]
-    methods << :average_ratings if @pub.has_ratings?
-    render :json => @pub.to_json(:methods => methods)
+    render :json => @pub.to_json(:methods => [:number_of_ratings, :number_of_images, :average_ratings])
   end
 end

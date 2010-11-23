@@ -55,25 +55,11 @@ describe Api::PubsController do
       response.headers['Content-Type'].should =~ /json/
     end
     
-    it "should include the number of images" do
+    it "should include additional methods" do
       get :show, :id => @pub.id
       response.body.should =~ /number_of_images/
-    end
-    
-    it "should include the number or ratings" do
-      get :show, :id => @pub.id
       response.body.should =~ /number_of_ratings/
-    end
-    
-    it "should include the average ratings if there are some ratings" do
-      @pub.ratings.make
-      get :show, :id => @pub.id
       response.body.should =~ /average_ratings/
-    end
-    
-    it "should not include average ratings if there are no ratings" do
-      get :show, :id => @pub.id
-      response.body.should_not =~ /average_ratings/
     end
   end
 end
