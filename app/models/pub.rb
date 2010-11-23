@@ -69,6 +69,10 @@ class Pub < ActiveRecord::Base
     ratings.length > 0
   end
   
+  def number_of_ratings
+    
+  end
+  
   def self.towns
     Pub.find(:all, :select => "DISTINCT(town) as town", :order => "town ASC").collect {|p| p.town}
   end

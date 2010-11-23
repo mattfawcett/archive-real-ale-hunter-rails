@@ -38,4 +38,37 @@ describe Api::PubsController do
       end
     end
   end
+
+  describe "responding to GET show" do
+    before(:each) do
+      @pub = Pub.make
+      Pub.stub!(:find).and_return(@pub)
+    end
+    
+    it "should respond with success" do
+      get :show, :id => @pub.id
+      response.should be_success
+    end
+    
+    it "should return the pub as json" do
+      get :show, :id => @pub.id
+      response.headers['Content-Type'].should =~ /json/
+    end
+    
+    it "should include the number or ratings" do
+      get :show, :id => @pub.id
+      response.body.should =~ /number_of_ratings/
+    end
+    
+    it "should include the average ratings if there are some ratings" do
+      @pub.ratings.make
+      get :show, :id => @pub.id
+      response.body.should =~ /average_ratings/
+    end
+    
+    it "should not include average ratings if there are no ratings" do
+      get :show, :id => @pub.id
+      response.body.should_not =~ /average_ratings/
+    end
+  end
 end
