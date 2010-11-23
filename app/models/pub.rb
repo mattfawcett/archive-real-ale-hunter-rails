@@ -58,7 +58,7 @@ class Pub < ActiveRecord::Base
   end
   
   def has_images?
-    images.length > 0
+    number_of_images > 0
   end
   
   def has_visits?
@@ -66,11 +66,15 @@ class Pub < ActiveRecord::Base
   end
   
   def has_ratings?
-    ratings.length > 0
+    number_of_ratings > 0
   end
   
   def number_of_ratings
-    
+    ratings.length
+  end
+  
+  def number_of_images
+    images.length
   end
   
   def self.towns

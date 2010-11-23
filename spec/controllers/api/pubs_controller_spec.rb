@@ -55,6 +55,11 @@ describe Api::PubsController do
       response.headers['Content-Type'].should =~ /json/
     end
     
+    it "should include the number of images" do
+      get :show, :id => @pub.id
+      response.body.should =~ /number_of_images/
+    end
+    
     it "should include the number or ratings" do
       get :show, :id => @pub.id
       response.body.should =~ /number_of_ratings/
