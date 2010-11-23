@@ -37,6 +37,14 @@ describe Api::PubsController do
         get :search, :q => "Best"
       end
     end
+    
+    it "should include additional methods" do
+      Pub.stub!(:search).and_return(@pubs)
+      get :search, :q => "Grove"
+      response.body.should =~ /number_of_images/
+      response.body.should =~ /number_of_ratings/
+      response.body.should =~ /average_ratings/
+    end
   end
 
   describe "responding to GET show" do

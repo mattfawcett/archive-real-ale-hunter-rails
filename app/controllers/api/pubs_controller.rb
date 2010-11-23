@@ -7,7 +7,7 @@ class Api::PubsController < ApplicationController
     else
       @pubs = Pub.search(params[:q])
     end
-    render :json => @pubs.to_json
+    render :json => @pubs.to_json(:methods => [:number_of_ratings, :number_of_images, :average_ratings])
   end
   
   def show
