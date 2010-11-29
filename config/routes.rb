@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'pages'
   
   map.namespace :api do |api|
-    api.resources :pubs, :collection => {:search => :get}
+    api.resources :pubs, :collection => {:search => :get, :closest => :get}
   end
 
   map.logout "/logout", :controller => "pages", :action => "logout"  
