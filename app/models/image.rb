@@ -14,4 +14,9 @@ class Image < ActiveRecord::Base
     user.add_pints(3)
   end
 
+  def files
+    file_urls = {:original => attachment.url}
+    [:medium, :thumb, :big_thumb].each {|size| file_urls[size] = attachment.url(size)}
+    return file_urls
+  end
 end

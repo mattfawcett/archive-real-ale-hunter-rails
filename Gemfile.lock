@@ -30,6 +30,7 @@ GEM
     hpricot (0.8.2)
     httparty (0.6.1)
       crack (= 0.1.8)
+    json (1.4.6)
     machinist (1.0.6)
     mattfawcett-phpbb-auth (0.1.1)
     mechanize (1.0.0)
@@ -78,6 +79,7 @@ DEPENDENCIES
   geokit (= 1.5.0)
   haml (= 2.0.9)
   hpricot
+  json
   machinist
   mattfawcett-phpbb-auth
   mechanize
