@@ -20,7 +20,7 @@ describe TweetSearcher do
     visit = Visit.last
     visit.user.should == @john
     visit.pub.should == @mr_foleys
-    visit.tweet_id.should == 12345
+    visit.tweet_id.should == "12345"
     visit.tweet_username.should == 'john_smith'
     visit.comments.should == "In the boozer having a few pots"
   end
@@ -82,7 +82,7 @@ describe TweetSearcher do
     visit = Visit.last
     visit.user.should be_nil
     visit.pub.should == @mr_foleys
-    visit.tweet_id.should == 12345
+    visit.tweet_id.should == "12345"
     visit.tweet_username.should == 'mikeunknown'
     visit.comments.should == "In the boozer having a few pots"
   end

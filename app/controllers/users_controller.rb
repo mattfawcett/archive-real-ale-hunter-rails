@@ -3,14 +3,14 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
-  
+
   def update
     @user = current_user
     if @user.update_attributes(:twitter_username => params[:user][:twitter_username])
       flash[:notice] = "Your twitter username has been updated"
       redirect_to edit_user_path
     else
-      render :action => "edit"      
+      render :action => "edit"
     end
   end
 end

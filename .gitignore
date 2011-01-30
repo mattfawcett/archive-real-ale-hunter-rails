@@ -7,3 +7,4 @@ tmp/*
 db/test.sqlite3-journal
 *.DS_Store
 db/sphinx/*
+.bundle
