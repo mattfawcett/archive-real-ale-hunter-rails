@@ -1,4 +1,5 @@
 class Pub < ActiveRecord::Base
+  POSTCODE_REGEX = /^[a-zA-Z]{1,2}[0-9]{1,2}([a-zA-Z]{1})? [0-9]{1}[a-zA-Z]{2}$/
   belongs_to :user
   has_many :beers, :as => :parent
   has_many :images
@@ -10,7 +11,7 @@ class Pub < ActiveRecord::Base
   validates_presence_of :town
   validates_presence_of :description
   validates_presence_of :post_code
-  validates_format_of :post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2}([a-zA-Z]{1})? [0-9]{1}[a-zA-Z]{2}$/
+  validates_format_of :post_code, :with => POSTCODE_REGEX
   
   before_validation :clean_post_code, :clean_website
   after_create :award_pints
@@ -36,7 +37,7 @@ class Pub < ActiveRecord::Base
 
   
   def clean_post_code
-    unless self.post_code.nil? || self.post_code =~ /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
+    unless self.post_code.nil? || self.post_code =~ POSTCODE_REGEX
       self.post_code = self.post_code.slice(0, self.post_code.length - 3) + " " + self.post_code.slice(self.post_code.length-3, 3)
     end
   end
