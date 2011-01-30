@@ -77,6 +77,7 @@ describe Pub do
     it { should allow_value("LS18 5DA").for(:post_code) }
     it { should allow_value("LS185DA").for(:post_code) } 
     it { should allow_value("LS1 5DA").for(:post_code) } 
+    it { should allow_value("EC2M 6SA").for(:post_code) } 
     it { should_not allow_value("LS 5DA").for(:post_code) } 
     it { should_not allow_value("LS1 DA").for(:post_code) } 
     

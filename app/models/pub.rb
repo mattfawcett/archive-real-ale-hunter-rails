@@ -10,7 +10,7 @@ class Pub < ActiveRecord::Base
   validates_presence_of :town
   validates_presence_of :description
   validates_presence_of :post_code
-  validates_format_of :post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2} [0-9]{1}[a-zA-Z]{2}$/
+  validates_format_of :post_code, :with => /^[a-zA-Z]{1,2}[0-9]{1,2}([a-zA-Z]{1})? [0-9]{1}[a-zA-Z]{2}$/
   
   before_validation :clean_post_code, :clean_website
   after_create :award_pints
