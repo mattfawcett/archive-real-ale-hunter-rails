@@ -15,7 +15,7 @@ gem "rack-rewrite", "~> 0.1.2"
 gem "mysql"
 gem "twitter"
 
-group "test" do
+group :test, :development do
   gem "shoulda"
   gem "rspec", "1.2.6"
   gem "rspec-rails", "1.2.6"
