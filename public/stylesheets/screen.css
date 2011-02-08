@@ -220,6 +220,7 @@ input.button {
 	
 	/* change the values of top and left to adjust the position of the logo*/
 	top: 75px; left: 55px;	
+	display: none;
 }
 #header p#slogan {
 	position: absolute;
@@ -227,6 +228,7 @@ input.button {
 	font: bold 15px 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-serif;
 	color: #322815;
 	letter-spacing: -0.5px;
+	display: none;
 	
 	/* change the values of top and left to adjust the position of the slogan*/
 	top: 148px; left: 150px;		
