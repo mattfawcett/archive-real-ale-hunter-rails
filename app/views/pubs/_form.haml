@@ -1,33 +1,33 @@
 -form_for @pub do |pub_form|
-  = pub_form.error_messages 
+  = pub_form.error_messages
   .column-left
     %h3 Pub details
     -if pub_form.object.new_record?
       %p
         = pub_form.label :name
         %br/
-        = pub_form.text_field :name    
-    %p  
+        = pub_form.text_field :name
+    %p
       = pub_form.label :address_1
       %br/
       = pub_form.text_field :address_1
-    %p  
-      = pub_form.label :address_2
+    %p
+      = pub_form.label :address_2, "Address 2 (Town or village)"
       %br/
       = pub_form.text_field :address_2
-    %p  
-      = pub_form.label :town
+    %p
+      = pub_form.label :town, "City"
       %br/
       = pub_form.text_field :town
-    %p 
+    %p
       = pub_form.label :post_code
       %br/
       = pub_form.text_field :post_code
-    %p  
+    %p
       = pub_form.label :telephone
       %br/
       = pub_form.text_field :telephone
-    %p  
+    %p
       = pub_form.label :number_of_pumps, "Number of hand pumps"
       %br/
       = pub_form.select :number_of_pumps, 1..16
@@ -35,15 +35,15 @@
       = pub_form.label :gbg, "Good Beer Guide listed?"
       %br/
       = pub_form.check_box :gbg
-   
-    
-  .column-right 
+
+
+  .column-right
     %h3 Description
-    %p 
+    %p
       = pub_form.label :description
       %br/
       = pub_form.text_area :description
-    %p 
+    %p
       = pub_form.label :website
       %br/
       = pub_form.text_field :website
@@ -51,9 +51,9 @@
     #beers_area
       = render :partial => 'shared/beer', :locals => {:pub_form => pub_form}
     %p
-    = add_beer_link "Add another", pub_form                   
-	      
-        
+    = add_beer_link "Add another", pub_form
+
+
   %hr.clear
   %p
     = pub_form.submit "Save"
