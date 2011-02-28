@@ -37,7 +37,7 @@ class Pub < ActiveRecord::Base
 
 
   def clean_post_code
-    unless self.post_code.nil? || self.post_code =~ POSTCODE_REGEX
+    unless self.post_code.blank? || self.post_code =~ POSTCODE_REGEX
       self.post_code = self.post_code.slice(0, self.post_code.length - 3) + " " + self.post_code.slice(self.post_code.length-3, 3)
     end
   end
