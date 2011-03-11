@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+        <meta charset="utf-8" />
+        <!--[if IE]>
+        <meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+
+    <meta name="viewport" content="user-scalable=no; target-densitydpi=device-dpi">
+
+
+    <title>Real Ale Hunter iPhone App</title>
+
+        <!-- CSS -->
+
+    <link href="stylesheets/screen.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/jquery.fancybox-1.3.4.css" media="all" rel="stylesheet" type="text/css" />
+
+
+        <!--[if IE]>
+        <style type="text/css">
+          @font-face { font-family: Chunkfive; src: url(fonts/Chunkfive-webfont.eot); }
+        </style>
+        <![endif]-->
+
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript" src="javascripts/jquery.js"></script>
+        <script type="text/javascript" src="javascripts/jquery.easing-1.3.pack.js"></script>
+        <script type="text/javascript" src="javascripts/jquery.fancybox-1.3.4.pack.js"></script>
+
+        <script type="text/javascript">
+      $(document).ready(function() {
+
+
+        $("a.showFull").fancybox({
+            'autoScale' : false,
+            'transitionIn'  : 'elastic',
+            'transitionOut' : 'elastic'
+
+        });
+
+
+        $('#qrWrapper').toggle(
+          function() {
+            $('.qrBarcode').show('fast');
+            $('#qrWrapper p').addClass('active');
+          },
+          function() {
+            $('.qrBarcode').hide('fast');
+            $('#qrWrapper p').removeClass('active');
+          }
+        );
+
+
+
+      });
+
+
+
+
+    </script>
+
+
+    <!--[if IE 6]>
+    <script src="javascripts/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+      DD_belatedPNG.fix('img');
+    </script>
+    <![endif]-->
+
+
+        <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+        <!-- SEO -->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon-ios.png"/>
+
+    </head>
+
+    <body>
+
+
+
+
+    <header id="pageHeader">
+
+      <div id="pageHeaderContent">
+
+          <div class="device">
+              <img src="images/device.png" alt="Real Ale Hunter">
+                <span><img src="images/roundel.png" alt="FREE BEER app"></span>
+            </div>
+
+            <div class="headerRight">
+
+                <div class="tabOnline">
+                  <p><a href="http://www.realalehunter.co.uk/">Try out the online version</a></p>
+                </div>
+
+                <div class="logo">
+                  <img src="images/rah-logo.png" alt="Real Ale Hunter">
+                </div>
+
+                <div class="download">
+                  <a href="http://itunes.apple.com/gb/app/real-ale-hunter/id423757406?mt=8"><img src="images/btn-download.png" alt="Download from iTunes"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <div id="pageBody">
+
+        <div id="pageBodyContent">
+
+      <div id="qrWrapper">
+        <div class="qrBarcode">
+          <img src="images/barcode.gif" alt="Direct download from iTunes">
+        </div>
+        <p>Show QR code</p>
+      </div>
+
+
+            <h1>So beer yet so far?</h1>
+            <h2>Find the ultimate pint with <em>real ale hunter</em></h2>
+
+
+
+            <div class="colLeft">
+
+
+              <div class="featureItem">
+                  <div class="featureIcon">
+                      <img src="images/icon-locate.png" alt="Finding your nearest pub">
+                    </div>
+                    <div class="featureInfo">
+                    <h3>Finding your nearest pub</h3>
+                        <p>Quench your thirst for real beer by locating the best real ale pubs. Wherever you are, whether it&rsquo;s your own neck of the woods or further afield, you&rsquo;re never far away from a proper pint. </p>
+                    </div>
+                </div>
+
+                <div class="featureItem">
+                  <div class="featureIcon">
+                      <img src="images/icon-search.png" alt="Search for a specific pub">
+                    </div>
+                    <div class="featureInfo">
+                    <h3>Search for a specific pub</h3>
+                        <p>Want to drop into a pub you&rsquo;ve heard good things about? Search for a pub by name or location and see the results on Google Maps. It&rsquo;s like GPS for your IPA.</p>
+                    </div>
+                </div>
+
+                <div class="featureItem">
+                  <div class="featureIcon">
+                      <img src="images/icon-info.png" alt="Unrivalled pub information">
+                    </div>
+                    <div class="featureInfo">
+                    <h3>Unrivalled pub information</h3>
+                        <p>Never waste another second drinking second rate beer. Real Ale Hunter gives you all the information you need including pub location, contact details and ratings so you have real local knowledge.</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="colRight">
+              <ul>
+                  <li><a href="images/screenshot-full1.png" rel="appScreenshot" class="showFull"><img src="images/screenshot-thumb1.png" alt="Screenshot"></a></li>
+                    <li><a href="images/screenshot-full2.png" rel="appScreenshot" class="showFull"><img src="images/screenshot-thumb2.png" alt="Screenshot"></a></li>
+                    <li><a href="images/screenshot-full3.png" rel="appScreenshot" class="showFull"><img src="images/screenshot-thumb3.png" alt="Screenshot"></a></li>
+                    <li><a href="images/screenshot-full4.png" rel="appScreenshot" class="showFull"><img src="images/screenshot-thumb4.png" alt="Screenshot"></a></li>
+                    <li><a href="images/screenshot-full5.png" rel="appScreenshot" class="showFull"><img src="images/screenshot-thumb5.png" alt="Screenshot"></a></li>
+                    <li><a href="images/screenshot-full6.png" rel="appScreenshot" class="showFull"><img src="images/screenshot-thumb6.png" alt="Screenshot"></a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+  <footer id="pageFooter">
+
+      <div id="pageFooterContent">
+
+          <div class="footerLeft">
+
+                <p class="footerTwitter">Follow: <a href="http://twitter.com/realalehunter"><span>@</span>realalehunter</a></p>
+
+                <p class="footerLinks"><a href="http://www.realalehunter.co.uk/">Main website</a> | <a href="http://www.realalehunter.co.uk/pubs/new">Add a pub</a> | <a href="http://forum.realalehunter.co.uk/">Forum</a></p>
+
+            </div>
+
+            <div class="footerRight">
+              <p><a href="http://www.bolseragency.com/mobileapps">App and site by bolser</a></p>
+            </div>
+
+        </div>
+
+  </footer>
+
+
+
+
+
+
+<!-- GOOGLE ANALYTICS TAGS -->
+
+
+</body>
+
+</html>

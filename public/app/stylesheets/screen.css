@@ -1,0 +1,407 @@
+/* /////////////////////////////
+ASHLEY BOLSER AGENCY
+CLIENT: INTERNAL
+PROJECT: REAL ALE HUNTER APP
+MEDIA TYPE: SCREEN
+CREATED ON: 30.01.2011
+//////////////////////////////*/
+
+
+
+
+/* RESET MOST COMMON DEFAULTS */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: none;
+}
+
+
+/* HTML5 tags - sets display for unknown elements */
+header, section, footer, aside, nav, article, figure {
+    display: block;
+}
+
+
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Chunkfive';
+  src: url('../fonts/Chunkfive-webfont.eot');
+  src:
+        url('../fonts/Chunkfive-webfont.woff') format('woff'),
+        url('../fonts/Chunkfive-webfont.ttf') format('truetype'),
+        url('../fonts/Chunkfive-webfont.svg#webfontChunkfive') format('svg');
+}
+
+
+
+
+
+body {
+    font-family: 'Trebuchet MS', Trebuchet, Arial, sans-serif;
+    font-size: small;
+    text-align: center;
+    background: #ac9e94;
+}
+
+
+
+/* HEADER */
+
+#pageHeader {
+    width: 100%;
+    height: 488px;
+    float: left;
+    text-align: center;
+    background: #241309 url(../images/bk-header.jpg) no-repeat top center;
+    z-index: 33333;
+}
+
+#pageHeaderContent {
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+
+#pageBody {
+    width: 100%;
+    float: left;
+    text-align: center;
+    background: #ac9e94 url(../images/bk-content.gif) repeat-x top;
+    z-index: 22222;
+    padding: 100px 0px 30px 0px;
+}
+
+* html #pageBody {
+    margin-top: -101px;
+}
+
+#pageBodyContent {
+    width: 940px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+
+#pageFooter {
+    width: 100%;
+    float: left;
+    text-align: center;
+    background: #fff;
+}
+
+#pageFooterContent {
+    width: 940px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+#qrWrapper {
+    width: 190px;
+    float: left;
+    position: absolute;
+    top: -100px;
+    right: 0px;
+    background: #402719 url('../images/bk-qr.png') no-repeat top center;
+    padding: 5px 0px 0px 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+}
+.qrBarcode {
+    width: 126px;
+    float: left;
+    padding: 10px 0px 5px 32px;
+    display: none;
+}
+
+#qrWrapper p {
+    width: 175px;
+    float: left;
+    background: url('../images/bk-qr-arrow-down.gif') no-repeat right;
+    font-family: Chunkfive, Georgia, serif;
+    letter-spacing: 0.5px;
+    color: #b5a69b;
+    font-size: 17px;
+    padding: 10px 0px 10px 15px;
+    cursor: pointer;
+}
+
+#qrWrapper p.active {
+    background: url('../images/bk-qr-arrow-up.gif') no-repeat right;
+}
+
+
+
+.device {
+    width: 470px;
+    height: 585px;
+    float: left;
+    position: relative;
+}
+
+.device span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.device:hover span {
+    -webkit-transform:rotate(-18deg);
+    -moz-transform:rotate(-18deg);
+    -o-transform:rotate(-18deg);
+    -ms-transform:rotate(-18deg);
+    transform:rotate(-18deg);
+}
+
+
+.headerRight {
+    width: 490px;
+    float: right;
+}
+
+
+.tabOnline {
+    width: 490px;
+    height: 55px;
+    float: left;
+    font-family: Chunkfive, Georgia, serif;
+    letter-spacing: 0.5px;
+}
+
+.tabOnline a {
+    color: #b5a69b;
+    float: right;
+    text-decoration: none;
+    background: #402719 url(../images/bk-online.gif) no-repeat right 15px;
+    padding: 13px 35px 0px 15px;
+    height: 32px;
+    font-size: 18px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+}
+
+.tabOnline a:hover {
+    padding: 18px 35px 0px 15px;
+    background: #402719 url(../images/bk-online.gif) no-repeat right 20px;
+}
+
+
+
+
+.logo {
+    width: 490px;
+    float: left;
+    padding: 120px 0px 0px 0px;
+}
+
+.logo img {
+    display: block;
+}
+
+.download {
+    width: 390px;
+    float: left;
+    padding: 0px 0px 0px 100px;
+}
+
+
+
+#pageBodyContent h1 {
+    font-family: Chunkfive, Georgia, serif;
+    color: #402719;
+    font-size: 48px;
+    font-weight: normal;
+    text-shadow: 1px 1px 0px #b6aca4;
+    letter-spacing: 0.5px;
+}
+
+#pageBodyContent h2 {
+    font-family: Chunkfive, Georgia, serif;
+    color: #402719;
+    font-size: 34px;
+    font-weight: normal;
+    text-shadow: 1px 1px 0px #b6aca4;
+    letter-spacing: 0.5px;
+    margin: 0px 0px 40px 0px;
+}
+
+
+.colLeft {
+    width: 540px;
+    float: left;
+}
+
+.colRight {
+    width: 380px;
+    float: right;
+    overflow: hidden;
+}
+
+
+.featureItem {
+    width: 540px;
+    float: left;
+    margin: 0px 0px 35px 0px;
+}
+
+.featureIcon {
+    width: 60px;
+    float: left;
+}
+
+.featureInfo {
+    width: 440px;
+    float: right;
+    padding: 5px 20px 0px 0px;
+}
+
+
+.featureItem h3 {
+    font-family: Chunkfive, Georgia, serif;
+    color: #8a1818;
+    font-size: 24px;
+    font-weight: normal;
+    text-shadow: 1px 1px 0px #b6aba4;
+    letter-spacing: 0.5px;
+    margin: 0px 0px 10px 0px;
+}
+
+
+.featureInfo p {
+    font-size: 16px;
+    color: #2a1408;
+    line-height: 22px;
+    margin: 0px 0px 12px 0px;
+}
+
+.featureInfo ul {
+    font-size: 15px;
+    color: #2a1408;
+    line-height: 20px;
+    margin: 0px 0px 12px 0px;
+    padding: 0px 0px 0px 15px;
+}
+
+
+.colRight ul {
+    list-style: none;
+    width: 460px;
+    float: left;
+}
+
+.colRight li {
+    float: left;
+    width: 160px;
+    background: #b8aca3;
+    border: 1px solid #a09389;
+    margin: 0px 20px 20px 0px;
+    padding: 9px 9px 9px 9px;
+}
+
+.colRight li:hover {
+    border: 1px solid #93857a;
+}
+
+.colRight li img {
+    display: block;
+}
+
+
+
+
+.footerLeft {
+    width: 460px;
+    float: left;
+    padding: 70px 0px 10px 0px;
+    color: #ac9e94;
+    font-family: Chunkfive, Georgia, serif;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.footerRight {
+    width: 480px;
+    float: left;
+    padding: 30px 0px 0px 0px;
+}
+
+.footerTwitter {
+    font-size: 18px;
+    margin: 0px 0px 8px 0px;
+}
+
+.footerTwitter a {
+    color: #6c986f;
+    font-size: 34px;
+    text-decoration: none;
+}
+
+.footerTwitter a span {
+    font-family: Arial;
+}
+
+.footerTwitter a:hover {
+    color: #8a1818;
+}
+
+
+.footerLinks {
+    font-size: 18px;
+    margin: 0px 0px 5px 0px;
+}
+
+.footerLinks a {
+    color: #6c986f;
+    text-decoration: none;
+}
+
+
+.footerLinks a:hover {
+    color: #8a1818;
+}
+
+
+.footerRight p {
+    float: right;
+}
+
+.footerRight a {
+    float: left;
+    width: 220px;
+    height: 107px;
+    background: url(../images/bolser.png) no-repeat top left;
+    text-indent: -99999em;
+}
+
+
+
+
+
+/* GENERIC STYLES */
+
+.access {
+    display: none;
+}
+
+.error {
+    color: #F00;
+}
+
+
+
+
+
+
+
