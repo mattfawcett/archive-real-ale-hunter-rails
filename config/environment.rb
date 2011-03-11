@@ -70,7 +70,7 @@ Rails::Initializer.run do |config|
     r301 "/new.html", '/whats_new'
     r301 "/newuser/index.php", '/whats_new'
     r301 %r{/forum(.*)}, 'http://forum.realalehunter.co.uk$1'
-    rewrite '/app', '/app/public'
+    rewrite '/app', '/app/index.html'
 
   end
 
