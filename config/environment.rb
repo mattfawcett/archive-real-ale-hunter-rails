@@ -19,7 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  
+
   # config.gem "friendly_id"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "haml"
@@ -50,7 +50,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   #config.action_controller.page_cache_directory = File.join(RAILS_ROOT, 'public', 'system', 'cache')
-  
+
   require 'rack-rewrite'
   config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
     r301 '/what-is-real-ale', '/what_is_real_ale'
@@ -70,12 +70,14 @@ Rails::Initializer.run do |config|
     r301 "/new.html", '/whats_new'
     r301 "/newuser/index.php", '/whats_new'
     r301 %r{/forum(.*)}, 'http://forum.realalehunter.co.uk$1'
+    rewrite '/app', '/app/public'
+
   end
-  
+
   config.load_paths += %W( #{RAILS_ROOT}/app/sweepers )
   config.active_record.observers = :app_sweeper
 
-  
+
 end
 
 
