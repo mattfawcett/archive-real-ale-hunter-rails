@@ -14,6 +14,6 @@ class ImagesController < ResourceController::Base
   
   private
   def redirect_to_best_pub_id
-    redirect_to pub_images_path(parent_object), :status => 301 if parent_object.has_better_id? 
+    redirect_to pub_images_path(parent_object), :status => 301 unless parent_object.friendly_id_status.best?
   end
 end

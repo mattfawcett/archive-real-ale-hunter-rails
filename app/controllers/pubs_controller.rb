@@ -12,7 +12,7 @@ class PubsController < ResourceController::Base
   new_action.before { object.beers.build }
   
   show.before {@page_title = "#{@pub.name} - #{@pub.town}"}
-  show.wants.html { redirect_to @pub, :status => 301 if @pub.has_better_id? }
+  show.wants.html { redirect_to @pub, :status => 301 unless @pub.friendly_id_status.best? }
   show.wants.json { render :json => object.to_json(:methods => :slug) }
   
 
