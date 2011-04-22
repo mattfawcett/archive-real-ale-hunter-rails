@@ -4,7 +4,7 @@ source "http://gems.github.com"
 
 gem "rails", "2.3.3"
 
-gem "friendly_id", "2.2.2"
+gem "friendly_id"
 gem "haml", "2.0.9"
 gem "paperclip", "2.3.1.1"
 gem "geokit", "1.5.0"

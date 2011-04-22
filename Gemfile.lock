@@ -12,6 +12,7 @@ GEM
     activeresource (2.3.3)
       activesupport (= 2.3.3)
     activesupport (2.3.3)
+    babosa (0.3.3)
     builder (2.1.2)
     crack (0.1.8)
     cucumber (0.3.11)
@@ -21,9 +22,8 @@ GEM
       term-ansicolor (>= 1.0.3)
       treetop (>= 1.2.5)
     diff-lcs (1.1.2)
-    friendly_id (2.2.2)
-      activerecord (>= 2.2.3)
-      activesupport (>= 2.2.3)
+    friendly_id (3.2.1.1)
+      babosa (~> 0.3.0)
     geokit (1.5.0)
     haml (2.0.9)
     hashie (0.4.0)
@@ -75,7 +75,7 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber (= 0.3.11)
-  friendly_id (= 2.2.2)
+  friendly_id
   geokit (= 1.5.0)
   haml (= 2.0.9)
   hpricot
