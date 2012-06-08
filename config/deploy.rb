@@ -4,7 +4,7 @@ require 'bundler/capistrano'
 default_run_options[:pty] = true
 
 
-set :repository,  "git@github.com:mattfawcett/real-ale-hunter-rails.git"
+set :repository,  "git@bitbucket.org:mattfawcett/real-ale-hunter-rails.git"
 set :deploy_to, "/home/matt/web/real-ale-hunter-rails"
 set :scm, :git
 set :user, :matt
