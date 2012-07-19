@@ -1,15 +1,15 @@
 
 source "http://rubygems.org"
-source "http://gems.github.com"
+#source "http://gems.github.com"
 
-gem "rails", "2.3.3"
+gem "rails", "3.2.6"
 
 gem "friendly_id"
 gem "haml", "2.0.9"
-gem "paperclip", "2.3.1.1"
+gem "paperclip"#, "2.3.1.1"
 gem "geokit", "1.5.0"
-gem "mattfawcett-phpbb-auth", :require => "phpbb_auth"
-gem "thinking-sphinx", "1.3.2", :require => "thinking_sphinx"
+#gem "mattfawcett-phpbb-auth", :require => "phpbb_auth"
+gem "thinking-sphinx", :require => "thinking_sphinx"
 gem "will_paginate"
 gem "rack-rewrite", "~> 0.1.2"
 gem "mysql"

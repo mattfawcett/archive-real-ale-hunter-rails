@@ -17,24 +17,19 @@ class Pub < ActiveRecord::Base
   after_create :award_pints
   acts_as_mappable
 
-  named_scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
-  named_scope :within_boundreys,  lambda {|min_lan, max_lat, min_lng, max_lng| {:conditions => ["lat >= ? AND lat <= ? AND lng >= ? AND lng <= ?", min_lan, max_lat, min_lng, max_lng]}}
-  named_scope :in_town, lambda {|town| {:conditions => {:town => town}}}
-  named_scope :beginning_with_letter, lambda {|letter| {:conditions => letter.nil? ? "" : ["UPPER(name) LIKE ?", "#{letter}%"]}}
+  scope :all_optimised_for_cluster_for_map, :select => "id, lat, lng"
+  scope :within_boundreys,  lambda {|min_lan, max_lat, min_lng, max_lng| {:conditions => ["lat >= ? AND lat <= ? AND lng >= ? AND lng <= ?", min_lan, max_lat, min_lng, max_lng]}}
+  scope :in_town, lambda {|town| {:conditions => {:town => town}}}
+  scope :beginning_with_letter, lambda {|letter| {:conditions => letter.nil? ? "" : ["UPPER(name) LIKE ?", "#{letter}%"]}}
 
   default_scope :order => "name ASC"
 
-  has_friendly_id :name_and_town, :use_slug => true
+  extend FriendlyId
+  friendly_id :name_and_town, :use => :slugged
 
   accepts_nested_attributes_for :beers, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
-  def validate_on_create
-    return unless lat.nil? && lng.nil?
-    geo = Geokit::Geocoders::MultiGeocoder.geocode(address)
-    errors.add(:address, "Could not Geocode address") if !geo.success
-    self.lat, self.lng = geo.lat,geo.lng if geo.success
-  end
-
+  validate :validate_geolocation, :on => :create
 
   def clean_post_code
     unless self.post_code.blank? || self.post_code =~ POSTCODE_REGEX
@@ -115,5 +110,12 @@ class Pub < ActiveRecord::Base
 
     # attributes
     has user_id, created_at, updated_at
+  end
+
+  def validate_geolocation
+    return unless lat.nil? && lng.nil?
+    geo = Geokit::Geocoders::MultiGeocoder.geocode(address)
+    errors.add(:address, "Could not Geocode address") if !geo.success
+    self.lat, self.lng = geo.lat,geo.lng if geo.success
   end
 end

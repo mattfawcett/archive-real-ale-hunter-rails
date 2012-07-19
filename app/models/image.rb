@@ -7,7 +7,7 @@ class Image < ActiveRecord::Base
   belongs_to :pub
   
   default_scope :order => "created_at DESC"
-  named_scope :latest, lambda{|n| {:limit => n}}
+  scope :latest, lambda{|n| {:limit => n}}
   after_create :award_pints
   
   def award_pints

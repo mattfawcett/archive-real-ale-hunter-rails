@@ -44,30 +44,30 @@
 	<!-- navigation starts-->	
 	<div  id="nav">
 		<ul>
-			<% content_tag :li, :id => (@tab == 'Home' ? 'current' : nil) do %>
+			<%= content_tag :li, :id => (@tab == 'Home' ? 'current' : nil) do %>
 	      <%= link_to "Home", root_path %>
 			<% end %>
-			<% content_tag :li, :id => (@tab == 'Map' ? 'current' : nil) do %>
+			<%= content_tag :li, :id => (@tab == 'Map' ? 'current' : nil) do %>
         <%= link_to "Map", map_path %>
 		  <% end %>
-			<% content_tag :li, :id => (@tab == 'Pubs' ? 'current' : nil) do %>
+			<%= content_tag :li, :id => (@tab == 'Pubs' ? 'current' : nil) do %>
         <%= link_to "Pubs", pubs_path %>
 		  <% end %>
-			<% content_tag :li, :id => (@tab == 'Towns' ? 'current' : nil) do %>
+			<%= content_tag :li, :id => (@tab == 'Towns' ? 'current' : nil) do %>
         <%= link_to "Towns", towns_path %>
 		  <% end %>
-			<% content_tag :li, :id => (@tab == "What's New" ? 'current' : nil) do %>
+			<%= content_tag :li, :id => (@tab == "What's New" ? 'current' : nil) do %>
         <%= link_to "What's New", :controller => "pages", :action => "whats_new" %>
 		  <% end %>
-		  <% content_tag :li, :id => (@tab == "Add Pub" ? 'current' : nil) do %>
+		  <%= content_tag :li, :id => (@tab == "Add Pub" ? 'current' : nil) do %>
         <%= link_to "Add Pub", new_pub_path %>
 		  <% end %>
-		  <% content_tag :li, :id => (@tab == "Forum" ? 'current' : nil) do %>
+		  <%= content_tag :li, :id => (@tab == "Forum" ? 'current' : nil) do %>
         <%= link_to "Forum", "http://forum.realalehunter.co.uk" %>
 		  <% end %>
 		</ul>
 		<!-- search starts -->
-  	<% form_tag(searches_path, :method => :get) do %>
+  	<%= form_tag(searches_path, :method => :get) do %>
   	  <fieldset>
   	    <%= text_field_tag :terms, params[:terms] %>
   	    <%= submit_tag "Search" %>
