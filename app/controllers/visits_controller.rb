@@ -1,19 +1,27 @@
-class VisitsController < ResourceController::Base
-  actions :all, :except => [:destroy, :edit, :update]
+class VisitsController < ApplicationController
   before_filter :require_login, :only => [:new, :create]
-  belongs_to :pub
-  
+  before_filter :find_pub
+
   layout "one_column"
 
-  new_action.before do
-    object.beers.build
+  def new
+    @visit = @pub.visits.new
+    @visit.beers.build
   end
 
-  index.before {@page_title = "Visits added to #{@pub.name} - #{@pub.town}"}
-  
-  create.flash "Thanks, your visit has been added"
-  create.wants.html { redirect_to pub_path(parent_object) }
-  create.before do
-    object.user = @current_user
+  def index
+    @page_title = "Visits added to #{@pub.name} - #{@pub.town}"
+    @visits = @pub.visits
+  end
+
+  def create
+    @visit = @pub.visits.new(params[:visit])
+    @visit.user = @current_user
+    if @visit.save
+      flash[:notice] =  "Thanks, your visit has been added"
+      redirect_to pub_path(@pub)
+    else
+      render :action => "new"
+    end
   end
 end

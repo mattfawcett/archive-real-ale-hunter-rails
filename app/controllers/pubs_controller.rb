@@ -1,37 +1,52 @@
-class PubsController < ResourceController::Base
+class PubsController < ApplicationController
   before_filter :require_login, :only => [:new, :create, :edit, :update]
   layout :which_layout?
-  # caches_page :index, :if => Proc.new { |c| c.request.format.json? || c.request.format.html? }
-  # caches_page :show
-  
-  
-  index.before {@page_title = "Pubs"}
-  index.wants.json { render :json => collection.to_json }
-  index.wants.js {}  
-  
-  new_action.before { object.beers.build }
-  
-  show.before {@page_title = "#{@pub.name} - #{@pub.town}"}
-  show.wants.html { redirect_to @pub, :status => 301 unless @pub.friendly_id_status.best? }
-  show.wants.json { render :json => object.to_json(:methods => :slug) }
-  
 
-  create.flash "Thanks, The pub has been added"
-  create.before { @pub.user = @current_user }
-  
-  
-  
+  def index
+    @page_title = "Pubs"
+    @pubs = collection
+    respond_to do |format|
+      format.json { render :json => collection.to_json }
+      format.js {}
+    end
+  end
+
+  def new
+    @pub = Pub.new
+    @pub.beers.build
+  end
+
+  def show
+    @page_title = "#{@pub.name} - #{@pub.town}"
+    @pub = Pub.find(params[:id])
+    respond_to do |format|
+      format.html { redirect_to @pub, :status => 301 unless @pub.friendly_id_status.best? }
+      format.json { render :json => @pub.to_json(:methods => :slug) }
+    end
+  end
+
+  def create
+    @pub = Pub.new(params[:pub])
+    @pub.user = @current_user
+    if @pub.save
+      flash[:notice] = 'Thanks, The pub has been added'
+      redirect_to pub_path(@pub)
+    else
+      render :action => 'new'
+    end
+  end
+
   private
   def which_layout?
     params[:action] == 'index' ? 'two_column' : 'one_column'
   end
-  
-  def collection      
+
+  def collection
     if params[:format] == 'json'
       if params[:lat] && params[:lon]
         #iphone request, get 5 closet pubs
-        end_of_association_chain.find(:all, :origin =>[params[:lat],params[:lon]], :within => 100, :order => :distance, :limit => params[:limit] || 5)        
-      else  
+        end_of_association_chain.find(:all, :origin =>[params[:lat],params[:lon]], :within => 100, :order => :distance, :limit => params[:limit] || 5)
+      else
         #get all pubs with minimal details for clustering
         end_of_association_chain.all_optimised_for_cluster_for_map
       end
@@ -42,10 +57,10 @@ class PubsController < ResourceController::Base
       if(params[:town_id])
         #limit to a town
         end_of_association_chain.in_town(params[:town_id]).beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
-      else  
+      else
         end_of_association_chain.beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
       end
     end
   end
-  
+
 end
