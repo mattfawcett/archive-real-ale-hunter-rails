@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th></th>
+    <th>name</th>
+    <th>Address</th>
+    <th>number of pumps</th>
+    <th>Good Beer Guide?</th>
+    <th>Added by</th>
+  </tr>
+
+  <% @pubs.each_with_index do |pub, index| %>
+    <tr>
+      <td rowspan="2"><%= image_tag "http://www.realalehunter.co.uk/images/markers/marker#{index+1}.png" %></td>
+      <td><%= link_to pub.name, pub_path(pub.slug.name), :target => "_blank" %></td>
+      <td><%= h pub.address %></td>
+      <td><%= pub.number_of_pumps.nil? ? "unknown" : pub.number_of_pumps %></td>
+      <td><%= pub.gbg.nil? ? "unknown" : (pub.gbg ? "yes" : "No") %></td>
+      <td><%= pub.user ? h(pub.user.username) : '' %></td>
+    </tr>
+    <tr>
+      <td rowspan="5"><%= h pub.description %></td>
+    </tr>
+  <% end %>
+</table>

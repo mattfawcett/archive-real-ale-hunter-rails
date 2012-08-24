@@ -1,0 +1,76 @@
+<%= form_for @pub do |pub_form| %>
+  <%= pub_form.error_messages %>
+
+  <div class="column-left">
+    <h3>Pub details</h3>
+
+    <% if pub_form.object.new_record? %>
+      <p>
+        <%= pub_form.label :name %><br/>
+        <%= pub_form.text_field :name %>
+      </p>
+    <% end %>
+    <p>
+      <%= pub_form.label :address_1 %><br/>
+      <%= pub_form.text_field :address_1 %>
+    </p>
+
+    <p>
+      <%= pub_form.label :address_2, "Address 2 (Town or village)" %><br/>
+      <%= pub_form.text_field :address_2 %>
+    </p>
+
+    <p>
+      <%= pub_form.label :town, "City" %><br/>
+      <%= pub_form.text_field :address_1 %>
+    </p>
+
+    <p>
+      <%= pub_form.label :post_code %><br/>
+      <%= pub_form.text_field :post_code %>
+    </p>
+
+    <p>
+      <%= pub_form.label :telephone %><br/>
+      <%= pub_form.text_field :telephone %>
+    </p>
+
+    <p>
+      <%= pub_form.label :number_of_pumps %><br/>
+      <%= pub_form.select :number_of_pumps, 1..16 %>
+    </p>
+
+    <p>
+      <%= pub_form.label :gbg, "Good Beer Guide listed?" %><br/>
+      <%= check_box.select :gbg %>
+    </p>
+  </div>
+
+
+  <div class="column-righ">
+    <h3>Description</h3>
+    <p>
+      <%= pub_form.label :description %><br/>
+      <%= pub_form.text_area :description %>
+    </p>
+
+    <p>
+      <%= pub_form.label :website %><br/>
+      <%= pub_form.text_field :website %>
+    </p>
+
+    <h3>permanent Beers</h3>
+    <div id="beers_area">
+      <%= render :partial => 'shared/beer', :locals => {:pub_form => pub_form} %>
+    </div>
+
+    <p>
+      <%= add_beer_link "Add another", pub_form %>
+    </p>
+  </div>
+  <hr class="clear">
+  <p>
+    <%= pub_form.submit "Save" %>
+  </p>
+<% end %>
+

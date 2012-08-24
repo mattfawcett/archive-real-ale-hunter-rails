@@ -15,12 +15,3 @@ begin
 rescue LoadError
 end
 
-require 'thinking_sphinx/tasks'
-
-
-namespace :spec do
-  task :autotest do
-    require './spec/rspec_autotest'
-    RspecAutotest.run
-  end
-end

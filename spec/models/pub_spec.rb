@@ -147,7 +147,7 @@ describe Pub do
   
   describe "slug" do
     it "should be a URI escaped version of name_and_town" do
-      @pub.slug.name.should eql("grove-leeds")
+      @pub.slug.should eql("grove-leeds")
     end
   end
   

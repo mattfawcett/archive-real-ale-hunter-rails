@@ -1,0 +1,9 @@
+<h2>Photos of <%= @pub.name %></h2>
+
+<p><%= link_to "Upload a new photo of #{@pub.name}", new_pub_image_path(@pub) %></p>
+<p><%= link_to "Back to #{@pub.name}", pub_path(@pub) %></p>
+<% @pub.images.each do |image| %>
+  <%= lightbox_image_tag(image) %>
+<% end %>
+
+<% set_meta(:keywords => "Images of #{@pub.name} - #{@pub.town}", :description => "Member submitted photos of #{@pub.name} - #{@pub.town}") %>

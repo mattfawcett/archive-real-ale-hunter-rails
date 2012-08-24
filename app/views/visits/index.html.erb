@@ -1,0 +1,23 @@
+<h2>Visits for <%= @pub.name %></h2>
+<p>
+  <%= link_to "Add a visit", new_pub_visit_path(@pub) %>
+  <% @pub.visits.all.each do |visit| %>
+    <div class="column-left">
+      <h3>
+        <%= "Added by #{visit.user ? h(visit.user.username) :  h("@"+visit.tweet_username)} - #{distance_of_time_in_words(visit.created_at.to_f, Time.now.to_i)} ago" %>
+        <% if visit.tweet_username %>
+          <%= link_to("via twitter", "http://twitter.com/#{h(visit.tweet_username)}") %>
+        <% end %>
+      </h3>
+      <%= h visit.comments %>
+    </div>
+    <div class="column-right">
+      <h3>Beers Available</h3>
+      <% visit.beers.each do |beer| %>
+        <%= h beer.name %>
+        <br/>
+      <% end %>
+    </div>
+    <hr class="clear"/>
+  <% end %>
+</p>

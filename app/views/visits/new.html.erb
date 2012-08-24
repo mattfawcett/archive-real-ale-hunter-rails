@@ -1,0 +1,24 @@
+<h2>Add a new visit for <%= @pub.name %></h2>
+<%= form_for([@pub, @visit]) do |visit_form| %>
+  <div class="column-left">
+    <h3>Visit details</h3>
+    <p>
+      <%= visit_form.label :comments %>
+      <br/>
+      <%= visit_form.text_area :comments %>
+    </p>
+  </div>
+
+  <div class="column-right">
+    <h3>Beers available on visit</h3>
+    <div id="beers_area">
+      <%= render :partial => 'shared/beer', :locals => {:pub_form => visit_form} %>
+    </div>
+    <p>
+      <%= add_beer_link "Add another", visit_form %>
+    </p>
+    <p>
+      <%= visit_form.submit "Add Visit" %>
+    </p>
+  </div>
+<% end %>

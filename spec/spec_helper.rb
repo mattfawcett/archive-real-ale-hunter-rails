@@ -3,8 +3,7 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'shoulda'
-require 'spec'
-require 'spec/rails'
+require 'rspec/rails'
 require 'machinist'
 require File.expand_path(File.dirname(__FILE__) + "/image_spec_helper")
 
@@ -12,13 +11,14 @@ require File.expand_path(File.dirname(__FILE__) + "/blueprints")
 require File.expand_path(File.dirname(__FILE__) + '/matchers')
 
 
-Spec::Runner.configure do |config|
+RSpec.configure do |config|
+  config.mock_with :rspec
   # If you're not using ActiveRecord you should remove these
   # lines, delete config/database.yml and disable :active_record
   # in your config/boot.rb
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
-  config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
+  config.fixture_path = Rails.root + '/spec/fixtures/'
 
   config.include(Matchers)
   config.before(:each) { Sham.reset }

@@ -1,0 +1,88 @@
+<h2><%= @pub.name %></h2>
+<p><%= "Added by #{@pub.user.username} [#{@pub.user.pints} pints]" %></p>
+<div class="column-left">
+  <h3>Address</h3>
+  <p id="pub-address">
+    <%= h @pub.name %>
+    <br/>
+    <%= h @pub.address_1 %>
+    <br/>
+
+    <% unless @pub.address_2.blank? %>
+      <%= @pub.address_2 unless @pub.address_2.nil? %>
+      <br/>
+    <% end %>
+
+    <%= @pub.town %>
+    <br/>
+
+    <%= @pub.post_code %>
+    <br/>
+
+    <% unless @pub.telephone.blank? %>
+      <%= h @pub.telephone %>
+      <br/>
+    <% end %>
+
+    <%= link_to "View on Map", map_path(:lat => @pub.lat, :lng => @pub.lng) %>
+  </p>
+
+  <% if @pub.gbg %>
+    <p><%= @pub.name %> is listed in the Good Beer Guide</p>
+  <% end %>
+
+  <% unless @pub.website.blank? %>
+    <p><%= link_to "View the wesbite for #{@pub.name}", @pub.website %>
+  <% end %>
+</div>
+
+<div class="column-right">
+  <h3>Permanent Real Ales</h3>
+  <p id="permanent-beers">
+    <% for beer in @pub.beers %>
+      <%= h beer.name %>
+      <br/>
+    <% end %>
+  </p>
+
+  <% unless @pub.number_of_pumps.nil? %>
+    <p><%= @pub.name %> has <% @pub.number_of_pumps %> hand pumps</p>
+  <% end %>
+
+  <h3>Ratings (<%= @pub.ratings.length %>)</h3>
+  <p id="ratings">
+    <% if @pub.has_ratings? %>
+      Beer quality - <%= @pub.average_ratings[:beer_quality]}/10 %>
+      <br/>
+      Beer selection - <%= @pub.average_ratings[:beer_selection]}/10 %>
+      <br/>
+      Atmosphere - <%= @pub.average_ratings[:atmosphere]}/10 %>
+      <br/>
+      Price - <%= @pub.average_ratings[:price]}/10 %>
+      <br/>
+      Overall Opinion - <%= @pub.average_ratings[:overall_option]}/10 %>
+      <br/>
+      <%= link_to "Add/Edit your rating", new_pub_rating_path(@pub) %>
+    <% else %>
+      <%= link_to "This pub hasn't been rated yet. be the first to rate it", new_pub_rating_path(@pub) %>
+    <% end %>
+  </p>
+</div>
+
+<hr class="clear"/>
+<p id="description">
+  <%= @pub.description %>
+  <br/>
+  <%= link_to "Update the details for #{@pub.name}", edit_pub_path(@pub) %>
+</p>
+
+<div class="column-left">
+  <%= render :partial => 'latest_pub_images' %>
+</div>
+
+<div class="column-right">
+  <%= render :partial => 'latest_pub_visits' %>
+</div>
+
+<% set_meta(:keywords => "Real ale pubs, #{h @pub.name}", :description => @pub.description) %>
+

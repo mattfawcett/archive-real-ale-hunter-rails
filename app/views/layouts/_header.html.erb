@@ -7,7 +7,7 @@
 <title><% if @page_title %><%= h @page_title %> | <% end %>Real Ale Hunter</title>
 
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-<%= display_meta(:keywords => "Real, Ale, Real ale, Realale, Map, Beer, Festival, Camra, Directory, Pubs, Boozers, Maps ,Google Maps, Camera, photos, Campaign, review, reviews, ratings, forum, drinking, supping", :description => "A map and directory of real ale pubs in the UK. Add visits, ratings, reviews, real ales available, photos and forums") %>
+<%= raw display_meta(:keywords => "Real, Ale, Real ale, Realale, Map, Beer, Festival, Camra, Directory, Pubs, Boozers, Maps ,Google Maps, Camera, photos, Campaign, review, reviews, ratings, forum, drinking, supping", :description => "A map and directory of real ale pubs in the UK. Add visits, ratings, reviews, real ales available, photos and forums") %>
 
 <%= stylesheet_link_tag "screen", "slimbox2", "jquery.tweet" %>
 <%= javascript_include_tag :defaults, 'slimbox2', 'jquery.tweet', 'tweets', "jquery.cookie" %>
@@ -20,61 +20,61 @@
 <!-- wrap starts here -->
 <div id="wrap">
 
-	<!--header -->
-	<div id="header">			
-				
-		<h1 id="logo-text"><a href="/" title="Real Ale Hunter">Real Ale Hunter</a></h1>		
-		<p id="slogan">A map and directory of real ale serving pubs</p>	
-		
-		<div id="top-menu">
-			<p id="top-menu-logged-in">
-			    <%= link_to "account", "http://forum.realalehunter.co.uk/ucp.php"%> |
-			    <%= link_to "logout", logout_path %>
-			</p>
-			<p id="top-menu-logged-out">
-			  <%= link_to "login", "http://forum.realalehunter.co.uk/ucp.php?mode=login" %> |
-		    <%= link_to "register", "http://forum.realalehunter.co.uk/ucp.php?mode=register" %>
-			</p>
-			
-		</div>			
-				
-	<!--header ends-->					
-	</div>
-		
-	<!-- navigation starts-->	
-	<div  id="nav">
-		<ul>
-			<%= content_tag :li, :id => (@tab == 'Home' ? 'current' : nil) do %>
-	      <%= link_to "Home", root_path %>
-			<% end %>
-			<%= content_tag :li, :id => (@tab == 'Map' ? 'current' : nil) do %>
+  <!--header -->
+  <div id="header">
+
+    <h1 id="logo-text"><a href="/" title="Real Ale Hunter">Real Ale Hunter</a></h1>
+    <p id="slogan">A map and directory of real ale serving pubs</p>
+
+    <div id="top-menu">
+      <p id="top-menu-logged-in">
+          <%= link_to "account", "http://forum.realalehunter.co.uk/ucp.php"%> |
+          <%= link_to "logout", logout_path %>
+      </p>
+      <p id="top-menu-logged-out">
+        <%= link_to "login", "http://forum.realalehunter.co.uk/ucp.php?mode=login" %> |
+        <%= link_to "register", "http://forum.realalehunter.co.uk/ucp.php?mode=register" %>
+      </p>
+
+    </div>
+
+  <!--header ends-->
+  </div>
+
+  <!-- navigation starts-->
+  <div  id="nav">
+    <ul>
+      <%= content_tag :li, :id => (@tab == 'Home' ? 'current' : nil) do %>
+        <%= link_to "Home", root_path %>
+      <% end %>
+      <%= content_tag :li, :id => (@tab == 'Map' ? 'current' : nil) do %>
         <%= link_to "Map", map_path %>
-		  <% end %>
-			<%= content_tag :li, :id => (@tab == 'Pubs' ? 'current' : nil) do %>
+      <% end %>
+      <%= content_tag :li, :id => (@tab == 'Pubs' ? 'current' : nil) do %>
         <%= link_to "Pubs", pubs_path %>
-		  <% end %>
-			<%= content_tag :li, :id => (@tab == 'Towns' ? 'current' : nil) do %>
+      <% end %>
+      <%= content_tag :li, :id => (@tab == 'Towns' ? 'current' : nil) do %>
         <%= link_to "Towns", towns_path %>
-		  <% end %>
-			<%= content_tag :li, :id => (@tab == "What's New" ? 'current' : nil) do %>
+      <% end %>
+      <%= content_tag :li, :id => (@tab == "What's New" ? 'current' : nil) do %>
         <%= link_to "What's New", :controller => "pages", :action => "whats_new" %>
-		  <% end %>
-		  <%= content_tag :li, :id => (@tab == "Add Pub" ? 'current' : nil) do %>
+      <% end %>
+      <%= content_tag :li, :id => (@tab == "Add Pub" ? 'current' : nil) do %>
         <%= link_to "Add Pub", new_pub_path %>
-		  <% end %>
-		  <%= content_tag :li, :id => (@tab == "Forum" ? 'current' : nil) do %>
+      <% end %>
+      <%= content_tag :li, :id => (@tab == "Forum" ? 'current' : nil) do %>
         <%= link_to "Forum", "http://forum.realalehunter.co.uk" %>
-		  <% end %>
-		</ul>
-		<!-- search starts -->
-  	<%= form_tag(searches_path, :method => :get) do %>
-  	  <fieldset>
-  	    <%= text_field_tag :terms, params[:terms] %>
-  	    <%= submit_tag "Search" %>
-  	  </fieldset>
-  	<% end %>
-  	<!-- search ends -->
-	<!-- navigation ends-->	
-	</div>		
-	
-	
+      <% end %>
+    </ul>
+    <!-- search starts -->
+    <%= form_tag(searches_path, :method => :get) do %>
+      <fieldset>
+        <%= text_field_tag :terms, params[:terms] %>
+        <%= submit_tag "Search" %>
+      </fieldset>
+    <% end %>
+    <!-- search ends -->
+  <!-- navigation ends-->
+  </div>
+
+

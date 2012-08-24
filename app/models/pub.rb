@@ -25,7 +25,7 @@ class Pub < ActiveRecord::Base
   default_scope :order => "name ASC"
 
   extend FriendlyId
-  friendly_id :name_and_town, :use => :slugged
+  friendly_id :name_and_town, :use => [:history]
 
   accepts_nested_attributes_for :beers, :allow_destroy => true, :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
@@ -99,7 +99,6 @@ class Pub < ActiveRecord::Base
   def award_pints
     user.add_pints(5)
   end
-
 
   define_index do
     # fields

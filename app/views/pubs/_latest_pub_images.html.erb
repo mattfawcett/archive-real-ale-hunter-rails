@@ -1,0 +1,18 @@
+<h3>latest photos</h3>
+<% if @pub.has_images? %>
+  <div id="pub_images">
+    <p>
+      <%= link_to "View All Photos", pub_images_path(@pub) %>
+      |
+      <%= link_to "Upload Photo", new_pub_image_path(@pub) %>
+    </p>
+    <% @pub.images.latest(4).each do |image| %>
+      <%= lightbox_image_tag(image) %>
+    <% end %>
+  </div>
+<% else %>
+  <p>
+    <%= link_to "There are currently no photos for #{h @pub.name}, click here to add one", new_pub_image_path(@pub) %>
+  </p>
+<% end %>
+

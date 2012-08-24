@@ -4,7 +4,7 @@ module ApplicationHelper
     %w(notice warning error).each do |msg|
       messages << content_tag(:div, flash[msg.to_sym], :class => "flash #{msg}") unless flash[msg.to_sym].blank?
     end
-    messages
+    messages.join
   end
   
   def pub_photo_alt_text(image)
@@ -20,7 +20,7 @@ $('#beers_area').append(change_id_of_dynamically_added_field("#{ escape_javascri
 }
     end
   end
-  
+
   def display_username(user)
     "<span title=\"#{h user.username} - #{user.pints} pints\" class=\"dotted-line-username\">#{h user.username}</span>"
   end

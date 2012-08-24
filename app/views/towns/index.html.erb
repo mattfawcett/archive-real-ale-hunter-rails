@@ -1,0 +1,13 @@
+<h2>Towns</h2>
+<%= render :partial => "shared/alphabet_anchor_links", :locals => {:hashes => true} %>
+
+<p>
+  <% last_letter = '' %>
+  <% @towns.each do |town| %>
+    <% unless last_letter == town.upcase[0,1] %>
+      <%= tag :a, :name => town.upcase[0,1] %>
+    <% end %>
+    <%= link_to town, town_pubs_path(town) %>
+    <br/>
+  <% end %>
+</p>

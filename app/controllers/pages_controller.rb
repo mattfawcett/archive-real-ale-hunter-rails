@@ -33,5 +33,5 @@ class PagesController < ApplicationController
     @page_title = params[:action].humanize
     @page_title = "CAMRA - The Campaign For Real Ale" if params[:action] == 'camra_campaign_for_real_ale'
     @page_title = "Home" if params[:action] == 'index'
-  end  
+  end
 end

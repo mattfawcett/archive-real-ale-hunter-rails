@@ -1,0 +1,11 @@
+<p>
+  <% ('A'..'Z').each do |letter| %>
+    <% if hashes %>
+      <%= link_to letter, "##{letter}" %>
+    <% else %>
+      <%= link_to letter, params.merge(:letter => letter, :page => nil) %>
+    <% end %>
+  <% end %>
+
+  <%= link_to "All", params.merge(:letter => nil, :page => nil) unless hashes %>
+</p>
