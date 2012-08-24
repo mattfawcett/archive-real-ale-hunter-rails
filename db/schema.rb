@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(:version => 20120720153411) do
     t.datetime "updated_at"
   end
 
+  create_table "breweries", :force => true do |t|
+    t.string "brewery_name"
+  end
+
+  create_table "edits", :force => true do |t|
+    t.string  "table_name"
+    t.string  "column_name"
+    t.text    "old_value"
+    t.text    "new_value"
+    t.integer "user"
+    t.string  "date",        :limit => 20
+  end
+
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug"
     t.integer  "sluggable_id"
@@ -43,6 +56,33 @@ ActiveRecord::Schema.define(:version => 20120720153411) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "lat",               :limit => 50, :default => "0.000000", :null => false
+    t.string   "lon",               :limit => 50, :default => "0.000000", :null => false
+    t.integer  "zoom",                            :default => 0,          :null => false
+    t.text     "description",                                             :null => false
+    t.string   "name",                            :default => "",         :null => false
+    t.string   "address_1"
+    t.string   "address_2",                       :default => "",         :null => false
+    t.string   "town",                            :default => "",         :null => false
+    t.string   "post_code",                       :default => "",         :null => false
+    t.string   "telephone",                       :default => "",         :null => false
+    t.string   "website",                         :default => "",         :null => false
+    t.string   "rating",                          :default => "",         :null => false
+    t.string   "number_of_ratings",               :default => "",         :null => false
+    t.string   "number_of_pumps",   :limit => 10, :default => "",         :null => false
+    t.integer  "added_by"
+    t.integer  "gbg"
+    t.datetime "date_added"
+    t.string   "county"
+    t.integer  "cask_marque",                     :default => 0,          :null => false
+  end
+
+  create_table "pub_beers", :force => true do |t|
+    t.integer "pub_id"
+    t.integer "beer_id"
   end
 
   create_table "pubs", :force => true do |t|
@@ -77,6 +117,26 @@ ActiveRecord::Schema.define(:version => 20120720153411) do
     t.datetime "updated_at"
   end
 
+  create_table "sessions", :primary_key => "serial", :force => true do |t|
+    t.string "session_id"
+    t.string "logged_in",   :limit => 1, :default => "", :null => false
+    t.string "user_serial"
+    t.string "ip_address"
+    t.string "expires"
+  end
+
+  create_table "slugs", :force => true do |t|
+    t.string   "name"
+    t.integer  "sluggable_id"
+    t.integer  "sequence",                     :default => 1, :null => false
+    t.string   "sluggable_type", :limit => 40
+    t.string   "scope",          :limit => 40
+    t.datetime "created_at"
+  end
+
+  add_index "slugs", ["name", "sluggable_type", "scope", "sequence"], :name => "index_slugs_on_name_and_sluggable_type_and_scope_and_sequence", :unique => true
+  add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
@@ -88,6 +148,11 @@ ActiveRecord::Schema.define(:version => 20120720153411) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "twitter_username"
+  end
+
+  create_table "visit_beers", :force => true do |t|
+    t.string "visit_id", :limit => 10
+    t.string "beer_id",  :limit => 10
   end
 
   create_table "visits", :force => true do |t|

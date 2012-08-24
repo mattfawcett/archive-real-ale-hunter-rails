@@ -8,6 +8,7 @@ class PubsController < ApplicationController
     respond_to do |format|
       format.json { render :json => collection.to_json }
       format.js {}
+      format.html {}
     end
   end
 
@@ -45,20 +46,20 @@ class PubsController < ApplicationController
     if params[:format] == 'json'
       if params[:lat] && params[:lon]
         #iphone request, get 5 closet pubs
-        end_of_association_chain.find(:all, :origin =>[params[:lat],params[:lon]], :within => 100, :order => :distance, :limit => params[:limit] || 5)
+        Pub.find(:all, :origin =>[params[:lat],params[:lon]], :within => 100, :order => :distance, :limit => params[:limit] || 5)
       else
         #get all pubs with minimal details for clustering
-        end_of_association_chain.all_optimised_for_cluster_for_map
+        Pub.all_optimised_for_cluster_for_map
       end
     elsif params[:format] == 'js'
       #get details for a limited amount of pubs. but full details
-      end_of_association_chain.within_boundreys(params[:min_lat], params[:max_lat], params[:min_lng], params[:max_lng])
+      Pub.within_boundreys(params[:min_lat], params[:max_lat], params[:min_lng], params[:max_lng])
     else
       if(params[:town_id])
         #limit to a town
-        end_of_association_chain.in_town(params[:town_id]).beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
+        Pub.in_town(params[:town_id]).beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
       else
-        end_of_association_chain.beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
+        Pub.beginning_with_letter(params[:letter]).paginate(:page => params[:page], :per_page => 200)
       end
     end
   end

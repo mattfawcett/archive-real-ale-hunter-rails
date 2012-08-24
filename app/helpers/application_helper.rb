@@ -12,6 +12,7 @@ module ApplicationHelper
   end
 
   def add_beer_link(name, form)
+    return 'FIXME'
     link_to_function name do |page|
       beer = render(:partial => 'shared/beer', :locals => { :pub_form => form, :visit_form => form, :beer => Beer.new })
       page << %{

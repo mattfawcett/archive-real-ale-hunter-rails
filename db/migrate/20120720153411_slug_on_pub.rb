@@ -5,11 +5,9 @@ class SlugOnPub < ActiveRecord::Migration
       p.slug = p.slugs.last
       p.save(:validate => false)
     end
-    rename_column :friendly_id_slugs, :name, :slug
   end
 
   def down
     remove_column :pubs, :slug
-    rename_column :friendly_id_slugs, :slug, :name
   end
 end
