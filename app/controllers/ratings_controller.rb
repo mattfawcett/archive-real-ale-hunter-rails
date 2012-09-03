@@ -1,6 +1,6 @@
 class RatingsController < ApplicationController
   before_filter :require_login
-  
+
   def new
     @pub = Pub.find(params[:pub_id])
     if @current_user.has_rated?(@pub)
@@ -9,12 +9,12 @@ class RatingsController < ApplicationController
       @rating = @pub.ratings.new
     end
   end
-  
+
   def edit
     @rating = @current_user.ratings.find(params[:id])
     @pub = @rating.pub
   end
-  
+
   def create
     @pub = Pub.find(params[:pub_id])
     @rating = Rating.new(params[:rating])
@@ -39,5 +39,5 @@ class RatingsController < ApplicationController
       render :action => "edit"
     end
   end
-  
+
 end
