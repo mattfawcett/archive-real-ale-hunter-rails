@@ -1,5 +1,9 @@
 RealAleHunter::Application.routes.draw do
-  resources :pubs
+  resources :pubs do
+    resources :ratings
+    resources :images
+    resources :visits
+  end
   resource :map
   resources :searches
   resources :towns do
@@ -8,11 +12,11 @@ RealAleHunter::Application.routes.draw do
   resources :users
   match '/' => 'pages#index', :as => "root"
   namespace :api do
-      resources :pubs do
-        collection do
-    get :search
-    get :closest
-    end
+    resources :pubs do
+      collection do
+        get :search
+        get :closest
+      end
     end
   end
 

@@ -52,15 +52,15 @@
   <h3>Ratings (<%= @pub.ratings.length %>)</h3>
   <p id="ratings">
     <% if @pub.has_ratings? %>
-      Beer quality - <%= @pub.average_ratings[:beer_quality]}/10 %>
+      Beer quality - <%= @pub.average_ratings[:beer_quality] %>/10
       <br/>
-      Beer selection - <%= @pub.average_ratings[:beer_selection]}/10 %>
+      Beer selection - <%= @pub.average_ratings[:beer_selection] %>/10
       <br/>
-      Atmosphere - <%= @pub.average_ratings[:atmosphere]}/10 %>
+      Atmosphere - <%= @pub.average_ratings[:atmosphere] %>/10
       <br/>
-      Price - <%= @pub.average_ratings[:price]}/10 %>
+      Price - <%= @pub.average_ratings[:price] %>/10
       <br/>
-      Overall Opinion - <%= @pub.average_ratings[:overall_option]}/10 %>
+      Overall Opinion - <%= @pub.average_ratings[:overall_option] %>/10
       <br/>
       <%= link_to "Add/Edit your rating", new_pub_rating_path(@pub) %>
     <% else %>
