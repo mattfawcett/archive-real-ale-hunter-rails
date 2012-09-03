@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120903152211) do
+ActiveRecord::Schema.define(:version => 20120903163318) do
 
   create_table "beers", :force => true do |t|
     t.string   "name"
@@ -79,16 +79,16 @@ ActiveRecord::Schema.define(:version => 20120903152211) do
 
   create_table "users", :force => true do |t|
     t.string   "username"
-    t.string   "email",                                                  :default => "", :null => false
+    t.string   "email",                                                  :default => "",    :null => false
     t.string   "level"
-    t.integer  "pints",                                                  :default => 0,  :null => false
+    t.integer  "pints",                                                  :default => 0,     :null => false
     t.decimal  "memory_lat",             :precision => 20, :scale => 20
     t.decimal  "memory_lon",             :precision => 20, :scale => 20
     t.integer  "memory_zoom"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "twitter_username"
-    t.string   "encrypted_password",                                     :default => "", :null => false
+    t.string   "encrypted_password",                                     :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20120903152211) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.boolean  "legacy_password",                                        :default => false
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

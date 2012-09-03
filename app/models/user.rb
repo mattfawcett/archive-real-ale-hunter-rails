@@ -32,9 +32,27 @@ class User < ActiveRecord::Base
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
+      puts where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).to_sql
       where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
     else
       where(conditions).first
     end
+  end
+
+  def valid_password?(password)
+    if self.legacy_password?
+      puts "leagacyyyy"
+      # Use Devise's secure_compare to avoid timing attacks
+      if Mram::PhpbbHash.check_hash(password, encrypted_password)
+        self.password = password
+        self.password_confirmation = password
+        self.legacy_password = false
+        self.save!
+      else
+        return false
+      end
+    end
+ 
+    super(password)
   end
 end

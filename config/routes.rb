@@ -23,5 +23,10 @@ RealAleHunter::Application.routes.draw do
   end
 
   match "/whats_new" => "pages#whats_new", :as => :whats_new
+  match "/what_is_real_ale" => "pages#what_is_real_ale", :as => :what_is_real_ale
+  match "/styles_of_real_ale" => "pages#styles_of_real_ale", :as => :styles_of_real_ale
+  match "/brewing_real_ale" => "pages#brewing_real_ale", :as => :brewing_real_ale
+  match "/camra_campaign_for_real_ale" => "pages#camra_campaign_for_real_ale", :as => :camra_campaign_for_real_ale
+  match "/links" => "pages#links", :as => :links
 end
 

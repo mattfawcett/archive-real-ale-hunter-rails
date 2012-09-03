@@ -16,6 +16,7 @@ gem "twitter"
 gem "geokit-rails3"
 gem "dynamic_form"
 gem "devise"
+gem "mram-phpbb_hash"
 
 group :test, :development do
   gem "shoulda"
