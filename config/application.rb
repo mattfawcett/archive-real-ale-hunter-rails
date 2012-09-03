@@ -78,6 +78,8 @@ module RealAleHunter
     end
 
     config.active_record.observers = :app_sweeper
+
+    config.assets.enabled = true
   end
 end
 
