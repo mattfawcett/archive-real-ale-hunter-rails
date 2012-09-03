@@ -24,10 +24,4 @@ class ApplicationController < ActionController::Base
   def find_pub
     @pub = Pub.find(:pub_id)
   end
-
-  def current_user
-    u = OpenStruct.new
-    u.username = 'matt'
-    u
-  end
 end

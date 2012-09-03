@@ -22,7 +22,6 @@ RealAleHunter::Application.routes.draw do
     end
   end
 
-  match '/logout' => 'pages#logout', :as => :logout
-  match ':action' => 'pages#index'
+  match "/whats_new" => "pages#whats_new", :as => :whats_new
 end
 
