@@ -24,6 +24,5 @@ RealAleHunter::Application.routes.draw do
 
   match '/logout' => 'pages#logout', :as => :logout
   match ':action' => 'pages#index'
-  match '/:controller(/:action(/:id))'
 end
 
