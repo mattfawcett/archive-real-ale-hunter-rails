@@ -15,6 +15,7 @@ gem "mysql"
 gem "twitter"
 gem "geokit-rails3"
 gem "dynamic_form"
+gem "devise"
 
 group :test, :development do
   gem "shoulda"

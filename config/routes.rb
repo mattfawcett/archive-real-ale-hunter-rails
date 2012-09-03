@@ -1,4 +1,6 @@
 RealAleHunter::Application.routes.draw do
+  devise_for :users
+
   resources :pubs do
     resources :ratings
     resources :images
