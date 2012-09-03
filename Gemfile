@@ -5,7 +5,6 @@ source "http://rubygems.org"
 gem "rails", "3.2.6"
 
 gem "friendly_id"
-gem "haml"#, "2.0.9"
 gem "paperclip"#, "2.3.1.1"
 gem "geokit"#, "1.5.0"
 #gem "mattfawcett-phpbb-auth", :require => "phpbb_auth"
