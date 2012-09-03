@@ -18,8 +18,8 @@ class PubsController < ApplicationController
   end
 
   def show
-    @page_title = "#{@pub.name} - #{@pub.town}"
     @pub = Pub.find(params[:id])
+    @page_title = "#{@pub.name} - #{@pub.town}"
     respond_to do |format|
       format.html { redirect_to @pub, :status => 301 unless @pub.friendly_id_status.best? }
       format.json { render :json => @pub.to_json(:methods => :slug) }

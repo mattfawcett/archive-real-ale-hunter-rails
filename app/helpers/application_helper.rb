@@ -23,7 +23,7 @@ $('#beers_area').append(change_id_of_dynamically_added_field("#{ escape_javascri
   end
 
   def display_username(user)
-    "<span title=\"#{h user.username} - #{user.pints} pints\" class=\"dotted-line-username\">#{h user.username}</span>"
+    "<span title=\"#{h user.username} - #{user.pints} pints\" class=\"dotted-line-username\">#{h user.username}</span>".html_safe
   end
 
 end
