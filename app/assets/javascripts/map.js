@@ -9,7 +9,6 @@ function mapping(){
   var markers = [];
   var markerCluster;
   var clustering_on = true;
-  var map;
   initialize();
 
   function initialize() {
@@ -24,38 +23,38 @@ function mapping(){
         start_lat = 54;
         start_lng = -1;
       }
-        map = new GMap2(document.getElementById('map'));
-        map.setCenter(new GLatLng(54, -1), 6);
-        map.addControl(new GLargeMapControl());
+        window.map = new GMap2(document.getElementById('map'));
+        window.map.setCenter(new GLatLng(54, -1), 6);
+        window.map.addControl(new GLargeMapControl());
 
         $.getJSON('/pubs.json','', function(json)
         {
         for (x in json)
         {
           var latlng = new GLatLng(json[x].pub.lat, json[x].pub.lng);
-          marker = createMarker(latlng, json[x].pub.id);
+          marker = window.createMarker(latlng, json[x].pub.id);
           markers.push(marker);
             }
-            markerCluster = new MarkerClusterer(map, markers, {gridSize: 80, maxZoom: 14});
+            markerCluster = new MarkerClusterer(window.map, markers, {gridSize: 80, maxZoom: 14});
         if($.query.get('lat') && $.query.get('lng'))
         {
           //coordinates in the query string, lets zoom in (cluster bug present when load map sratignht to this position)
-          map.setCenter(new GLatLng($.query.get('lat'), $.query.get('lng')), 16);
+          window.map.setCenter(new GLatLng($.query.get('lat'), $.query.get('lng')), 16);
         }
         });
 
-        GEvent.addListener(map, "zoomend", function(overlay, point){
-            map.clearOverlays();
+        GEvent.addListener(window.map, "zoomend", function(overlay, point){
+            window.map.clearOverlays();
         });
 
-        GEvent.addListener(map, "moveend", function(overlay, point){
-        var curzoom = map.getZoom();
+        GEvent.addListener(window.map, "moveend", function(overlay, point){
+        var curzoom = window.map.getZoom();
         if(curzoom >= 14)
         {
           //we are zoomed in, dynamically update numbered markers
           if(clustering_on){
             markerCluster.turn_off();
-            map.clearOverlays();
+            window.map.clearOverlays();
                 clustering_on = false; //set flag so if we zoom out again, clustering gets restarted
               }
               update_non_clustered_markers();
@@ -75,8 +74,7 @@ function mapping(){
 
 
   //create a marker object for the cluster, (if a number is passed in then a numbered icon will be used)
-  function createMarker(point, pub_id, number)
-  {
+  window.createMarker = function(point, pub_id, number){
     if(number)
     {
       var icon = numbered_icon(number);
@@ -120,7 +118,7 @@ function mapping(){
   // zoomed in area
   function update_non_clustered_markers()
   {
-      var bounds = map.getBounds();
+      var bounds = window.map.getBounds();
     var southWest = bounds.getSouthWest();
       var northEast = bounds.getNorthEast();
     $.ajax({
@@ -135,7 +133,7 @@ function mapping(){
   function numbered_icon(number)
   {
     var icon = new GIcon();
-    icon.image="http://www.realalehunter.co.uk/images/markers/marker" + number + ".png";
+    icon.image="/assets/markers/marker" + number + ".png";;
     icon.iconSize=new GSize(20,34);
     icon.iconAnchor=new GPoint(16,32);
     icon.infoWindowAnchor=new GPoint(16, 0);
