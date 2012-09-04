@@ -26,4 +26,5 @@ RealAleHunter::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
+  config.action_mailer.default_url_options = { :host => 'www.realalehunter.co.uk' }
 end
