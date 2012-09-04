@@ -10,7 +10,6 @@ describe PubsController do
     describe "when requesting html" do
 
       it "should expose all the pubs as @pubs" do
-        Pub.should_receive(:find).with(:all, {:offset=> 0, :limit=> 200}).and_return([@pub])
         get :index
         assigns(:pubs).should == [@pub]
       end
@@ -54,7 +53,7 @@ describe PubsController do
         describe "when request is from an iphone and includes lat and lon" do
           it "should find the nearest pubs" do
             pubs_array = [@pub]
-            Pub.should_receive(:find).with(:all, :order => :distance, :within => 100, :origin => ["53","-1"], :limit => 5).at_least(:once).and_return(pubs_array)
+            Pub.should_receive(:find).with(:all, :order => :distance, :within => 100, :origin => [53,-1], :limit => 5).at_least(:once).and_return(pubs_array)
             get :index, :format => 'json', :lat => 53, :lon => -1
           end
         end
