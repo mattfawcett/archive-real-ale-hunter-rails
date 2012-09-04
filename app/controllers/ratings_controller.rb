@@ -4,7 +4,7 @@ class RatingsController < ApplicationController
   def new
     @pub = Pub.find(params[:pub_id])
     if @current_user.has_rated?(@pub)
-      redirect_to edit_rating_path(@current_user.rating_for(@pub))
+      redirect_to edit_pub_rating_path(@pub, @current_user.rating_for(@pub))
     else
       @rating = @pub.ratings.new
     end
