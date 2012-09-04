@@ -12,6 +12,21 @@ class PubsController < ApplicationController
     end
   end
 
+  def edit
+    @pub = Pub.find(params[:id])
+  end
+
+  def update
+    @pub = Pub.find(params[:id])
+    puts "details are #{params[:pub].inspect}"
+    if @pub.update_attributes(params[:pub])
+      flash[:notice] = "Details updated"
+      redirect_to @pub
+    else
+      render :action => "edit"
+    end
+  end
+
   def new
     @pub = Pub.new
     @pub.beers.build
