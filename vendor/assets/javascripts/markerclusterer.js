@@ -638,6 +638,7 @@ function MarkerClusterer(map, opt_markers, opt_opts) {
     this.padding_ = padding;
   }
   
+  if(typeof GOverlay != 'undefined'){
   ClusterMarker_.prototype = new GOverlay();
   
   /**
@@ -744,4 +745,4 @@ function MarkerClusterer(map, opt_markers, opt_opts) {
   ClusterMarker_.prototype.isHidden = function () {
     return this.div_.style.display === "none";
   };
-  
+}
