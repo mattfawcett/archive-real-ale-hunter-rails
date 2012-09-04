@@ -22,8 +22,8 @@ describe Pub do
     it "should find pubs in the passed in town" do
       @pub_2 = Pub.make(:lat => 13, :lng => 123)
       @pub_3 = Pub.make(:town => "Wakefield", :lat => 13, :lng => 123)
-      Pub.in_town("Leeds").should eql([@pub, @pub_2])
-      Pub.in_town("Wakefield").should eql([@pub_3])
+      Pub.in_town("Leeds").should == [@pub, @pub_2]
+      Pub.in_town("Wakefield").should == [@pub_3]
     end
   end
 

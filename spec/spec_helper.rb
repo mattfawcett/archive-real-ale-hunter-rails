@@ -8,7 +8,6 @@ require 'machinist'
 require File.expand_path(File.dirname(__FILE__) + "/image_spec_helper")
 
 require File.expand_path(File.dirname(__FILE__) + "/blueprints")
-require File.expand_path(File.dirname(__FILE__) + '/matchers')
 
 
 RSpec.configure do |config|
@@ -20,7 +19,6 @@ RSpec.configure do |config|
   config.use_instantiated_fixtures  = false
   config.fixture_path = Rails.root + '/spec/fixtures/'
 
-  config.include(Matchers)
   config.before(:each) { Sham.reset }
 
 end
