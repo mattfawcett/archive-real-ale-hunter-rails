@@ -11,12 +11,13 @@
 
   <div class="column-right">
     <h3>Beers available on visit</h3>
-    <div id="beers_area">
-      <%= render :partial => 'shared/beer', :locals => {:pub_form => visit_form} %>
+      <div id="beers_area">
+      <%= visit_form.fields_for :beers do |beer_form| %>
+        <%= render "beer_fields", :f => beer_form %>
+      <% end %>
+
+      <%= link_to_add_association 'Add another', visit_form, :beers %>
     </div>
-    <p>
-      <%= add_beer_link "Add another", visit_form %>
-    </p>
     <p>
       <%= visit_form.submit "Add Visit" %>
     </p>

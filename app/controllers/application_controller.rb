@@ -22,6 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def find_pub
-    @pub = Pub.find(:pub_id)
+    @pub = Pub.find(params[:pub_id])
   end
 end
