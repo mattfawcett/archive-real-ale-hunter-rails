@@ -43,7 +43,7 @@ class PubsController < ApplicationController
 
   def create
     @pub = Pub.new(params[:pub])
-    @pub.user = @current_user
+    @pub.user = current_user
     if @pub.save
       flash[:notice] = 'Thanks, The pub has been added'
       redirect_to pub_path(@pub)

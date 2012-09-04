@@ -16,7 +16,7 @@ class VisitsController < ApplicationController
 
   def create
     @visit = @pub.visits.new(params[:visit])
-    @visit.user = @current_user
+    @visit.user = current_user
     if @visit.save
       flash[:notice] =  "Thanks, your visit has been added"
       redirect_to pub_path(@pub)

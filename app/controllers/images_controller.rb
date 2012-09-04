@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
 
   def create
     @image = @pub.images.new(params[:image])
-    @image.user = @current_user
+    @image.user = current_user
     if @image.save
       flash[:notice] = "Thanks, your photo has been uploaded"
       redirect_to pub_images_path(@pub)
