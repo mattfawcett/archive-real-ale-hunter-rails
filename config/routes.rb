@@ -19,6 +19,7 @@ RealAleHunter::Application.routes.draw do
         get :search
         get :closest
       end
+      resources :images
     end
   end
 
