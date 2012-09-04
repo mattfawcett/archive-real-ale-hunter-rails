@@ -3,10 +3,10 @@
 <%= will_paginate @results %>
 
 <% @results.each do |pub| %>
-  <%= link_to pub.excerpts.name, pub_path(pub) %>
+  <%= link_to pub.excerpts.name.html_safe, pub_path(pub) %>
   - <%= pub.address(excerpts=true) %>
   <br/>
-  <%= pub.excerpts.description %>
+  <%= raw pub.excerpts.description %>
   <br/>
   <br/>
 <% end %>
