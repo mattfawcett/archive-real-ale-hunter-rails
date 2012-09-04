@@ -1,0 +1,7 @@
+<% @pubs.each_with_index do |pub, index| %>
+  var point = new GLatLng(<%= pub.lat %>, <%= pub.lng %>);
+  var marker = createMarker(point, <%= pub.id %>, <%= index+1 %>);
+  map.addOverlay(marker);
+<% end %>
+
+$('#map-pub-listing').html(<%= j(render :partial => 'maps/map_pub_listing') );
