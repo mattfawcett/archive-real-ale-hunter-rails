@@ -9,3 +9,4 @@ db/test.sqlite3-journal
 db/sphinx/*
 .bundle
 db/sphinx/*
+public/system/*
