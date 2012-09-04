@@ -1,7 +1,7 @@
 module ApplicationHelper
   def flash_messages
     messages = []
-    %w(notice warning error).each do |msg|
+    %w(notice warning error alert).each do |msg|
       messages << content_tag(:div, flash[msg.to_sym], :class => "flash #{msg}") unless flash[msg.to_sym].blank?
     end
     messages.join.html_safe
