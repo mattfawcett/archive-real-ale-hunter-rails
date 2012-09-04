@@ -98,7 +98,7 @@ function mapping(){
       url: '/pubs/' + pub_id + '.json',
       dataType: 'json',
       success: function(json) {
-        html = html + '<strong><a target="_blank" href="/pubs/' + json.pub.slug.slug.name + '">' + json.pub.name + '</a></strong><br/>';
+        html = html + '<strong><a target="_blank" href="/pubs/' + json.pub.slug + '">' + json.pub.name + '</a></strong><br/>';
         html = html + json.pub.address_1 + '<br/>';
         if(json.pub.address_2){
           html = html + json.pub.address_2 + '<br/>';
