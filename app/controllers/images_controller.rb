@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  before_filter :require_login, :only => [:new, :create]
+  before_filter :authenticate_user!, :only => [:new, :create]
   before_filter :find_pub
   before_filter :redirect_to_best_pub_id, :only => [:index]
 

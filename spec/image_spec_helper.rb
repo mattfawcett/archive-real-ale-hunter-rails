@@ -8,7 +8,7 @@ module ImageSpecHelper
   end
   
   def create_image(attrs = {})
-    returning new_image(attrs) do |image|
+    new_image(attrs).tap do |image|
       image.save!
     end
   end

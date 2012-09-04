@@ -26,9 +26,11 @@ RSpec.configure do |config|
 end
 
 def login_as(user)
-  cookies["phpbb3_7uah4_sid"] = 'abcd'
-  mock_user = mock_model(PhpbbUser, {:user_email => 'phpbbsessionemail', :username => 'dave'})
-  mock_session = mock_model(PhpbbSession, :logged_in? => true, :phpbb_user => mock_user)
-  PhpbbSession.stub!(:find_by_session_id).and_return(mock_session)
-  User.stub!(:find).with(:first, :conditions => {'username' => 'dave'}).and_return(user)
+  #cookies["phpbb3_7uah4_sid"] = 'abcd'
+  #mock_user = mock_model(PhpbbUser, {:user_email => 'phpbbsessionemail', :username => 'dave'})
+  #mock_session = mock_model(PhpbbSession, :logged_in? => true, :phpbb_user => mock_user)
+  #PhpbbSession.stub!(:find_by_session_id).and_return(mock_session)
+  #User.stub!(:find).with(:first, :conditions => {'username' => 'dave'}).and_return(user)
+
+  sign_in :user, user
 end

@@ -1,5 +1,5 @@
 class RatingsController < ApplicationController
-  before_filter :require_login
+  before_filter :authenticate_user!
 
   def new
     @pub = Pub.find(params[:pub_id])

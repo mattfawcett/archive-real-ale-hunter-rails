@@ -4,10 +4,12 @@ require 'sham'
 
 User.blueprint do
   username "matt"
-  email "mail@matthewfawcett.co.uk"
+  email "mail#{rand(9999)}@matthewfawcett.co.uk"
   level 3
   pints 100
   twitter_username "mattfawcett"
+  password "letmein123"
+  password_confirmation "letmein123"
 end
 
 Pub.blueprint do

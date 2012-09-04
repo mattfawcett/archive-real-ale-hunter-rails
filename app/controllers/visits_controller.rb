@@ -1,5 +1,5 @@
 class VisitsController < ApplicationController
-  before_filter :require_login, :only => [:new, :create]
+  before_filter :authenticate_user!, :only => [:new, :create]
   before_filter :find_pub
 
   layout "one_column"

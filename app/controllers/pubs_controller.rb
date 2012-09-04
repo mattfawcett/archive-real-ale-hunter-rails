@@ -1,5 +1,5 @@
 class PubsController < ApplicationController
-  before_filter :require_login, :only => [:new, :create, :edit, :update]
+  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update]
   layout :which_layout?
 
   def index
