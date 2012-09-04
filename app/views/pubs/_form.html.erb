@@ -47,7 +47,7 @@
   </div>
 
 
-  <div class="column-righ">
+  <div class="column-right">
     <h3>Description</h3>
     <p>
       <%= pub_form.label :description %><br/>
@@ -61,12 +61,13 @@
 
     <h3>permanent Beers</h3>
     <div id="beers_area">
-      <%= render :partial => 'shared/beer', :locals => {:pub_form => pub_form} %>
+      <%= pub_form.fields_for :beers do |beer_form| %>
+        <%= render "beer_fields", :f => beer_form %>
+      <% end %>
+
+      <%= link_to_add_association 'Add another', pub_form, :beers %>
     </div>
 
-    <p>
-      <%= add_beer_link "Add another", pub_form %>
-    </p>
   </div>
   <hr class="clear">
   <p>

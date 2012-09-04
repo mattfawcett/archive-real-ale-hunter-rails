@@ -19,6 +19,7 @@ gem "devise"
 gem "mram-phpbb_hash"
 gem "jquery-rails"
 gem 'sass-rails'
+gem "cocoon"
 
 group :test, :development do
   gem "shoulda"
