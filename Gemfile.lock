@@ -79,6 +79,10 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (~> 0.0, >= 0.0.9)
+    meta_on_rails (1.1.0)
+      actionpack
+      activesupport
+      rails
     mime-types (1.19)
     mram-phpbb_hash (0.1.1)
     multi_json (1.3.6)
@@ -194,6 +198,7 @@ DEPENDENCIES
   json
   machinist (= 1.0.6)
   mechanize
+  meta_on_rails
   mram-phpbb_hash
   mysql
   paperclip
