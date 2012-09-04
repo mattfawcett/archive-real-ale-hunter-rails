@@ -18,7 +18,7 @@
       <td><%= pub.user ? h(pub.user.username) : '' %></td>
     </tr>
     <tr>
-      <td rowspan="5"><%= h pub.description %></td>
+      <td colspan="5"><%= h pub.description %></td>
     </tr>
   <% end %>
 </table>
