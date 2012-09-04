@@ -89,7 +89,7 @@ function MarkerClusterer(map, opt_markers, opt_opts) {
   var i = 0;
   for (i = 1; i <= 5; ++i) {
     styles_.push({
-      'url': "/images/m" + i + ".png",
+      'url': "/assets/m" + i + ".png",
       'height': sizes[i - 1],
       'width': sizes[i - 1]
     });
