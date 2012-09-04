@@ -1,7 +1,11 @@
 class ImagesController < ApplicationController
   before_filter :require_login, :only => [:new, :create]
-  before_filter :redirect_to_best_pub_id, :only => [:index]
   before_filter :find_pub
+  before_filter :redirect_to_best_pub_id, :only => [:index]
+
+  def new
+    @image = @pub.images.new
+  end
 
   def index
     @page_title = "Photos of #{@pub.name} - #{@pub.town}"
@@ -12,7 +16,7 @@ class ImagesController < ApplicationController
     @image.user = @current_user
     if @image.save
       flash[:notice] = "Thanks, your photo has been uploaded"
-      redirect_to pub_images_path(parent_object)
+      redirect_to pub_images_path(@pub)
     else
       render :action => :new
     end
@@ -20,6 +24,6 @@ class ImagesController < ApplicationController
 
   private
   def redirect_to_best_pub_id
-    redirect_to pub_images_path(parent_object), :status => 301 unless parent_object.friendly_id_status.best?
+    redirect_to pub_images_path(@pub), :status => 301 unless @pub.slug == params[:pub_id]
   end
 end
