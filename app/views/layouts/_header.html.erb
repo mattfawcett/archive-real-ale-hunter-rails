@@ -7,7 +7,7 @@
 <title><% if @page_title %><%= h @page_title %> | <% end %>Real Ale Hunter</title>
 
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-<%= raw display_meta(:keywords => "Real, Ale, Real ale, Realale, Map, Beer, Festival, Camra, Directory, Pubs, Boozers, Maps ,Google Maps, Camera, photos, Campaign, review, reviews, ratings, forum, drinking, supping", :description => "A map and directory of real ale pubs in the UK. Add visits, ratings, reviews, real ales available, photos and forums") %>
+<%= raw display_meta(:keywords => "Real, Ale, Real ale, Realale, Map, Beer, Festival, Camra, Directory, Pubs, Boozers, Maps ,Google Maps, Camera, photos, Campaign, review, reviews, ratings, drinking, supping", :description => "A map and directory of real ale pubs in the UK. Add visits, ratings, reviews, real ales available, photos") %>
 
 <%= stylesheet_link_tag "application" %>
 <%= javascript_include_tag 'application' %>
@@ -62,9 +62,6 @@
       <% end %>
       <%= content_tag :li, :id => (@tab == "Add Pub" ? 'current' : nil) do %>
         <%= link_to "Add Pub", new_pub_path %>
-      <% end %>
-      <%= content_tag :li, :id => (@tab == "Forum" ? 'current' : nil) do %>
-        <%= link_to "Forum", "http://forum.realalehunter.co.uk" %>
       <% end %>
     </ul>
     <!-- search starts -->
