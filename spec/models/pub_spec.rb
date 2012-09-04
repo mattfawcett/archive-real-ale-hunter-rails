@@ -60,11 +60,6 @@ describe Pub do
     @pub.should be_valid
   end
 
-  it "should have a named scope to retrieve all pubs, but only the bare minimum of columns" do
-    Pub.should have_named_scope :all_optimised_for_cluster_for_map, :select => "lat, lng"
-  end
-
-
   it "should have named scope for getting all details of pubs in a limited area" do
     @pub_1 = Pub.make(:lat => 42, :lng => -1.25)
     @pub_2 = Pub.make(:lat => 42, :lng => 7.25)
