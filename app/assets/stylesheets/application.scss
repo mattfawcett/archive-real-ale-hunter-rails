@@ -1,3 +1,4 @@
+//= require "all-vendor"
 /* ----------------------------------------------
   Template Name : VectorLover
   Template Code : S-0026
@@ -15,7 +16,7 @@
 * { margin: 0; padding: 0; outline: 0 }
 
 body {
-  background: #CCC url(../images/bg.gif) repeat-x;
+  background: #CCC image-url("bg.gif") repeat-x;
   font: 12px/170% 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #6B6B6B;
   text-align: center;
@@ -112,7 +113,7 @@ blockquote {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #80614D;
   border: 1px solid #EEE8E1;
-  background: #FAF7F5 url(../images/quote.gif) no-repeat 15px 15px;
+  background: #FAF7F5 image-url("quote.gif") no-repeat 15px 15px;
 }
 
 /* start - table */
@@ -191,7 +192,7 @@ input.button {
 #wrap {
   position: relative;
   width: 952px;
-  background: #FFF url(../images/wrap.gif) repeat-y center top;
+  background: #FFF image-url("wrap.gif") repeat-y center top;
   margin: 40px auto 30px auto;
   text-align: left;
 }
@@ -205,7 +206,7 @@ input.button {
   position: relative;
   width: 952px;
   height: 245px;
-  background: #8AB84B url(../images/header.jpg) no-repeat;
+  background: #8AB84B image-url("header.jpg") no-repeat;
   color: #fff;
   padding: 0;
   margin: 0;
@@ -257,7 +258,7 @@ input.button {
   padding: 0; margin: 0;
   width: 952px;
   height: 50px;
-  background: #988060 url(../images/nav.gif) no-repeat;
+  background: #988060 image-url("nav.gif") no-repeat;
 }
 #nav ul {
   float: left;
@@ -283,11 +284,11 @@ input.button {
   color: #E7FAA9;
 }
 #nav ul li#current {
-  background: transparent url(../images/left-tab.gif) no-repeat;
+  background: transparent image-url("left-tab.gif") no-repeat;
 }
 #nav ul li#current a {
   color: #4B3D2C;
-  background: transparent url(../images/right-tab.gif) no-repeat right top;
+  background: transparent image-url("right-tab.gif") no-repeat right top;
 }
 #nav form {
   margin: 5px 5px;
@@ -322,7 +323,7 @@ input.button {
   text-decoration: none;
 }
 #main ul li {
-  list-style-image: url(../images/bullet.gif);
+  list-style-image: image-url("bullet.gif");
 }
 
 #main-full-width {
@@ -344,7 +345,7 @@ input.button {
   text-decoration: none;
 }
 #main-full-width ul li {
-  list-style-image: url(../images/bullet.gif);
+  list-style-image: image-url("bullet.gif");
 }
 
 #sidebar {
@@ -404,7 +405,7 @@ input.button {
   padding: 0; margin: 20px 0 30px 10px;
   border: none;
   width: 270px; height: 33px;
-  background: #F2F0F0 url(../images/qsearch.gif) no-repeat;
+  background: #F2F0F0 image-url("qsearch.gif") no-repeat;
 }
 #sidebar form#qsearch p {
   margin: 0; padding: 0;
@@ -435,7 +436,7 @@ input.button {
   width: 952px;
   margin: 0;
   padding: 30px 0 25px 0;
-  background: #CCC url(../images/footer-bottom.gif) no-repeat left top;
+  background: #CCC image-url("footer-bottom.gif") no-repeat left top;
   font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-serif;
   font-size: 0.95em;
   color: #777;
@@ -462,27 +463,27 @@ input.button {
 .post-footer .date{
   margin: 0 10px 0 5px;
   padding: 7px;
-  background: #FAF7F5 url(../images/clock.gif) no-repeat 0 2px;
+  background: #FAF7F5 image-url("clock.gif") no-repeat 0 2px;
   padding-left: 30px;
 }
 .post-footer a.comments {
   margin: 0 10px 0 5px;
   padding: 7px 5px;
-  background: #FAF7F5 url(../images/comments.gif) no-repeat 0 2px;
+  background: #FAF7F5 image-url("comments.gif") no-repeat 0 2px;
   padding-left: 30px;
   color: #977C57;
 }
 .post-footer a.readmore {
   margin: 0 10px 0 5px;
   padding: 7px 5px;
-  background: #FAF7F5 url(../images/doc.gif) no-repeat 0 2px;
+  background: #FAF7F5 image-url("doc.gif") no-repeat 0 2px;
   padding-left: 30px;
   color: #977C57;
 }
 .post-footer a.edit {
   margin: 0 10px 0 5px;
   padding: 7px 5px;
-  background: #FAF7F5 url(../images/edit-doc.gif) no-repeat 0 2px;
+  background: #FAF7F5 image-url("edit-doc.gif") no-repeat 0 2px;
   padding-left: 30px;
   color: #977C57;
 }

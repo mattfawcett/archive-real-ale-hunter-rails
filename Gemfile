@@ -18,6 +18,7 @@ gem "dynamic_form"
 gem "devise"
 gem "mram-phpbb_hash"
 gem "jquery-rails"
+gem 'sass-rails'
 
 group :test, :development do
   gem "shoulda"
