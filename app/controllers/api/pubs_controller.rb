@@ -11,7 +11,7 @@ class Api::PubsController < ApplicationController
   end
 
   def closest
-    @pubs = Pub.find(:all, :origin =>[params[:lat],params[:lon]], :within => 100, :order => :distance, :limit => params[:limit] || 5).compact
+    @pubs = Pub.unscoped.geo_scope(:origin =>[params[:lat],params[:lon]], :within => 100).order('distance ASC').limit(params[:limit] || 5).compact
     render :json => @pubs.to_json(:methods => [:number_of_ratings, :number_of_images, :average_ratings])
   end
 
