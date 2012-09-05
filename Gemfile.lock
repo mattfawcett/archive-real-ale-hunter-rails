@@ -103,10 +103,9 @@ GEM
     nokogiri (1.5.5)
     ntlm-http (0.1.1)
     orm_adapter (0.4.0)
-    paperclip (3.1.4)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      activesupport (>= 3.0.0)
+    paperclip (2.7.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
     polyglot (0.3.3)
@@ -222,7 +221,7 @@ DEPENDENCIES
   meta_on_rails
   mram-phpbb_hash
   mysql
-  paperclip
+  paperclip (= 2.7.0)
   rack-rewrite
   rails (= 3.2.6)
   rspec
