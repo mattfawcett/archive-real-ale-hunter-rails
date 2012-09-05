@@ -37,9 +37,8 @@ RealAleHunter::Application.configure do
   ActionMailer::Base.smtp_settings = {
    :address => "smtp.gmail.com",
    :port => 587,
-   :domain => "realalehunter.co.uk",
    :authentication => :plain,
-   :user_name => "no-reply",
+   :user_name => "no-reply@realalehunter.co.uk",
    :password => "Jms98yNjdu0lkJn"
   }
 end
