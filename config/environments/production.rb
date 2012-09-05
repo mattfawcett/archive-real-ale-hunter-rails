@@ -34,5 +34,12 @@ RealAleHunter::Application.configure do
   # config.threadsafe!
   config.action_mailer.default_url_options = { :host => 'www.realalehunter.co.uk' }
   config.action_mailer.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {:openssl_verify_mode => 'none'}
+  ActionMailer::Base.smtp_settings = {
+   :address => "smtp.gmail.com",
+   :port => 587,
+   :domain => "realalehunter.co.uk",
+   :authentication => :plain,
+   :user_name => "no-reply",
+   :password => "Jms98yNjdu0lkJn"
+  }
 end
