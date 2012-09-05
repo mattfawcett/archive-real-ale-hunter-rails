@@ -22,7 +22,7 @@ class Pub < ActiveRecord::Base
   scope :in_town, lambda {|town| {:conditions => {:town => town}}}
   scope :beginning_with_letter, lambda {|letter| {:conditions => letter.nil? ? "" : ["UPPER(name) LIKE ?", "#{letter}%"]}}
 
-  default_scope :order => "name ASC"
+  default_scope :order => :name
 
   extend FriendlyId
   friendly_id :name_and_town, :use => [:history]
@@ -78,8 +78,7 @@ class Pub < ActiveRecord::Base
   end
 
   def self.latest(n = 5)
-    #bug in rails is why this isn't in a named_scope https://rails.lighthouseapp.com/projects/8994/tickets/2346-named_scope-doesnt-override-default_scopes-order-key
-    find(:all, :order => "created_at DESC", :limit => n)
+    unscoped.order("created_at DESC").limit(n)
   end
 
   def average_ratings
