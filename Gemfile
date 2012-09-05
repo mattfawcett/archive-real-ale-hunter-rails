@@ -21,6 +21,9 @@ gem "jquery-rails"
 gem 'sass-rails'
 gem "cocoon"
 gem "meta_on_rails"
+gem 'uglifier'
+gem 'therubyracer'
+
 
 group :test, :development do
   gem "shoulda"
