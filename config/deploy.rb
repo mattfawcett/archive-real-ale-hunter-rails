@@ -1,11 +1,13 @@
 require 'rubygems'
 require 'bundler/capistrano'
+load 'deploy/assets'
 
 default_run_options[:pty] = true
 
 
 set :repository,  "git@bitbucket.org:mattfawcett/real-ale-hunter-rails.git"
 set :deploy_to, "/var/www/realalehunter"
+set :branch, "upgrade"
 set :scm, :git
 set :user, :deploy
 set :port, 1985
