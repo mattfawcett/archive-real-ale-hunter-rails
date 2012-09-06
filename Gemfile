@@ -23,6 +23,7 @@ gem "cocoon"
 gem "meta_on_rails"
 gem 'uglifier'
 gem 'therubyracer'
+gem 'coffee-script'
 
 
 group :test, :development do

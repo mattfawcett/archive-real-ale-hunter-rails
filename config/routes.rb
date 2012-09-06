@@ -5,6 +5,9 @@ RealAleHunter::Application.routes.draw do
     resources :ratings
     resources :images
     resources :visits
+    member do
+      get :map_marker_html
+    end
   end
   resource :map
   resources :searches

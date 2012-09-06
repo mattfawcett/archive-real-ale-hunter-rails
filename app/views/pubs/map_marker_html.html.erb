@@ -1,0 +1,8 @@
+<strong><%= link_to @pub.name, @pub, :target => '_blank' %></strong><br/>
+<%= @pub.address_1 %><br/>
+<% if @pub.address_2.present? %>
+  <%= @pub.address_2 %><br/>
+<% end %>
+<%= @pub.town %><br/>
+<%= @pub.post_code %><br/>
+<%= @pub.telephone %><br/>

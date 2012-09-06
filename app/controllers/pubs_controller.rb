@@ -41,6 +41,11 @@ class PubsController < ApplicationController
     end
   end
 
+  def map_marker_html
+    @pub = Pub.find(params[:id])
+    render :layout => nil
+  end
+
   def create
     @pub = Pub.new(params[:pub])
     @pub.user = current_user
