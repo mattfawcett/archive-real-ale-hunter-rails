@@ -21,35 +21,3 @@ production:
 
 cucumber:
   <<: *TEST
-  
-old_site:
-  adapter: mysql
-  database: realalehunter
-  username: root
-  password:
-  host: localhost
-  
-phpbb_database_development:  
-  adapter: mysql
-  database: realalehunter_forum
-  username: root
-  password:
-  host: localhost
-  
-  
-phpbb_database_test: &PHPBB_TEST
-  adapter: mysql
-  database: realalehunter_forum
-  username: root
-  password:
-  host: localhost
-  
-phpbb_database_cucumber: 
-  <<: *PHPBB_TEST
-  
-phpbb_database_production:  
-  adapter: mysql
-  database: realalehunter_forum_2
-  username: matt
-  password: c3038135cdzvc4
-  host: localhost
