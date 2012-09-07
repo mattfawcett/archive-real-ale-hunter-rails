@@ -41,4 +41,6 @@ RealAleHunter::Application.configure do
    :user_name => "no-reply@realalehunter.co.uk",
    :password => "Jms98yNjdu0lkJn"
   }
+
+  config.filter_parameters += [:password]
 end
