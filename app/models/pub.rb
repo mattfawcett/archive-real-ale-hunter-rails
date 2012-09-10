@@ -74,7 +74,7 @@ class Pub < ActiveRecord::Base
   end
 
   def self.towns
-    Pub.find(:all, :select => "DISTINCT(town) as town", :order => "town ASC").collect {|p| p.town}
+    Pub.unscoped.find(:all, :select => "DISTINCT(town) as town", :order => "town ASC").collect {|p| p.town}
   end
 
   def self.latest(n = 5)
