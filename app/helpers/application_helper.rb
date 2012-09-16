@@ -8,7 +8,7 @@ module ApplicationHelper
   end
   
   def pub_photo_alt_text(image)
-    "#{image.name} - uploaded by #{image.user.username} #{distance_of_time_in_words(image.created_at, Time.now)} ago"
+    "Uploaded by #{image.user.username} #{distance_of_time_in_words(image.created_at, Time.now)} ago |  #{link_to 'Download Original', image.attachment.url(:original)}"
   end
 
   def display_username(user)
