@@ -1,6 +1,7 @@
 class VisitsController < ApplicationController
   before_filter :authenticate_user!, :only => [:new, :create]
   before_filter :find_pub
+  before_filter :require_admin, :only => :destroy
 
   layout "one_column"
 
@@ -23,5 +24,12 @@ class VisitsController < ApplicationController
     else
       render :action => "new"
     end
+  end
+
+  def destroy
+    @visit = Visit.find(params[:id])
+    @visit.destroy
+    flash[:notice] = "Visit deleted"
+    redirect_to pub_path(@pub)
   end
 end
