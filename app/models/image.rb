@@ -1,7 +1,8 @@
 class Image < ActiveRecord::Base
   include ActionView::Helpers::DateHelper
   
-  has_attached_file :attachment, :styles => { :medium => "800x600>", :thumb => "180x150>", :big_thumb => "270x225>" }
+  has_attached_file :attachment, :styles => { :medium => "800x600>", :thumb => "180x150>", :big_thumb => "270x225>" },
+                                 :url => "/system/attachments/:id/:style/:basename.:extension"
   validates_attachment_presence :attachment
   belongs_to :user
   belongs_to :pub
@@ -18,11 +19,5 @@ class Image < ActiveRecord::Base
     file_urls = {:original => attachment.url}
     [:medium, :thumb, :big_thumb].each {|size| file_urls[size] = attachment.url(size)}
     return file_urls
-  end
-end
-
-module Paperclip::Interpolations
-  def id_partition(attachment, style)
-    attachment.instance.id
   end
 end
