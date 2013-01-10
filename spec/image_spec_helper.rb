@@ -3,7 +3,7 @@ module ImageSpecHelper
     Image.new(valid_image_attributes(attrs)) do |image|
       # Remove any paperclip styles specified so as not to invoke ImageMagick
       image.attachment.instance_eval { @styles = {} }
-      image.attachment = StringIO.open('Test Attachment')
+      image.attachment = File.new("#{Rails.root}/app/assets/images/clock.gif")
     end
   end
   

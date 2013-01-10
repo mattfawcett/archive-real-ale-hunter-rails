@@ -5,7 +5,7 @@ source "http://rubygems.org"
 gem "rails"
 
 gem "friendly_id"
-gem "paperclip", "2.7.0"
+gem "paperclip"
 gem "geokit"#, "1.5.0"
 #gem "mattfawcett-phpbb-auth", :require => "phpbb_auth"
 gem "thinking-sphinx", :require => "thinking_sphinx"
