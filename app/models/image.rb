@@ -20,3 +20,9 @@ class Image < ActiveRecord::Base
     return file_urls
   end
 end
+
+module Paperclip::Interpolations
+  def id_partition(attachment, style)
+    attachment.instance.id
+  end
+end
