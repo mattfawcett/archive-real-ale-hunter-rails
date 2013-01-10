@@ -98,20 +98,20 @@ describe RatingsController do
       it "should save my rating" do
         @user_who_has_rated.stub_chain(:ratings, :find).and_return(@rating)
         @rating.should_receive(:update_attributes).with('these' => 'params').and_return(true)
-        put :update, :id => @rating.id, :rating => {'these' => 'params'}
+        put :update, :pub_id => @pub.id, :id => @rating.id, :rating => {'these' => 'params'}
       end
 
       it "should set a flash success message" do
         @user_who_has_rated.stub_chain(:ratings, :find).and_return(@rating)
         @rating.should_receive(:update_attributes).with('these' => 'params').and_return(true)
-        put :update, :id => @rating.id, :rating => {'these' => 'params'}
+        put :update, :pub_id => @pub.id, :id => @rating.id, :rating => {'these' => 'params'}
         flash[:notice].should eql("Thanks, your rating has been updated")
       end
 
       it "should redirect me to the pubs show page" do
         @user_who_has_rated.stub_chain(:ratings, :find).and_return(@rating)
         @rating.should_receive(:update_attributes).with('these' => 'params').and_return(true)
-        put :update, :id => @rating.id, :rating => {'these' => 'params'}
+        put :update, :pub_id => @pub.id, :id => @rating.id, :rating => {'these' => 'params'}
         response.should redirect_to(pub_path(@pub))
       end
     end
@@ -120,14 +120,14 @@ describe RatingsController do
       it "should rerender the form if the rating is invalid" do
         @user_who_has_rated.stub_chain(:ratings, :find).and_return(@rating)
         @rating.should_receive(:update_attributes).with('these' => 'params').and_return(false)
-        put :update, :id => @rating.id, :rating => {'these' => 'params'}
+        put :update, :pub_id => @pub.id, :id => @rating.id, :rating => {'these' => 'params'}
         response.should be_success
       end
 
       it "should expose the rating as @rating" do
         @user_who_has_rated.stub_chain(:ratings, :find).and_return(@rating)
         @rating.should_receive(:update_attributes).with('these' => 'params').and_return(false)
-        put :update, :id => @rating.id, :rating => {'these' => 'params'}
+        put :update, :pub_id => @pub.id, :id => @rating.id, :rating => {'these' => 'params'}
         assigns(:rating).should == @rating
       end
     end
