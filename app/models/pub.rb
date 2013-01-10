@@ -99,20 +99,23 @@ class Pub < ActiveRecord::Base
     user.add_pints(5)
   end
 
-  define_index do
-    # fields
-    indexes name, :sortable => true
-    indexes town
-    indexes description
-    indexes user.username, :as => :author, :sortable => true
+  #define_index do
+  #  # fields
+  #  indexes name, :sortable => true
+  #  indexes town
+  #  indexes description
+  #  indexes user.username, :as => :author, :sortable => true
 
-    # attributes
-    has user_id, created_at, updated_at
-  end
+  #  # attributes
+  #  has user_id, created_at, updated_at
+  #end
 
   def validate_geolocation
     return unless lat.nil? && lng.nil?
     geo = Geokit::Geocoders::MultiGeocoder.geocode(address)
+    puts "geo start"
+    puts geo.inspect
+    puts "geo end"
     errors.add(:address, "Could not Geocode address") if !geo.success
     self.lat, self.lng = geo.lat,geo.lng if geo.success
   end

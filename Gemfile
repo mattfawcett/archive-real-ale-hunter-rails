@@ -2,7 +2,7 @@
 source "http://rubygems.org"
 #source "http://gems.github.com"
 
-gem "rails", "3.2.6"
+gem "rails"
 
 gem "friendly_id"
 gem "paperclip", "2.7.0"
@@ -12,7 +12,7 @@ gem "thinking-sphinx", :require => "thinking_sphinx"
 gem "will_paginate"
 gem "rack-rewrite"#, "~> 0.1.2"
 gem "mysql"
-gem "twitter", "1.5.0"
+gem "twitter", "3.0.0"
 gem "geokit-rails3"
 gem "dynamic_form"
 gem "devise"
@@ -24,6 +24,7 @@ gem "meta_on_rails"
 gem 'uglifier'
 gem 'therubyracer'
 gem 'coffee-script'
+gem 'mysql2'
 
 
 group :test, :development do
