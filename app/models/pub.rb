@@ -112,7 +112,7 @@ class Pub < ActiveRecord::Base
 
   def validate_geolocation
     return unless lat.nil? && lng.nil?
-    geo = Geokit::Geocoders::MultiGeocoder.geocode(address)
+    geo = Geokit::Geocoders::GoogleGeocoder3.geocode(address)
     errors.add(:address, "Could not Geocode address") if !geo.success
     self.lat, self.lng = geo.lat,geo.lng if geo.success
   end
