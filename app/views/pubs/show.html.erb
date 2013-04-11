@@ -46,7 +46,7 @@
   </p>
 
   <% unless @pub.number_of_pumps.nil? %>
-    <p><%= @pub.name %> has <% @pub.number_of_pumps %> hand pumps</p>
+    <p><%= @pub.name %> has <%= @pub.number_of_pumps %> hand pumps</p>
   <% end %>
 
   <h3>Ratings (<%= @pub.ratings.length %>)</h3>
