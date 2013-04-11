@@ -8,7 +8,9 @@ module ApplicationHelper
   end
   
   def pub_photo_alt_text(image)
-    "Uploaded by #{image.user.username} #{distance_of_time_in_words(image.created_at, Time.now)} ago |  #{link_to 'Download Original', image.attachment.url(:original)}"
+    string = "Uploaded by #{image.user.username} #{distance_of_time_in_words(image.created_at, Time.now)} ago |  #{link_to 'Download Original', image.attachment.url(:original)}"
+    string << ' | ' + link_to("Delete Image", pub_image_path(image.pub, image), :method => :delete, :confirm => "Are you sure?") if user_signed_in? && image.user == current_user
+    return string
   end
 
   def display_username(user)
