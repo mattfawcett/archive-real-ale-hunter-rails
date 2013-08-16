@@ -16,8 +16,8 @@ production:
   adapter: mysql2
   database: "real_ale_hunter_production"
   host: localhost
-  username: web
-  password: Hs984hdyNNk297G
+  username: root
+  password:
 
 cucumber:
   <<: *TEST
